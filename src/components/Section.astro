@@ -1,9 +1,13 @@
 ---
-const { title } = Astro.props;
+const { title, classes } = Astro.props;
 ---
 
-<section class="mx-auto mb-12 max-w-[700px]">
-  {title && <h2 class="mb-2 text-3xl font-bold">{title}</h2>}
+<section class:list={["mx-auto mb-12 max-w-[700px]", classes]}>
+  {
+    title && (
+      <h2 class="mb-2 text-3xl font-bold print:text-stone-700/90">{title}</h2>
+    )
+  }
   <slot />
 </section>
 
