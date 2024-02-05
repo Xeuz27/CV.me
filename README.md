@@ -68,6 +68,6 @@ npm run dev
 | ⚙️  | `npm run build`          | Comprueba posibles errores y hace un empaquetado de producción en `./dist/`.      |
 | ⚙️  | `npm run preview`        | Vista previa en local `localhost:4321` |
 
-## 🔑 Licencia
+## Licencia
 
-[MIT](LICENSE.txt) - Creado por [**midudev**](https://midu.dev).
+[MIT](https://github.com/Xeuz27/CV.me/blob/main/LICENSE.TXT) - Creado por [**midudev**](https://midu.dev).
