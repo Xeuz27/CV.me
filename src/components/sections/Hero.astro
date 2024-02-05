@@ -1,0 +1,110 @@
+---
+import { basics } from "@cv";
+const { name, label, email, phone, url, location, profiles } = basics;
+const { city, region } = location;
+import img from "../../images/me.jpg";
+import { Image } from "astro:assets";
+import Section from "@components/Section.astro";
+
+import Mail from "@icons/Mail.astro";
+import Phone from "@icons/Phone.astro";
+import Linkedin from "@icons/Linkedin.astro";
+import Github from "@icons/Github.astro";
+import World from "@icons/World.astro";
+import X from "@icons/X.astro";
+import Web from "@icons/Website.astro";
+
+import type { SocialIcon } from "@types";
+
+const SOCIAL_ICONS: SocialIcon = {
+  Github,
+  Linkedin,
+  X,
+};
+---
+
+<Section>
+  <div class="flex items-center justify-between gap-4">
+    <div class="flex flex-col gap-2 pr-8">
+      <h1 class="text-4xl font-bold">{name}</h1>
+      <h2 class="text-balance text-lg font-medium leading-tight">{label}</h2>
+      <span class="flex items-center gap-2 text-[0.85rem]">
+        <World />
+        {city}, {region}
+      </span>
+      <footer class="mt-2 flex gap-4 text-[#888]">
+        {
+          email && (
+            <a
+              href={`mailto:${email}`}
+              title={`enviar correo electronico a ${name} al correo ${email}`}
+              target="_blank"
+            >
+              <Mail />
+            </a>
+          )
+        }
+        {
+          phone && (
+            <a
+              href={`tel:${phone}`}
+              title={`llamar por telefono a ${name} al numero ${phone}`}
+              target="_blank"
+            >
+              <Phone />
+            </a>
+          )
+        }
+        <a
+          href={`${url}`}
+          target="_blank"
+          title={`visitar el sitio web de ${name}, ${url}`}
+        >
+          <div class="pointer-events-none">
+            <Web />
+          </div>
+        </a>
+        {
+          profiles.map(({ network, url, username }) => {
+            const Icon = SOCIAL_ICONS[network];
+            return (
+              <a
+                href={url}
+                title={`visitar el perfil de ${name} en ${network}`}
+                target="_blank"
+              >
+                <div class="pointer-events-none">
+                  <Icon />
+                </div>
+              </a>
+            );
+          })
+        }
+      </footer>
+    </div>
+    <figure class="flex h-full w-[200px] items-center">
+      <Image
+        width="400"
+        class="aspect-square w-32 rounded-md object-cover"
+        src={img}
+        alt=`image of ${name}`
+        title=`image of ${name}`
+      />
+    </figure>
+  </div>
+</Section>
+<style>
+  footer a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #393939;
+    padding: 4px;
+    border-radius: 6px;
+    transition: all 0.5s ease;
+  }
+  footer a:hover {
+    background-color: #383838;
+    border: 1px solid #888;
+  }
+</style>
