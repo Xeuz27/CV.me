@@ -42,7 +42,7 @@ const printInfo = [email, phone, linkedUrl, url];
         <World />
         {city}, {region}
       </span>
-      <footer class="print flex flex-wrap gap-x-4">
+      <footer class="print flex flex-wrap gap-x-4 gap-y-[2px]">
         {printInfo.map((item) => <p class="inline-block text-xs">{item}</p>)}
       </footer>
       <footer class="no-print flex gap-4 text-[#888]">
@@ -112,7 +112,7 @@ const printInfo = [email, phone, linkedUrl, url];
   }
   @media print {
     .print {
-      display: block;
+      display: flex;
     }
     .no-print {
       display: none;
