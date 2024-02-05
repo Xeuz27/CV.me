@@ -29,10 +29,12 @@ const printInfo = [email, phone, linkedUrl, url];
 
 <Section>
   <div class="flex items-center justify-between gap-4">
-    <div class="flex flex-col gap-2 pr-8 print:text-stone-700">
-      <h1 class="text-4xl font-bold text-inherit print:text-2xl">{name}</h1>
+    <div class="flex flex-col gap-2 pr-8 print:gap-1 print:text-stone-700">
+      <h1 class="text-4xl font-bold print:text-2xl print:text-inherit">
+        {name}
+      </h1>
       <h2
-        class="text-balance text-lg font-medium leading-tight text-inherit print:text-pretty print:text-base print:leading-none"
+        class="text-balance text-lg font-medium leading-tight print:text-pretty print:text-base print:leading-none print:text-inherit"
       >
         {label}
       </h2>
@@ -40,10 +42,10 @@ const printInfo = [email, phone, linkedUrl, url];
         <World />
         {city}, {region}
       </span>
-      <footer class="print flex flex-col">
-        {printInfo.map((item) => <p class="text-xs">{item}</p>)}
+      <footer class="print flex flex-wrap gap-x-4">
+        {printInfo.map((item) => <p class="inline-block text-xs">{item}</p>)}
       </footer>
-      <footer class="no-print mt-2 flex gap-4 text-[#888]">
+      <footer class="no-print flex gap-4 text-[#888]">
         {
           email && (
             <a
