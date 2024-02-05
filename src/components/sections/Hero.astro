@@ -21,18 +21,29 @@ const SOCIAL_ICONS: SocialIcon = {
   Linkedin,
   X,
 };
+const linkedInfo = profiles.find(({ network }) => network === "Linkedin");
+const linkedUrl = linkedInfo?.url;
+
+const printInfo = [email, phone, linkedUrl, url];
 ---
 
 <Section>
   <div class="flex items-center justify-between gap-4">
-    <div class="flex flex-col gap-2 pr-8">
-      <h1 class="text-4xl font-bold">{name}</h1>
-      <h2 class="text-balance text-lg font-medium leading-tight">{label}</h2>
+    <div class="flex flex-col gap-2 pr-8 print:text-stone-700">
+      <h1 class="text-4xl font-bold text-inherit print:text-2xl">{name}</h1>
+      <h2
+        class="text-balance text-lg font-medium leading-tight text-inherit print:text-pretty print:text-base print:leading-none"
+      >
+        {label}
+      </h2>
       <span class="flex items-center gap-2 text-[0.85rem]">
         <World />
         {city}, {region}
       </span>
-      <footer class="mt-2 flex gap-4 text-[#888]">
+      <footer class="print flex flex-col">
+        {printInfo.map((item) => <p class="text-xs">{item}</p>)}
+      </footer>
+      <footer class="no-print mt-2 flex gap-4 text-[#888]">
         {
           email && (
             <a
@@ -94,6 +105,17 @@ const SOCIAL_ICONS: SocialIcon = {
   </div>
 </Section>
 <style>
+  .print {
+    display: none;
+  }
+  @media print {
+    .print {
+      display: block;
+    }
+    .no-print {
+      display: none;
+    }
+  }
   footer a {
     display: inline-flex;
     align-items: center;
