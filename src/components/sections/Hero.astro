@@ -28,9 +28,13 @@ const printInfo = [email, phone, linkedUrl, url];
 ---
 
 <Section>
-  <div class="flex items-center justify-between gap-4">
+  <div
+    class="flex flex-col-reverse items-center justify-between gap-4 sm:flex-row"
+  >
     <div class="flex flex-col gap-2 pr-8 print:gap-1 print:text-stone-700">
-      <h1 class="text-4xl font-bold print:text-2xl print:text-inherit">
+      <h1
+        class="text-[22px] font-bold sm:text-4xl print:text-2xl print:text-inherit"
+      >
         {name}
       </h1>
       <h2
@@ -98,7 +102,7 @@ const printInfo = [email, phone, linkedUrl, url];
     <figure class="flex h-full w-[200px] items-center">
       <Image
         width="400"
-        class="aspect-square w-32 rounded-md object-cover"
+        class="aspect-square w-full rounded-md object-cover sm:w-32"
         src={img}
         alt=`image of ${name}`
         title=`image of ${name}`

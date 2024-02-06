@@ -56,14 +56,17 @@ const profilesInfo = profiles.map(({ network, url }) => {
 <footer
   class="fixed bottom-0 w-full border-t-2 border-stone-600 bg-[#2a2a2a] py-2 print:hidden"
 >
-  <div class="text-center">
+  <div class="hidden text-center sm:block">
     <p>
       Pulsa <kbd>Ctrl</kbd> + <kbd>K</kbd> para abrir la paleta de comandos
     </p>
   </div>
+  <div data-click-handler class="text-center sm:hidden">
+    <p>Pulsa aqui para abrir la paleta de comandos</p>
+  </div>
 </footer>
-<ninja-keys data-info={JSON.stringify(profilesInfo)} class="print:hidden"
-></ninja-keys>
+<ninja-keys data-info={JSON.stringify(profilesInfo)} class="dark print:hidden">
+</ninja-keys>
 <script>
   import "ninja-keys";
   const ninja = document.querySelector("ninja-keys");
@@ -96,6 +99,13 @@ const profilesInfo = profiles.map(({ network, url }) => {
       ...data,
     ];
   }
+  const open = () => {
+    ninja?.open();
+  };
+  const kbClickHandler = document.querySelectorAll("[data-click-handler]");
+  kbClickHandler.forEach((div) => {
+    div.addEventListener("click", () => open());
+  });
 </script>
 <style>
   kbd {
@@ -118,5 +128,12 @@ const profilesInfo = profiles.map(({ network, url }) => {
     animation: linear 2s fadeIn;
     animation-timeline: --revealing;
     animation-range: entry 100% cover 10%;
+  }
+  ninja-keys {
+    --ninja-width: calc(100% - 3rem);
+  }
+  .modal-footer {
+    flex-wrap: wrap !important;
+    background: rgb(25, 25, 25);
   }
 </style>
