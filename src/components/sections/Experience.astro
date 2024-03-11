@@ -1,16 +1,18 @@
 ---
 import Section from "@components/Section.astro";
 import { work } from "@cv";
+import { format } from "@formkit/tempo"
 ---
 
 <Section title="Experiencia Laboral">
   <ul class="flex flex-col gap-6">
     {
       work.map(({ name, position, startDate, endDate, summary }) => {
-        const startYear = new Date(startDate).getFullYear();
-        const endYear =
-          endDate !== null ? new Date(endDate).getFullYear() : "Actual";
-        const years = `${startYear} - ${endYear}`;
+        const startYear = new Date(startDate);
+        const endYear = new Date(endDate);
+        let formattedStartYear = format(startYear, "MMM, YYYY")
+        let formattedEndYear = format(endYear, "MMM, YYYY")
+        const years = `${formattedStartYear} | ${formattedEndYear}`;
         return (
           <li class="">
             <article>
@@ -24,7 +26,7 @@ import { work } from "@cv";
                   </h4>
                 </div>
 
-                <time class="text-sm leading-9 sm:text-lg" datetime="">
+                <time class="text-sm leading-9 sm:text-lg">
                   {years}
                 </time>
               </header>
