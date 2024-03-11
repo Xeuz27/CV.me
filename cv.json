@@ -37,8 +37,8 @@
       "name": "Technolog.ch",
       "position": "Fullstack Software Developer Jr",
       "url": "https://www.technolog.ch/",
-      "startDate": "2023-05",
-      "endDate": "2023-11",
+      "startDate": "2023-04",
+      "endDate": "2024-01",
       "summary": "Implementé con éxito la inteligencia artificial para recortar el tiempo necesario para construir un backend utilizando ChatGpt. el backend se desarrolló utilizando programacion orientada a objetos con c#, el marco de trabajo .net Core y Swagger para la documentacion de la Api Rest",
       "highlights": ["Started the company"]
     },
@@ -47,7 +47,7 @@
       "position": "Freelance Front-End Developer",
       "url": "https://www.teslamediagroup.com/",
       "startDate": "2022-10",
-      "endDate": "2023-01",
+      "endDate": "2023-03",
       "summary": "Transcribí documentos de texto con optimización SEO para el sistema de gestión de contenidos (CMS) Joomla, que opera bajo el lenguaje de PHP. estos documentos eran artículos de blog orientados a mejorar el posicionamiento en motores de búsqueda, generando así un mayor tráfico mensual de visitantes que eventualmente se convertiian en ventas.",
       "highlights": ["Started the company"]
     }
@@ -214,6 +214,7 @@
     },
     {
       "name": "Sumz-ai",
+      "show": false,
       "description": "aplicacion para extraer informacion de un articulo de internet usando un endpoint de rapidApi para luego resumirlos usando chatgpt",
       "highlights": ["App", "OpenAi", "Open Source"],
       "url": "https://sumz-ai.vercel.app/",
@@ -222,6 +223,7 @@
     },
     {
       "name": "Hoobank",
+      "show": false,
       "description": "Landing page moderna siguiendo el tutorial de Js Mastery",
       "highlights": ["Landing page", "Modern UI", "Open Source"],
       "url": "https://hoobank-modern-ui-landing-page.vercel.app/",
