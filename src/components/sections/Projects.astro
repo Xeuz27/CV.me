@@ -6,7 +6,8 @@ import { projects } from "@cv";
 <Section classes="print:mt-24" title="Proyectos">
   <ul class="grid-cols-responsive grid gap-4 print:mx-[-16px]">
     {
-      projects.map(({ url, description, highlights, name, isActive }) => {
+      projects.map(({ url, description, highlights, name, isActive, show = true }) => {
+        if (!show) return
         return (
           <li class="border border-gray-200/80 print:border-transparent">
             <article class="flex h-full flex-col gap-4 rounded-sm p-4">
