@@ -1,0 +1,17 @@
+---
+import { getLangFromUrl } from "../../src/utils/i18n";
+const lang = getLangFromUrl(Astro.url);
+const url = lang === "" ? "/es" : "/";
+import Translate from "../components/icons/translate.astro";
+---
+
+<div class="absolute right-5 top-5 print:hidden">
+  <a
+    href={url}
+    title={`${lang === "" ? "Traducir al Español" : " Translate to English"}`}
+    class="flex gap-1 text-3xl uppercase text-white"
+  >
+    <Translate classes="size-7 mt-[2.5px] text-white pointer-events-none" />
+    {lang === "" ? "Es" : "En"}
+  </a>
+</div>
