@@ -1,5 +1,6 @@
 ---
-import { basics } from "@cv";
+import { getI18N } from "../../utils/i18n";
+const { basics } = getI18N(Astro.currentLocale);
 const { name, label, email, phone, url, location, profiles } = basics;
 const { city, region } = location;
 import img from "../../images/me.jpg";
