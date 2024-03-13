@@ -1,0 +1,27 @@
+---
+import Layout from "@layouts/Layout.astro";
+
+import About from "@components/sections/About.astro";
+import Education from "@components/sections/Education.astro";
+import Experience from "@components/sections/Experience.astro";
+import Hero from "@components/sections/Hero.astro";
+import Projects from "@components/sections/Projects.astro";
+import Skills from "@components/sections/Skills.astro";
+import KeyboardManager from "@components/KeyboardManager.astro";
+---
+
+<Layout
+  title="Jesus gutierrez • Desarrollador y Programador Web FullStack • Curriculum"
+  description="Contrata a yidev27 para crear tu Pagina web. Desarrollador de paginas y aplicaciones webs. Comprometido en impulsar el avance tecnológico, mi enfoque está en liderar a emprendedores y pequeños empresarios hacia nuevas perspectivas de éxito en el ámbito digital. Brindando conocimientos y estrategias para destacar y prosperar en el mundo tecnológico."
+  ogImage="https://ik.imagekit.io/0oguwfou0i/yi-printable-portfolio?updatedAt=1707175630120"
+>
+  <main class="container mx-auto p-4 sm:p-16">
+    <Hero />
+    <About />
+    <Experience />
+    <Education />
+    <Skills />
+    <Projects />
+  </main>
+  <KeyboardManager />
+</Layout>
