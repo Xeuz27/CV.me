@@ -1,17 +1,20 @@
 ---
+import { getI18N, getLangFromUrl } from "../../utils/i18n";
+const { work } = getI18N(Astro.currentLocale);
+const lang = getLangFromUrl(Astro.url);
+
 import Section from "@components/Section.astro";
-import { work } from "@cv";
-import { format } from "@formkit/tempo"
+import { format } from "@formkit/tempo";
 ---
 
-<Section title="Experiencia Laboral">
+<Section title={lang === "" ? "Experience" : `Experiencia Laboral`}>
   <ul class="flex flex-col gap-6">
     {
       work.map(({ name, position, startDate, endDate, summary }) => {
         const startYear = new Date(startDate);
         const endYear = new Date(endDate);
-        let formattedStartYear = format(startYear, "MMM, YYYY")
-        let formattedEndYear = format(endYear, "MMM, YYYY")
+        let formattedStartYear = format(startYear, "MMM, YYYY");
+        let formattedEndYear = format(endYear, "MMM, YYYY");
         const years = `${formattedStartYear} | ${formattedEndYear}`;
         return (
           <li class="">
@@ -26,9 +29,7 @@ import { format } from "@formkit/tempo"
                   </h4>
                 </div>
 
-                <time class="text-sm leading-9 sm:text-lg">
-                  {years}
-                </time>
+                <time class="text-sm leading-9 sm:text-lg">{years}</time>
               </header>
 
               <footer>
