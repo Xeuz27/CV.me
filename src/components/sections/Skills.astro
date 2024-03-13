@@ -1,9 +1,11 @@
 ---
 import Section from "@components/Section.astro";
-import { hardSkills } from "@cv";
+import { hardSkills } from "@data/cv.json";
+import { getLangFromUrl } from "../../utils/i18n";
+const lang = getLangFromUrl(Astro.url);
 ---
 
-<Section title="Habilidades">
+<Section title={lang === "" ? "Skills" : `Habilidades`}>
   <ul class="inline-flex flex-wrap gap-2">
     {
       hardSkills.map(({ name }) => (

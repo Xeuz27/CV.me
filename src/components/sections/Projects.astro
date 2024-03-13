@@ -1,46 +1,53 @@
 ---
 import Section from "@components/Section.astro";
-import { projects } from "@cv";
+const { projects } = getI18N(Astro.currentLocale);
+
+import { getI18N, getLangFromUrl } from "../../utils/i18n";
+const lang = getLangFromUrl(Astro.url);
 ---
 
-<Section classes="print:mt-24" title="Proyectos">
-  <ul class="grid-cols-responsive grid gap-4 print:mx-[-16px]">
+<Section classes="print:mt-24" title={lang === "" ? "Projects" : `Proyectos`}>
+  <ul class="grid grid-cols-responsive gap-4 print:mx-[-16px]">
     {
-      projects.map(({ url, description, highlights, name, isActive, show = true }) => {
-        if (!show) return
-        return (
-          <li class="border border-gray-200/80 print:border-transparent">
-            <article class="flex h-full flex-col gap-4 rounded-sm p-4">
-              <header class="flex-1">
-                <h3 class="mb-1 text-lg font-medium print:text-stone-700/80">
-                  <a
-                    class="hover:underline"
-                    href={url}
-                    target="_blank"
-                    title={`ver proyecto ${name}`}
-                  >
-                    {name}
-                  </a>
-                  {isActive && (
-                    <span class="text-2xl leading-none text-green-700">
-                      &bull;
-                    </span>
-                  )}
-                </h3>
+      projects.map(
+        ({ url, description, highlights, name, isActive, show = true }) => {
+          if (!show) return;
+          return (
+            <li class="border border-gray-200/80 print:border-transparent">
+              <article class="flex h-full flex-col gap-4 rounded-sm p-4">
+                <header class="flex-1">
+                  <h3 class="mb-1 text-lg font-medium print:text-stone-700/80">
+                    <a
+                      class="hover:underline"
+                      href={url}
+                      target="_blank"
+                      title={`ver proyecto ${name}`}
+                    >
+                      {name}
+                    </a>
+                    {isActive && (
+                      <span class="text-2xl leading-none text-green-700">
+                        &bull;
+                      </span>
+                    )}
+                  </h3>
 
-                <p class="mb-1 text-[0.8rem] leading-[1.1rem]">{description}</p>
-              </header>
-              <footer class="flex flex-wrap gap-2 text-xs">
-                {highlights.map((highlight) => (
-                  <span class="rounded-md bg-stone-700/40 px-[0.6rem] py-[0.2rem] font-medium print:bg-stone-200/60">
-                    {highlight}
-                  </span>
-                ))}
-              </footer>
-            </article>
-          </li>
-        );
-      })
+                  <p class="mb-1 text-[0.8rem] leading-[1.1rem]">
+                    {description}
+                  </p>
+                </header>
+                <footer class="flex flex-wrap gap-2 text-xs">
+                  {highlights.map((highlight) => (
+                    <span class="rounded-md bg-stone-700/40 px-[0.6rem] py-[0.2rem] font-medium print:bg-stone-200/60">
+                      {highlight}
+                    </span>
+                  ))}
+                </footer>
+              </article>
+            </li>
+          );
+        }
+      )
     }
   </ul>
 </Section>
