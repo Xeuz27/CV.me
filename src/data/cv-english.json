@@ -1,0 +1,246 @@
+{
+  "basics": {
+    "name": "Jesús Alejandro Gutiérrez",
+    "label": "Fullstack Developer with 2 years plus experience creating web pages and apps with React",
+    "image": "../../images/me.jpg",
+    "email": "yidev27@gmail.com",
+    "phone": "+58 (414) 617-2019",
+    "url": "https://xeuz27.github.io/yidev.io/",
+    "summary": "Committed to boost technological advancement, my focus is on leading entrepreneurs and small business owners towards new perspectives of success in the digital field. Providing knowledge and strategies to stand out and thrive in the technological world.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Maracaibo",
+      "countryCode": "Ve",
+      "region": "Venezuela"
+    },
+    "profiles": [
+      {
+        "network": "Github",
+        "username": "xeuz27",
+        "url": "https://github.com/Xeuz27"
+      },
+      {
+        "network": "Linkedin",
+        "username": "yi-dev",
+        "url": "https://www.linkedin.com/in/yi-dev/"
+      },
+      {
+        "network": "X",
+        "username": "yidev27",
+        "url": "https://twitter.com/yidev27"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Technolog.ch",
+      "position": "Fullstack Software Developer Jr",
+      "url": "https://www.technolog.ch/",
+      "startDate": "2023-04",
+      "endDate": "2024-01",
+      "summary": "Successfully implemented artificial intelligence to cut the time needed to build a backend using ChatGpt. The backend was developed using object-oriented programming with C#, the .net Core framework and Swagger for the Rest API documentation.",
+      "highlights": ["Started the company"]
+    },
+    {
+      "name": "Tesla Media Group",
+      "position": "Freelance Front-End Developer",
+      "url": "https://www.teslamediagroup.com/",
+      "startDate": "2022-10",
+      "endDate": "2023-03",
+      "summary": "Transcribed text documents with SEO for the Joomla content management system (CMS), which operates under the PHP language. These documents were blog articles aimed at improving search engine positioning, thus generating greater monthly traffic of visitors that eventually converted into sales.",
+      "highlights": ["Started the company"]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Organization",
+      "position": "Volunteer",
+      "url": "https://organization.com/",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
+      "summary": "Description…",
+      "highlights": ["Awarded 'Volunteer of the Month'"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University",
+      "url": "https://institution.com/",
+      "area": "Software Development",
+      "studyType": "Bachelor",
+      "startDate": "2011-01-01",
+      "endDate": "2013-01-01",
+      "score": "4.0",
+      "courses": ["DB1101 - Basic SQL"]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Award",
+      "date": "2014-11-01",
+      "awarder": "Company",
+      "summary": "There is no spoon."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Certificate",
+      "date": "2021-11-07",
+      "issuer": "Company",
+      "url": "https://certificate.com"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Publication",
+      "publisher": "Company",
+      "releaseDate": "2014-10-01",
+      "url": "https://publication.com",
+      "summary": "Description…"
+    }
+  ],
+  "softSkills": [
+    {
+      "name": "Web Development",
+      "level": "Master",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    }
+  ],
+  "hardSkills": [
+    {
+      "name": "Html",
+      "level": "Master",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "name": "Css",
+      "level": "Master",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "name": "TailwindCSS",
+      "level": "Master",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "name": "Javascript",
+      "level": "Master",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "name": "ReactJs",
+      "level": "Master",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "name": "NodeJS",
+      "level": "Master",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "name": "ExpressJS",
+      "level": "Master",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "name": "Astro",
+      "level": "Master",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "name": "Github",
+      "level": "Master",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "name": "Mysql",
+      "level": "Master",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "name": "Firebase",
+      "level": "Master",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "advanced"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Wildlife",
+      "keywords": ["Ferrets", "Unicorns"]
+    }
+  ],
+  "references": [
+    {
+      "name": "Jane Doe",
+      "reference": "Reference…"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Petit Prime Solutions",
+      "isActive": true,
+      "description": "Landing page type website for construction-repair services company",
+      "highlights": ["Astro", "SEO", "Landing page"],
+      "url": "https://petit-prime-solutions.vercel.app/"
+    },
+    {
+      "name": "Yidev.io",
+      "description": "Minimal alternative to linktree with SEO integrations",
+      "highlights": ["Landing page", "Linktree", "Open Source", "SEO"],
+      "url": "https://xeuz27.github.io/yidev.io/",
+      "github": "https://github.com/Xeuz27/yidev.io",
+      "isActive": true
+    },
+    {
+      "name": "Astro-Ecommerce",
+      "description": "Ecommerce Website for NvStore made with Astro and ReactJS",
+      "highlights": [
+        "Ecommerce",
+        "Astro",
+        "Astro Islands",
+        "ReactJS",
+        "In development"
+      ],
+      "url": "https://astro-nvstore.vercel.app/",
+      "isActive": true
+    },
+    {
+      "name": "NvStore",
+      "description": "Ecommerce website for NvStore with admin-dashboard to upload products and orders/shipping management",
+      "highlights": [
+        "ReactJS",
+        "ReactContext",
+        "firebase storage",
+        "Realtime database",
+        "En desarrollo"
+      ],
+      "url": "https://nvstore.vercel.app",
+      "isActive": true
+    },
+    {
+      "name": "Sumz-ai",
+      "show": false,
+      "description": "aplicacion para extraer informacion de un articulo de internet usando un endpoint de rapidApi para luego resumirlos usando chatgpt",
+      "highlights": ["App", "OpenAi", "Open Source"],
+      "url": "https://sumz-ai.vercel.app/",
+      "github": "https://github.com/Xeuz27/sumz-ai",
+      "isActive": true
+    },
+    {
+      "name": "Hoobank",
+      "show": false,
+      "description": "Landing page moderna siguiendo el tutorial de Js Mastery",
+      "highlights": ["Landing page", "Modern UI", "Open Source"],
+      "url": "https://hoobank-modern-ui-landing-page.vercel.app/",
+      "github": "https://github.com/Xeuz27/hoobank_modern_ui_landing_page",
+      "isActive": true
+    }
+  ]
+}
