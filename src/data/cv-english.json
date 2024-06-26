@@ -37,8 +37,8 @@
       "name": "Technolog.ch",
       "position": "Fullstack Software Developer Jr",
       "url": "https://www.technolog.ch/",
-      "startDate": "2023-04",
-      "endDate": "2024-01",
+      "startDate": "2023-05",
+      "endDate": "2023-11",
       "summary": "Successfully implemented artificial intelligence to cut the time needed to build a backend using ChatGpt. The backend was developed using object-oriented programming with C#, the .net Core framework and Swagger for the Rest API documentation.",
       "highlights": ["Started the company"]
     },
@@ -47,7 +47,7 @@
       "position": "Freelance Front-End Developer",
       "url": "https://www.teslamediagroup.com/",
       "startDate": "2022-10",
-      "endDate": "2023-03",
+      "endDate": "2023-1",
       "summary": "Transcribed text documents with SEO for the Joomla content management system (CMS), which operates under the PHP language. These documents were blog articles aimed at improving search engine positioning, thus generating greater monthly traffic of visitors that eventually converted into sales.",
       "highlights": ["Started the company"]
     }
@@ -219,7 +219,7 @@
         "ReactContext",
         "firebase storage",
         "Realtime database",
-        "En desarrollo"
+        "In development"
       ],
       "url": "https://nvstore.vercel.app",
       "isActive": true

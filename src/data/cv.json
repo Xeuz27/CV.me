@@ -37,8 +37,8 @@
       "name": "Technolog.ch",
       "position": "Fullstack Software Developer Jr",
       "url": "https://www.technolog.ch/",
-      "startDate": "2023-04",
-      "endDate": "2024-01",
+      "startDate": "2023-05",
+      "endDate": "2023-11",
       "summary": "Implementé con éxito la inteligencia artificial para recortar el tiempo necesario para construir un backend utilizando ChatGpt. el backend se desarrolló utilizando programacion orientada a objetos con c#, el marco de trabajo .net Core y Swagger para la documentacion de la Api Rest",
       "highlights": ["Started the company"]
     },
@@ -47,7 +47,7 @@
       "position": "Freelance Front-End Developer",
       "url": "https://www.teslamediagroup.com/",
       "startDate": "2022-10",
-      "endDate": "2023-03",
+      "endDate": "2023-01",
       "summary": "Transcribí documentos de texto con SEO para el sistema de gestión de contenidos (CMS) Joomla, que opera bajo el lenguaje de PHP. estos documentos eran artículos de blog orientados a mejorar el posicionamiento en motores de búsqueda, generando así un mayor tráfico mensual de visitantes que eventualmente se convertiian en ventas.",
       "highlights": ["Started the company"]
     }
@@ -186,8 +186,8 @@
     {
       "name": "Petit Prime Solutions",
       "isActive": true,
-      "description": "Pagina web tipo landing page con blog integrado para empresa de servicios de construccion-reparaciones",
-      "highlights": ["En desarrollo", "SEO", "Landing page", "Blog"],
+      "description": "Pagina web tipo landing page para empresa de servicios de construccion-reparaciones",
+      "highlights": ["SEO", "Landing page", "Astro"],
       "url": "https://petit-prime-solutions.vercel.app/"
     },
     {
@@ -201,14 +201,26 @@
     {
       "name": "Astro-NvStore",
       "description": "Ecommerce para NvStore hecho con Astro y ReactJS",
-      "highlights": ["Ecommerce", "En desarrollo"],
+      "highlights": [
+        "Ecommerce",
+        "Astro",
+        "Astro Islands",
+        "ReactJS",
+        "En desarrollo"
+      ],
       "url": "https://astro-nv-store.vercel.app/",
       "isActive": true
     },
     {
       "name": "NvStore",
       "description": "Ecommerce para NvStore con admin-dashboard para la carga de productos y manejo de ordenes/compras",
-      "highlights": ["Ecommerce", "En desarrollo"],
+      "highlights": [
+        "ReactJS",
+        "ReactContext",
+        "firebase storage",
+        "Realtime database",
+        "En desarrollo"
+      ],
       "url": "https://nvstore.vercel.app",
       "isActive": true
     },
