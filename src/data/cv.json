@@ -199,11 +199,12 @@
       "isActive": true
     },
     {
-      "name": "Astro-NvStore",
+      "name": "Astro-Ecommerce",
       "description": "Ecommerce para NvStore hecho con Astro y ReactJS",
       "highlights": [
         "Ecommerce",
         "Astro",
+        "SEO",
         "Astro Islands",
         "ReactJS",
         "En desarrollo"
@@ -215,6 +216,7 @@
       "name": "NvStore",
       "description": "Ecommerce para NvStore con admin-dashboard para la carga de productos y manejo de ordenes/compras",
       "highlights": [
+        "App",
         "ReactJS",
         "ReactContext",
         "firebase storage",
@@ -222,6 +224,21 @@
         "En desarrollo"
       ],
       "url": "https://nvstore.vercel.app",
+      "isActive": true
+    },
+    {
+      "name": "Shoppi",
+      "description": "sitio web Ecommerce con Interfaz de usuario intuitiva y adaptable a dispositivos moviles que envia las ordenes a un numero de Telefono de Whatsapp",
+      "highlights": [
+        "ReactJS",
+        "ReactContext",
+        "App",
+        "UX",
+        "Modern UI",
+        "firebase",
+        "Realtime database"
+      ],
+      "url": "https://dark-shoppi.vercel.app/shop",
       "isActive": true
     },
     {
