@@ -191,6 +191,21 @@
       "url": "https://petit-prime-solutions.vercel.app/"
     },
     {
+      "name": "Shoppi",
+      "description": "Mobile responsive ecommerce website with intuitive UX that payloads purchase orders to a Whatsapp phone Number",
+      "highlights": [
+        "ReactJS",
+        "ReactContext",
+        "App",
+        "UX",
+        "Modern UI",
+        "firebase",
+        "Realtime database"
+      ],
+      "url": "https://dark-shoppi.vercel.app/shop",
+      "isActive": true
+    },
+    {
       "name": "Yidev.io",
       "description": "Minimal alternative to linktree with SEO integrations",
       "highlights": ["Landing page", "Linktree", "Open Source", "SEO"],
@@ -224,21 +239,6 @@
         "In development"
       ],
       "url": "https://nvstore.vercel.app",
-      "isActive": true
-    },
-    {
-      "name": "Shoppi",
-      "description": "Mobile responsive ecommerce website with intuitive UX that payloads orders to a Whatsapp phone Number",
-      "highlights": [
-        "ReactJS",
-        "ReactContext",
-        "App",
-        "UX",
-        "Modern UI",
-        "firebase",
-        "Realtime database"
-      ],
-      "url": "https://dark-shoppi.vercel.app/shop",
       "isActive": true
     },
     {

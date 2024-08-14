@@ -191,11 +191,18 @@
       "url": "https://petit-prime-solutions.vercel.app/"
     },
     {
-      "name": "Yidev.io",
-      "description": "Alternativa minimalista para linktree con integraciones de SEO",
-      "highlights": ["Landing page", "Linktree", "Open Source", "SEO"],
-      "url": "https://xeuz27.github.io/yidev.io/",
-      "github": "https://github.com/Xeuz27/yidev.io",
+      "name": "Shoppi",
+      "description": "sitio web Ecommerce con Interfaz de usuario intuitiva y adaptable a dispositivos moviles que envia las ordenes de compra a un numero de Telefono de Whatsapp",
+      "highlights": [
+        "ReactJS",
+        "ReactContext",
+        "App",
+        "UX",
+        "Modern UI",
+        "firebase",
+        "Realtime database"
+      ],
+      "url": "https://dark-shoppi.vercel.app/shop",
       "isActive": true
     },
     {
@@ -209,7 +216,7 @@
         "ReactJS",
         "En desarrollo"
       ],
-      "url": "https://astro-nv-store.vercel.app/",
+      "url": "https://astro-nvstore.vercel.app/",
       "isActive": true
     },
     {
@@ -227,18 +234,11 @@
       "isActive": true
     },
     {
-      "name": "Shoppi",
-      "description": "sitio web Ecommerce con Interfaz de usuario intuitiva y adaptable a dispositivos moviles que envia las ordenes a un numero de Telefono de Whatsapp",
-      "highlights": [
-        "ReactJS",
-        "ReactContext",
-        "App",
-        "UX",
-        "Modern UI",
-        "firebase",
-        "Realtime database"
-      ],
-      "url": "https://dark-shoppi.vercel.app/shop",
+      "name": "Yidev.io",
+      "description": "Alternativa minimalista para linktree con integraciones de SEO",
+      "highlights": ["Landing page", "Linktree", "Open Source", "SEO"],
+      "url": "https://xeuz27.github.io/yidev.io/",
+      "github": "https://github.com/Xeuz27/yidev.io",
       "isActive": true
     },
     {
