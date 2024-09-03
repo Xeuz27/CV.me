@@ -6,7 +6,7 @@ export interface Props {
 }
 
 const { title, description, ogImage } = Astro.props;
-// const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const socialImageURL = new URL(ogImage ? ogImage : "/open-graph.png", Astro.url)
   .href;
 
@@ -20,7 +20,16 @@ const siteTitle = `${title}`;
 <meta name="generator" content={Astro.generator} />
 
 <!-- Canonical URL -->
-<!-- <link rel="canonical" href={canonicalURL} /> -->
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Alternate Links -->
+<link
+  rel="alternate"
+  href="https://cv-me-zeta.vercel.app/"
+  hreflang="x-default"
+/>
+<link rel="alternate" href="https://cv-me-zeta.vercel.app/" hreflang="en" />
+<link rel="alternate" href="https://cv-me-zeta.vercel.app/es" hreflang="es" />
 
 <!-- Primary Meta Tags -->
 <title>{siteTitle}</title>
@@ -29,6 +38,11 @@ const siteTitle = `${title}`;
 <meta name="revisit-after" content="7 days" />
 <meta name="googlebot" content="index, follow" />
 
+<!-- Google Search Console Site Verification -->
+<meta
+  name="google-site-verification"
+  content="bxQs-Kba1ZgsizXREjb3G33B0b9s2QRRbjkITeuFToo"
+/>
 <!-- SEO -->
 <meta name="title" content={siteTitle} />
 <meta name="description" content={description} />
