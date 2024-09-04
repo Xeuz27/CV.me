@@ -6,10 +6,9 @@ export interface Props {
 }
 
 const { title, description, ogImage } = Astro.props;
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const canonicalURL = new URL("https://cv-me-zeta.vercel.app/");
 const socialImageURL = new URL(ogImage ? ogImage : "/open-graph.png", Astro.url)
   .href;
-
 const siteTitle = `${title}`;
 ---
 
@@ -49,7 +48,7 @@ const siteTitle = `${title}`;
 <meta name="author" content="Yidev27" />
 <meta
   name="keywords"
-  content="Desarrollador, Developer, Freelancer, Programador, Web, Apps, Javascript, ReactJS, Astro"
+  content="Desarrollador Web, Web Developer, Consultor Web, Freelancer, Programador, Web, Apps, Javascript, ReactJS, Astro, Paginas Web, Maracaibo"
 />
 
 <!-- Open Graph / Facebook -->
