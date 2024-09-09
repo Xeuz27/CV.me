@@ -3,6 +3,7 @@ import Layout from "@layouts/Layout.astro";
 
 import KeyboardManager from "@components/KeyboardManager.astro";
 import About from "@components/sections/About.astro";
+import Contact from "@components/sections/Contact.astro";
 import Education from "@components/sections/Education.astro";
 import Experience from "@components/sections/Experience.astro";
 import Hero from "@components/sections/Hero.astro";
@@ -15,8 +16,9 @@ import Skills from "@components/sections/Skills.astro";
   description="Hire yidev27 To create your Website. App and Websites Developer. Committed to boost technological advancement, my focus is on leading entrepreneurs and small business owners towards new perspectives of success in the digital field. Providing knowledge and strategies to stand out and thrive in the technological world."
   ogImage="https://ik.imagekit.io/0oguwfou0i/yi-printable-portfolio?updatedAt=1707175630120"
 >
-  <main class="container mx-auto p-4 sm:p-16">
+  <main class="container mx-auto p-4 sm:p-16 print:p-0">
     <Hero />
+    <Contact />
     <About />
     <Experience />
     <Education />
