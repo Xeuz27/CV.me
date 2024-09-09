@@ -1,0 +1,187 @@
+---
+import Section from "@components/Section.astro";
+
+import Github from "@icons/Github.astro";
+import Linkedin from "@icons/Linkedin.astro";
+import Mail from "@icons/Mail.astro";
+import Web from "@icons/Website.astro";
+import Whatsapp from "@icons/Whatsapp.astro";
+import X from "@icons/X.astro";
+
+import { getI18N, getLangFromUrl } from "@utils/i18n";
+
+import type { SocialIcon } from "@types";
+
+const SOCIAL_ICONS: SocialIcon = {
+  Github,
+  Linkedin,
+  X
+};
+const { basics } = getI18N(Astro.currentLocale);
+const { name, email, phone, url, profiles } = basics;
+
+const lang = getLangFromUrl(Astro.url);
+
+const linkedinInfo = profiles.find(({ network }) => network === "Linkedin");
+const linkedinUrl = {
+  label: "Linkedin",
+  href: linkedinInfo?.url,
+  data: linkedinInfo?.url
+};
+const githubInfo = profiles.find(({ network }) => network === "Github");
+const githubUrl = {
+  label: "Github",
+  href: githubInfo?.url,
+  data: githubInfo?.username
+};
+
+const printInfo = [phone, email, githubUrl, url, linkedinUrl];
+---
+
+<Section title={lang === "" ? "Contact Me" : `Contactos`}>
+  <footer class="hidden print:flex print:p-0">
+    <ul
+      class="flex w-full flex-col gap-y-[2px] divide-y-[1px] divide-[#424242] print:divide-[#bababa]"
+    >
+      {
+        printInfo.map(({ label, href, data }) => (
+          <li class="flex items-center justify-between text-xs sm:text-base">
+            <span>{label}:</span>
+            <a target="_blank" rel="nofollow" href={href}>
+              {data}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </footer>
+  <footer class="no-print flex gap-2 text-[#888] print:hidden">
+    {
+      email && (
+        <a
+          href={email.href}
+          title={`
+            ${
+              lang == "es"
+                ? `Enviar correo electronico a ${name} al correo ${email.data}`
+                : `Send Email to ${name} at ${email.data}`
+            }
+            `}
+          target="_blank"
+          rel="nofollow"
+        >
+          <Mail />
+          <span class="sr-only">
+            {lang == "es"
+              ? `Enviar correo electronico a ${name} al correo ${email.data}`
+              : `Send Email to ${name} at ${email.data}`}
+          </span>
+        </a>
+      )
+    }
+    {
+      phone && (
+        <a
+          href="https://wa.me/4146172019?text=Hola,Vi%20tu%20curriculum%20y%20me%20interesa%20recibir%20un%20estimado"
+          title={`
+            ${
+              lang === "es"
+                ? `Hola, Vi tu Curriculum y... me interesa recibir un estimado. al Whatsapp de ${name}`
+                : `Send whatsapp: Hey i saw You CV and... i'd like to receive an estimate to ${name}`
+            }
+            
+            `}
+          target="_blank"
+        >
+          <Whatsapp />
+          <span class="sr-only">
+            {lang === "es"
+              ? `Hola, Vi tu Curriculum y... me interesa recibir un estimado. al numero de Whatsapp de ${name}`
+              : `Send whatsapp: Hey i saw You CV and... i'd like to receive an estimate to ${name}`}
+          </span>
+        </a>
+      )
+    }
+    <!-- {
+      phone && (
+        <a
+        
+          href="https://wa.me/4146172019?text=Hola,%20me%20interesa%20recibir%20un%20estimado"
+          href={phone.href}
+          title={`llamar por telefono a ${name} al Número de Teléfono ${phone.data}`}
+          target="_blank"
+        >
+          <Phone />
+        </a>
+      )
+    } -->
+    <a
+      href={`${url.href}`}
+      target="_blank"
+      rel="dofollow"
+      title={`
+      ${
+        lang === "es"
+          ? `visitar el sitio web de ${name}, ${url.data}`
+          : `Go To jesus' Website`
+      }
+      `}
+    >
+      <Web />
+      <span class="sr-only"
+        >{
+          lang === "es"
+            ? `visitar el sitio web de ${name}, ${url.data}`
+            : `Go To jesus' Website`
+        }</span
+      >
+    </a>
+    {
+      profiles.map(({ network, url, show = true }) => {
+        const Icon = SOCIAL_ICONS[network];
+        return (
+          <a
+            class={`${show === false && "!hidden"}`}
+            href={url}
+            title={`
+              ${
+                lang === "es"
+                  ? `visitar el perfil de ${name} en ${network}`
+                  : `Go to Jesus' ${network} `
+              }
+              
+              `}
+            target="_blank"
+          >
+            <Icon />
+            <span class="sr-only">
+              {lang === "es"
+                ? `visitar el perfil de ${name} en ${network}`
+                : `Go to Jesus' ${network} `}
+            </span>
+          </a>
+        );
+      })
+    }
+  </footer>
+</Section>
+<style>
+  footer.no-print a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #393939;
+    padding: 4px;
+    border-radius: 6px;
+    transition: all 0.5s ease;
+  }
+  footer.no-print a:hover {
+    background-color: #1f1f1f;
+    border: 1px solid #888;
+  }
+  footer.print li a:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-color: #888;
+  }
+</style>
