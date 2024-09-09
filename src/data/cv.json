@@ -1,12 +1,24 @@
 {
   "basics": {
-    "name": "Jesús Alejandro Gutiérrez",
+    "name": "Jesús Alejandro Gutiérrez Guevara",
+    "summary": "Comprometido en impulsar el avance tecnológico, mi enfoque está en liderar a emprendedores y pequeños empresarios hacia nuevas perspectivas de éxito en el ámbito digital. Brindando conocimientos y estrategias para destacar y prosperar en el mundo tecnológico.",
     "label": "Fullstack Developer con 2 años de experiencia creando paginas webs y aplicaciones con React",
     "image": "../../images/me.jpg",
-    "email": "yidev27@gmail.com",
-    "phone": "+58 (414) 617-2019",
-    "url": "https://xeuz27.github.io/yidev.io/",
-    "summary": "Comprometido en impulsar el avance tecnológico, mi enfoque está en liderar a emprendedores y pequeños empresarios hacia nuevas perspectivas de éxito en el ámbito digital. Brindando conocimientos y estrategias para destacar y prosperar en el mundo tecnológico.",
+    "email": {
+      "href": "mailto:yidev27@gmail.com",
+      "label": "Correo Electrónico",
+      "data": "yidev27@gmail.com"
+    },
+    "phone": {
+      "href": "tel:+58 (414) 617-2019",
+      "label": "Número de Teléfono",
+      "data": "+58 (414) 617-2019"
+    },
+    "url": {
+      "href": "https://xeuz27.github.io/yidev.io/",
+      "label": "Sitio Web",
+      "data": "xeuz27.github.io/yidev.io/"
+    },
     "location": {
       "address": "",
       "postalCode": "",
@@ -26,6 +38,7 @@
         "url": "https://www.linkedin.com/in/yi-dev/"
       },
       {
+        "show": false,
         "network": "X",
         "username": "yidev27",
         "url": "https://twitter.com/yidev27"
@@ -37,8 +50,8 @@
       "name": "Technolog.ch",
       "position": "Fullstack Software Developer Jr",
       "url": "https://www.technolog.ch/",
-      "startDate": "2023-05",
-      "endDate": "2023-11",
+      "startDate": "May, 2023",
+      "endDate": "Oct, 2023",
       "summary": "Implementé con éxito la inteligencia artificial para recortar el tiempo necesario para construir un backend utilizando ChatGpt. el backend se desarrolló utilizando programacion orientada a objetos con c#, el marco de trabajo .net Core y Swagger para la documentacion de la Api Rest",
       "highlights": ["Started the company"]
     },
@@ -46,8 +59,8 @@
       "name": "Tesla Media Group",
       "position": "Freelance Front-End Developer",
       "url": "https://www.teslamediagroup.com/",
-      "startDate": "2022-10",
-      "endDate": "2023-01",
+      "startDate": "Oct, 2023",
+      "endDate": "Ene, 2023",
       "summary": "Transcribí documentos de texto con SEO para el sistema de gestión de contenidos (CMS) Joomla, que opera bajo el lenguaje de PHP. estos documentos eran artículos de blog orientados a mejorar el posicionamiento en motores de búsqueda, generando así un mayor tráfico mensual de visitantes que eventualmente se convertirian en ventas.",
       "highlights": ["Started the company"]
     }
@@ -65,14 +78,12 @@
   ],
   "education": [
     {
-      "institution": "University",
-      "url": "https://institution.com/",
-      "area": "Software Development",
-      "studyType": "Bachelor",
-      "startDate": "2011-01-01",
-      "endDate": "2013-01-01",
-      "score": "4.0",
-      "courses": ["DB1101 - Basic SQL"]
+      "institution": "Platzi",
+      "url": "https://platzi.com/",
+      "area": "Desarrollador JavaScript Fullstack",
+      "studyType": "Ruta Profesional",
+      "startDate": "Sept, 2023",
+      "endDate": "Sept, 2024"
     }
   ],
   "awards": [
@@ -119,17 +130,12 @@
       "keywords": ["HTML", "CSS", "JavaScript"]
     },
     {
-      "name": "TailwindCSS",
-      "level": "Master",
-      "keywords": ["HTML", "CSS", "JavaScript"]
-    },
-    {
       "name": "Javascript",
       "level": "Master",
       "keywords": ["HTML", "CSS", "JavaScript"]
     },
     {
-      "name": "ReactJs",
+      "name": "Mysql",
       "level": "Master",
       "keywords": ["HTML", "CSS", "JavaScript"]
     },
@@ -144,30 +150,51 @@
       "keywords": ["HTML", "CSS", "JavaScript"]
     },
     {
+      "name": "ReactJs",
+      "level": "Master",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    },
+    {
       "name": "Astro",
       "level": "Master",
       "keywords": ["HTML", "CSS", "JavaScript"]
     },
+    {
+      "name": "TailwindCSS",
+      "level": "Master",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    },
+
     {
       "name": "Github",
       "level": "Master",
       "keywords": ["HTML", "CSS", "JavaScript"]
     },
     {
-      "name": "Mysql",
+      "name": "NPM",
+      "level": "Master",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    },
+
+    {
+      "name": "Firebase",
       "level": "Master",
       "keywords": ["HTML", "CSS", "JavaScript"]
     },
     {
-      "name": "Firebase",
+      "name": "Seo",
       "level": "Master",
       "keywords": ["HTML", "CSS", "JavaScript"]
     }
   ],
   "languages": [
     {
-      "language": "English",
-      "fluency": "Native speaker"
+      "language": "Español",
+      "fluency": "Nativo"
+    },
+    {
+      "language": "Ingles",
+      "fluency": "Fluido"
     }
   ],
   "interests": [
@@ -185,13 +212,15 @@
   "projects": [
     {
       "name": "Petit Prime Solutions",
+      "type": "Website | Landing Page",
       "isActive": true,
-      "description": "Pagina web tipo landing page para empresa de servicios de construccion-reparaciones",
-      "highlights": ["SEO", "Landing page", "Astro", "Blog"],
+      "description": "Sitio web tipo landing page para empresa de servicios de construccion-reparaciones",
+      "highlights": ["SEO", "Astro", "Blog"],
       "url": "https://petit-prime-solutions.vercel.app/"
     },
     {
       "name": "Shoppi",
+      "type": "Web App | Ecommerce",
       "description": "sitio web Ecommerce con Interfaz de usuario intuitiva y adaptable a dispositivos moviles que envia las ordenes de compra a un numero de Telefono de Whatsapp",
       "highlights": [
         "ReactJS",
@@ -207,6 +236,7 @@
     },
     {
       "name": "Astro-Ecommerce",
+      "type": "Web App | Ecommerce",
       "description": "Ecommerce para NvStore hecho con Astro y ReactJS",
       "highlights": [
         "Ecommerce",
@@ -221,6 +251,7 @@
     },
     {
       "name": "NvStore",
+      "type": "Web App | Ecommerce",
       "description": "Ecommerce para NvStore con admin-dashboard para la carga de productos y manejo de ordenes/compras",
       "highlights": [
         "App",
@@ -235,6 +266,7 @@
     },
     {
       "name": "Yidev.io",
+      "type": "Landing Page",
       "description": "Alternativa minimalista para linktree con integraciones de SEO",
       "highlights": ["Landing page", "Linktree", "Open Source", "SEO"],
       "url": "https://xeuz27.github.io/yidev.io/",

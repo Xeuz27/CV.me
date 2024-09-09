@@ -1,12 +1,24 @@
 {
   "basics": {
-    "name": "Jesús Alejandro Gutiérrez",
+    "name": "Jesús Alejandro Gutiérrez Guevara",
+    "summary": "Committed to boost technological advancement, my focus is on leading entrepreneurs and small business owners towards new perspectives of success in the digital field. Providing knowledge and strategies to stand out and thrive in the technological world.",
     "label": "Fullstack Developer with 2 years plus experience creating web pages and apps with React",
     "image": "../../images/me.jpg",
-    "email": "yidev27@gmail.com",
-    "phone": "+58 (414) 617-2019",
-    "url": "https://xeuz27.github.io/yidev.io/",
-    "summary": "Committed to boost technological advancement, my focus is on leading entrepreneurs and small business owners towards new perspectives of success in the digital field. Providing knowledge and strategies to stand out and thrive in the technological world.",
+    "email": {
+      "href": "mailto:yidev27@gmail.com",
+      "label": "Email",
+      "data": "yidev27@gmail.com"
+    },
+    "phone": {
+      "href": "tel:+58 (414) 617-2019",
+      "label": "Phone Number",
+      "data": "+58 (414) 617-2019"
+    },
+    "url": {
+      "href": "https://xeuz27.github.io/yidev.io/",
+      "label": "Website",
+      "data": "xeuz27.github.io/yidev.io/"
+    },
     "location": {
       "address": "",
       "postalCode": "",
@@ -26,6 +38,7 @@
         "url": "https://www.linkedin.com/in/yi-dev/"
       },
       {
+        "show": false,
         "network": "X",
         "username": "yidev27",
         "url": "https://twitter.com/yidev27"
@@ -37,8 +50,8 @@
       "name": "Technolog.ch",
       "position": "Fullstack Software Developer Jr",
       "url": "https://www.technolog.ch/",
-      "startDate": "2023-05",
-      "endDate": "2023-11",
+      "startDate": "May, 2023",
+      "endDate": "Nov, 2023",
       "summary": "Successfully implemented artificial intelligence to cut the time needed to build a backend using ChatGpt. The backend was developed using object-oriented programming with C#, the .net Core framework and Swagger for the Rest API documentation.",
       "highlights": ["Started the company"]
     },
@@ -46,8 +59,8 @@
       "name": "Tesla Media Group",
       "position": "Freelance Front-End Developer",
       "url": "https://www.teslamediagroup.com/",
-      "startDate": "2022-10",
-      "endDate": "2023-1",
+      "startDate": "Oct, 2023",
+      "endDate": "Ene, 2023",
       "summary": "Transcribed text documents with SEO for the Joomla content management system (CMS), which operates under the PHP language. These documents were blog articles aimed at improving search engine positioning, thus generating greater monthly traffic of visitors that eventually converted into sales.",
       "highlights": ["Started the company"]
     }
@@ -65,14 +78,12 @@
   ],
   "education": [
     {
-      "institution": "University",
-      "url": "https://institution.com/",
-      "area": "Software Development",
-      "studyType": "Bachelor",
-      "startDate": "2011-01-01",
-      "endDate": "2013-01-01",
-      "score": "4.0",
-      "courses": ["DB1101 - Basic SQL"]
+      "institution": "Platzi",
+      "url": "https://platzi.com/",
+      "area": "Fullstack JavaScript Developer",
+      "studyType": "Ruta Profesional",
+      "startDate": "Sept, 2023",
+      "endDate": "Sept, 2024"
     }
   ],
   "awards": [
@@ -119,17 +130,12 @@
       "keywords": ["HTML", "CSS", "JavaScript"]
     },
     {
-      "name": "TailwindCSS",
-      "level": "Master",
-      "keywords": ["HTML", "CSS", "JavaScript"]
-    },
-    {
       "name": "Javascript",
       "level": "Master",
       "keywords": ["HTML", "CSS", "JavaScript"]
     },
     {
-      "name": "ReactJs",
+      "name": "Mysql",
       "level": "Master",
       "keywords": ["HTML", "CSS", "JavaScript"]
     },
@@ -144,30 +150,51 @@
       "keywords": ["HTML", "CSS", "JavaScript"]
     },
     {
+      "name": "ReactJs",
+      "level": "Master",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    },
+    {
       "name": "Astro",
       "level": "Master",
       "keywords": ["HTML", "CSS", "JavaScript"]
     },
+    {
+      "name": "TailwindCSS",
+      "level": "Master",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    },
+
     {
       "name": "Github",
       "level": "Master",
       "keywords": ["HTML", "CSS", "JavaScript"]
     },
     {
-      "name": "Mysql",
+      "name": "NPM",
+      "level": "Master",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    },
+
+    {
+      "name": "Firebase",
       "level": "Master",
       "keywords": ["HTML", "CSS", "JavaScript"]
     },
     {
-      "name": "Firebase",
+      "name": "Seo",
       "level": "Master",
       "keywords": ["HTML", "CSS", "JavaScript"]
     }
   ],
   "languages": [
     {
+      "language": "Spanish",
+      "fluency": "Native"
+    },
+    {
       "language": "English",
-      "fluency": "advanced"
+      "fluency": "Fluent"
     }
   ],
   "interests": [
@@ -185,6 +212,7 @@
   "projects": [
     {
       "name": "Petit Prime Solutions",
+      "type": "Website | Landing Page",
       "isActive": true,
       "description": "Landing page type website for construction-repair services company",
       "highlights": ["Astro", "SEO", "Landing page"],
@@ -192,6 +220,7 @@
     },
     {
       "name": "Shoppi",
+      "type": "Web App | Ecommerce",
       "description": "Mobile responsive ecommerce website with intuitive UX that payloads purchase orders to a Whatsapp phone Number",
       "highlights": [
         "ReactJS",
@@ -207,6 +236,7 @@
     },
     {
       "name": "Yidev.io",
+      "type": "Landing Page",
       "description": "Minimal alternative to linktree with SEO integrations",
       "highlights": ["Landing page", "Linktree", "Open Source", "SEO"],
       "url": "https://xeuz27.github.io/yidev.io/",
@@ -215,6 +245,7 @@
     },
     {
       "name": "Astro-Ecommerce",
+      "type": "Web App | Ecommerce",
       "description": "Ecommerce Website for NvStore made with Astro and ReactJS",
       "highlights": [
         "Ecommerce",
@@ -229,6 +260,7 @@
     },
     {
       "name": "NvStore",
+      "type": "Web App | Ecommerce",
       "description": "Ecommerce website for NvStore with admin-dashboard to upload products and orders/shipping management",
       "highlights": [
         "App",
