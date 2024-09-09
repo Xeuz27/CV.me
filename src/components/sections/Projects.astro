@@ -7,11 +7,11 @@ const lang = getLangFromUrl(Astro.url);
 ---
 
 <Section
-  classes="print:mt-32"
+  classes="print:mt-1"
   title={lang === "" ? "Personal Experience" : `Experiencia Personal`}
 >
   <ul
-    class="flex flex-col gap-6 divide-y-[2px] divide-stone-700/60 pt-3 print:divide-stone-200/50"
+    class="flex flex-col gap-6 divide-y-[2px] divide-stone-700/60 pt-3 print:gap-4 print:divide-stone-200/50"
   >
     {
       projects.map(
@@ -26,7 +26,7 @@ const lang = getLangFromUrl(Astro.url);
         }) => {
           if (!show) return;
           return (
-            <li class="pt-3">
+            <li class="pt-3 print:gap-2">
               <article class="flex h-full flex-col gap-1 rounded-sm">
                 <header class="flex flex-row items-center gap-1">
                   <h4 class="text-xl font-medium text-stone-300/90 print:text-stone-700/80">
