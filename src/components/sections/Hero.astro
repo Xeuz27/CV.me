@@ -1,106 +1,40 @@
 ---
-import { getI18N } from "../../utils/i18n";
-const { basics } = getI18N(Astro.currentLocale);
-const { name, label, email, phone, url, location, profiles } = basics;
-const { city, region } = location;
-import img from "../../images/me.jpg";
-import { Image } from "astro:assets";
+import img from "@images/me.jpg";
+
+import World from "@components/icons/World.astro";
 import Section from "@components/Section.astro";
 
-import Mail from "@icons/Mail.astro";
-import Phone from "@icons/Phone.astro";
-import Linkedin from "@icons/Linkedin.astro";
-import Github from "@icons/Github.astro";
-import World from "@icons/World.astro";
-import X from "@icons/X.astro";
-import Web from "@icons/Website.astro";
+import { getI18N } from "@utils/i18n";
+import { Image } from "astro:assets";
 
-import type { SocialIcon } from "@types";
-
-const SOCIAL_ICONS: SocialIcon = {
-  Github,
-  Linkedin,
-  X,
-};
-const linkedInfo = profiles.find(({ network }) => network === "Linkedin");
-const linkedUrl = linkedInfo?.url;
-
-const printInfo = [email, phone, linkedUrl, url];
+const { basics } = getI18N(Astro.currentLocale);
+const { name, label, location } = basics;
+const { city, region } = location;
 ---
 
 <Section>
   <div
-    class="flex flex-col-reverse items-center justify-between gap-4 sm:flex-row"
+    class="flex flex-col-reverse items-center justify-between gap-2 sm:flex-row"
   >
-    <div class="flex flex-col gap-2 pr-8 print:gap-1 print:text-stone-700">
+    <div class="flex flex-col gap-2 print:text-stone-800">
       <h1
-        class="text-[22px] font-bold sm:text-4xl print:text-2xl print:text-inherit"
+        class="text-balance text-3xl font-bold leading-none text-stone-50 sm:text-4xl print:text-3xl print:text-inherit"
       >
         {name}
       </h1>
       <h2
-        class="text-balance text-lg font-medium leading-tight print:text-pretty print:text-base print:leading-none print:text-inherit"
+        class="my-1 text-balance text-lg font-medium leading-tight text-stone-200/80 print:text-base print:leading-none print:text-inherit"
       >
         {label}
       </h2>
-      <span class="flex items-center gap-2 text-[0.85rem]">
+      <span
+        class="flex items-center gap-1 text-xl text-[#ffffff80] print:text-stone-400/90"
+      >
         <World />
         {city}, {region}
       </span>
-      <footer class="print flex flex-wrap gap-x-4 gap-y-[2px]">
-        {printInfo.map((item) => <p class="inline-block text-xs">{item}</p>)}
-      </footer>
-      <footer class="no-print flex gap-4 text-[#888]">
-        {
-          email && (
-            <a
-              href={`mailto:${email}`}
-              title={`enviar correo electronico a ${name} al correo ${email}`}
-              target="_blank"
-            >
-              <Mail />
-            </a>
-          )
-        }
-        {
-          phone && (
-            <a
-              href={`tel:${phone}`}
-              title={`llamar por telefono a ${name} al numero ${phone}`}
-              target="_blank"
-            >
-              <Phone />
-            </a>
-          )
-        }
-        <a
-          href={`${url}`}
-          target="_blank"
-          title={`visitar el sitio web de ${name}, ${url}`}
-        >
-          <div class="pointer-events-none">
-            <Web />
-          </div>
-        </a>
-        {
-          profiles.map(({ network, url, username }) => {
-            const Icon = SOCIAL_ICONS[network];
-            return (
-              <a
-                href={url}
-                title={`visitar el perfil de ${name} en ${network}`}
-                target="_blank"
-              >
-                <div class="pointer-events-none">
-                  <Icon />
-                </div>
-              </a>
-            );
-          })
-        }
-      </footer>
     </div>
-    <figure class="flex h-full w-[200px] items-center">
+    <figure class="flex h-full w-[200px] items-center justify-end print:hidden">
       <Image
         width="400"
         class="aspect-square w-full rounded-md object-cover sm:w-32"
@@ -111,29 +45,3 @@ const printInfo = [email, phone, linkedUrl, url];
     </figure>
   </div>
 </Section>
-<style>
-  .print {
-    display: none;
-  }
-  @media print {
-    .print {
-      display: flex;
-    }
-    .no-print {
-      display: none;
-    }
-  }
-  footer a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #393939;
-    padding: 4px;
-    border-radius: 6px;
-    transition: all 0.5s ease;
-  }
-  footer a:hover {
-    background-color: #383838;
-    border: 1px solid #888;
-  }
-</style>
