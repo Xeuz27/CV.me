@@ -1,40 +1,46 @@
 ---
-import { getI18N, getLangFromUrl } from "../../utils/i18n";
+import Section from "@components/Section.astro";
+
+import { getI18N, getLangFromUrl } from "@utils/i18n";
+
 const { work } = getI18N(Astro.currentLocale);
 const lang = getLangFromUrl(Astro.url);
-
-import Section from "@components/Section.astro";
-import { format } from "@formkit/tempo";
 ---
 
 <Section title={lang === "" ? "Experience" : `Experiencia Laboral`}>
-  <ul class="flex flex-col gap-6">
+  <ul
+    class="flex flex-col gap-6 divide-y-[2px] divide-stone-700/60 print:divide-stone-200/50"
+  >
     {
       work.map(({ name, position, startDate, endDate, summary }) => {
-        const startYear = new Date(startDate);
-        const endYear = new Date(endDate);
-        let formattedStartYear = format(startYear, "MMM, YYYY");
-        let formattedEndYear = format(endYear, "MMM, YYYY");
-        const years = `${formattedStartYear} | ${formattedEndYear}`;
         return (
-          <li class="">
+          <li class="pt-3">
             <article>
-              <header class="mb-2 flex items-start justify-between">
-                <div>
-                  <h3 class="text-lg font-semibold text-stone-200/80 print:text-stone-700/80">
-                    {name}
-                  </h3>
-                  <h4 class="text-sm text-stone-200/60 print:text-stone-700/70">
-                    {position}
+              <header class="mb-3 flex flex-col-reverse items-center justify-between sm:flex-row">
+                <div class="flex flex-col gap-[2px] max-sm:w-full">
+                  <h4 class="text-lg tracking-normal text-stone-200/50 max-sm:flex max-sm:justify-between print:text-stone-600/70">
+                    {lang === "" ? "Company" : "Empresa"}:
+                    <span class="text-stone-100/90 print:text-stone-800">
+                      {name}
+                    </span>
                   </h4>
+                  <h5 class="text-sm text-stone-200/40 max-sm:flex max-sm:justify-between print:text-stone-400/50">
+                    {lang === "" ? "Role: " : "Rol: "}
+                    <span class="text-stone-100/70 print:text-stone-400">
+                      {position}
+                    </span>
+                  </h5>
                 </div>
 
-                <time class="text-sm leading-9 sm:text-lg">{years}</time>
+                <time class="text-sm text-zinc-200/40 sm:text-lg print:text-stone-400/80">
+                  {startDate} | {endDate}
+                </time>
               </header>
-
-              <footer>
-                <p>{summary}</p>
-              </footer>
+              <main>
+                <p class="text-justify leading-tight tracking-normal">
+                  {summary}
+                </p>
+              </main>
             </article>
           </li>
         );
