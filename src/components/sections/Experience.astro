@@ -7,7 +7,10 @@ const { work } = getI18N(Astro.currentLocale);
 const lang = getLangFromUrl(Astro.url);
 ---
 
-<Section title={lang === "" ? "Experience" : `Experiencia Laboral`}>
+<Section
+  classes={lang == "" && "mb-4"}
+  title={lang === "" ? "Experience" : `Experiencia Laboral`}
+>
   <ul
     class="flex flex-col gap-6 divide-y-[2px] divide-stone-700/60 print:divide-stone-200/50"
   >
