@@ -10,6 +10,7 @@ const canonicalURL = new URL("https://cv-me-zeta.vercel.app/");
 const socialImageURL = new URL(ogImage ? ogImage : "/open-graph.png", Astro.url)
   .href;
 const siteTitle = `${title}`;
+import "../styles/global.css";
 ---
 
 <!-- Global Metadata -->
@@ -48,11 +49,11 @@ const siteTitle = `${title}`;
 <meta name="author" content="Yidev27" />
 <meta
   name="keywords"
-  content="Desarrollador Web, Web Developer, Consultor Web, Freelancer, Programador, Web, Apps, Javascript, ReactJS, Astro, Paginas Web, Maracaibo"
+  content="Desarrollador Web, Web Developer, Consultor Web, Freelancer, Programador, Web, Apps, Javascript, ReactJS, Astro, Paginas Web, Maracaibo, Venezuela"
 />
 
 <!-- Open Graph / Facebook -->
-<meta property="og:type" content={"website"} />
+<meta property="og:type" content="website" />
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
@@ -72,9 +73,6 @@ const siteTitle = `${title}`;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" itemprop="image" content={socialImageURL} />
-
-<!-- styles -->
-<link rel="stylesheet" href="/global.css" />
 
 <!-- RSS auto-discovery -->
 <!-- <link
