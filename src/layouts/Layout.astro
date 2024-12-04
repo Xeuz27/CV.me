@@ -19,5 +19,10 @@ const { title, description, ogImage } = Astro.props;
   <body class="relative">
     <slot />
     <LanguageSwitcher />
+    <div
+      id="noise"
+      class="pointer-events-none fixed inset-0 before:absolute before:inset-0 before:bg-repeat before:opacity-10"
+    >
+    </div>
   </body>
 </html>
