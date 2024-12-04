@@ -219,6 +219,21 @@
       "url": "https://petit-prime-solutions.vercel.app/"
     },
     {
+      "name": "NvStore | Clothing store",
+      "type": "Web App | Ecommerce",
+      "description": "Ecommerce para NvStore hecho con Astro y ReactJS con backend para manejo de inventario",
+      "highlights": [
+        "Ecommerce",
+        "Astro",
+        "SEO",
+        "Astro Islands",
+        "ReactJS",
+        "En desarrollo"
+      ],
+      "url": "https://nvstore.vercel.app/",
+      "isActive": true
+    },
+    {
       "name": "Shoppi",
       "type": "Web App | Ecommerce",
       "description": "sitio web Ecommerce con Interfaz de usuario intuitiva y adaptable a dispositivos moviles que envia las ordenes de compra a un numero de Telefono de Whatsapp",
@@ -232,25 +247,11 @@
         "Realtime database"
       ],
       "url": "https://dark-shoppi.vercel.app/shop",
-      "isActive": true
-    },
-    {
-      "name": "Astro-Ecommerce",
-      "type": "Web App | Ecommerce",
-      "description": "Ecommerce para NvStore hecho con Astro y ReactJS",
-      "highlights": [
-        "Ecommerce",
-        "Astro",
-        "SEO",
-        "Astro Islands",
-        "ReactJS",
-        "En desarrollo"
-      ],
-      "url": "https://nvstore.vercel.app/",
-      "isActive": true
+      "isActive": false
     },
     {
       "name": "NvStore",
+      "show": false,
       "type": "Web App | Ecommerce",
       "description": "Ecommerce para NvStore con admin-dashboard para la carga de productos y manejo de ordenes/compras",
       "highlights": [
@@ -267,7 +268,7 @@
     {
       "name": "Yidev.io",
       "type": "Landing Page",
-      "description": "Alternativa minimalista para linktree con integraciones de SEO",
+      "description": "Alternativa a linktr.ee con integraciones de SEO",
       "highlights": ["Landing page", "Linktree", "Open Source", "SEO"],
       "url": "https://xeuz27.github.io/yidev.io/",
       "github": "https://github.com/Xeuz27/yidev.io",
@@ -280,7 +281,7 @@
       "highlights": ["App", "OpenAi", "Open Source"],
       "url": "https://sumz-ai.vercel.app/",
       "github": "https://github.com/Xeuz27/sumz-ai",
-      "isActive": true
+      "isActive": false
     },
     {
       "name": "Hoobank",

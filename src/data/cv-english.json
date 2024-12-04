@@ -219,6 +219,21 @@
       "url": "https://petit-prime-solutions.vercel.app/"
     },
     {
+      "name": "NvStore | Clothing Store",
+      "type": "Web App | Ecommerce",
+      "description": "Ecommerce Website for NvStore made with Astro and ReactJS with admin-dashboard to handle inventory",
+      "highlights": [
+        "Ecommerce",
+        "Astro",
+        "SEO",
+        "Astro Islands",
+        "ReactJS",
+        "In development"
+      ],
+      "url": "https://nvstore.vercel.app/",
+      "isActive": true
+    },
+    {
       "name": "Shoppi",
       "type": "Web App | Ecommerce",
       "description": "Mobile responsive ecommerce website with intuitive UX that payloads purchase orders to a Whatsapp phone Number",
@@ -232,34 +247,20 @@
         "Realtime database"
       ],
       "url": "https://dark-shoppi.vercel.app/shop",
-      "isActive": true
+      "isActive": false
     },
     {
       "name": "Yidev.io",
       "type": "Landing Page",
-      "description": "Minimal alternative to linktree with SEO integrations",
+      "description": "Alternative to linktree with SEO integrations",
       "highlights": ["Landing page", "Linktree", "Open Source", "SEO"],
       "url": "https://xeuz27.github.io/yidev.io/",
       "github": "https://github.com/Xeuz27/yidev.io",
       "isActive": true
     },
     {
-      "name": "Astro-Ecommerce",
-      "type": "Web App | Ecommerce",
-      "description": "Ecommerce Website for NvStore made with Astro and ReactJS",
-      "highlights": [
-        "Ecommerce",
-        "Astro",
-        "SEO",
-        "Astro Islands",
-        "ReactJS",
-        "In development"
-      ],
-      "url": "https://nvstore.vercel.app/",
-      "isActive": true
-    },
-    {
       "name": "NvStore",
+      "show": false,
       "type": "Web App | Ecommerce",
       "description": "Ecommerce website for NvStore with admin-dashboard to upload products and orders/shipping management",
       "highlights": [
