@@ -41,7 +41,7 @@ const printInfo = [phone, email, githubUrl, url, linkedinUrl];
 <Section title={lang === "" ? "Contact Me" : `Contactos`}>
   <footer class="hidden print:flex print:p-0">
     <ul
-      class="flex w-full flex-col gap-y-[2px] divide-y-[1px] divide-[#424242] print:divide-[#bababa]"
+      class="divide-separatorPrint flex w-full flex-col gap-y-[2px] divide-y-[2px]"
     >
       {
         printInfo.map(({ label, href, data }) => (

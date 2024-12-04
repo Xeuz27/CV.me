@@ -10,9 +10,9 @@ const url = lang === "" ? "/es" : "/";
   <a
     href={url}
     title={`${lang === "" ? "Traducir al Español" : " Translate to English"}`}
-    class="flex items-center gap-1 text-3xl uppercase text-white"
+    class="flex items-center gap-1 text-3xl uppercase text-white/80 hover:text-white"
   >
-    <Translate classes="size-7 mt-[2.5px] text-white pointer-events-none" />
+    <Translate classes="size-7 mt-[2.5px] text-inherit pointer-events-none" />
     {lang === "" ? "Es" : "En"}
   </a>
 </div>

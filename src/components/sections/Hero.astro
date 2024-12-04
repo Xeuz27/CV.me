@@ -4,26 +4,28 @@ import img from "@images/me.jpg";
 import World from "@components/icons/World.astro";
 import Section from "@components/Section.astro";
 
-import { getI18N } from "@utils/i18n";
+import { getI18N, getLangFromUrl } from "@utils/i18n";
 import { Image } from "astro:assets";
 
 const { basics } = getI18N(Astro.currentLocale);
+const lang = getLangFromUrl(Astro.url);
+
 const { name, label, location } = basics;
 const { city, region } = location;
 ---
 
-<Section>
+<Section classes={`${lang === "es" ? "print:mb-1" : ""}`}>
   <div
     class="flex flex-col-reverse items-center justify-between gap-2 sm:flex-row"
   >
     <div class="flex flex-col gap-2 print:text-stone-800">
       <h1
-        class="text-balance text-3xl font-bold leading-none text-stone-50 sm:text-4xl print:text-3xl print:text-inherit"
+        class="text-balance text-3xl font-bold leading-none text-mainTitle sm:text-4xl print:text-3xl print:text-inherit"
       >
         {name}
       </h1>
       <h2
-        class="my-1 text-balance text-lg font-medium leading-tight text-stone-200/80 print:text-base print:leading-none print:text-inherit"
+        class="my-1 text-balance text-lg font-medium leading-tight text-subtitle print:text-base print:leading-none print:text-inherit"
       >
         {label}
       </h2>

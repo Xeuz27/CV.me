@@ -9,12 +9,12 @@ const lang = getLangFromUrl(Astro.url);
 
 <Section title={lang === "" ? "Experience" : `Experiencia Laboral`}>
   <ul
-    class="flex flex-col gap-6 divide-y-[2px] divide-stone-700/60 print:divide-stone-200/50"
+    class="flex flex-col gap-6 divide-y-[2px] divide-separator print:gap-3 print:divide-separatorPrint"
   >
     {
       work.map(({ name, position, startDate, endDate, summary }) => {
         return (
-          <li class="pt-3">
+          <li class="last:pt-5 print:pt-0 print:last:pt-2">
             <article>
               <header class="mb-3 flex flex-col-reverse items-center justify-between sm:flex-row">
                 <div class="flex flex-col gap-[2px] max-sm:w-full">
@@ -32,7 +32,7 @@ const lang = getLangFromUrl(Astro.url);
                   </h5>
                 </div>
 
-                <time class="text-sm text-zinc-200/40 sm:text-lg print:text-stone-400/80">
+                <time class="text-sm text-zinc-100/60 sm:text-lg print:text-stone-400/80">
                   {startDate} | {endDate}
                 </time>
               </header>

@@ -11,7 +11,7 @@ const lang = getLangFromUrl(Astro.url);
   title={lang === "" ? "Personal Experience" : `Experiencia Personal`}
 >
   <ul
-    class="flex flex-col gap-6 divide-y-[2px] divide-stone-700/60 pt-3 print:gap-4 print:divide-stone-200/50"
+    class="flex flex-col gap-6 divide-y-[2px] divide-separator pt-2 print:gap-4 print:divide-separatorPrint"
   >
     {
       projects.map(
@@ -24,17 +24,18 @@ const lang = getLangFromUrl(Astro.url);
           isActive,
           show = true
         }) => {
+          console.log(isActive);
           if (!show) return;
           return (
-            <li class="pt-3 print:gap-2">
-              <article class="flex h-full flex-col gap-1 rounded-sm">
+            <li class="pt-[18px] print:pt-3">
+              <article class="flex h-full flex-col gap-3 rounded-sm print:gap-2">
                 <header class="flex flex-row items-center gap-1">
-                  <h4 class="text-xl font-medium text-stone-300/90 print:text-stone-700/80">
+                  <h4 class="text-2xl font-medium leading-none text-stone-300/90 hover:text-white print:text-stone-700/80">
                     <a
-                      class="hover:underline hover:underline-offset-2"
+                      class="leading-none hover:underline hover:underline-offset-2"
                       href={url}
                       target="_blank"
-                      title={`ver proyecto ${name}`}
+                      title={`${lang === "" ? `Go to ${name}` : `Ir a ${name}`}`}
                     >
                       {name} • {type}
                     </a>
@@ -45,7 +46,7 @@ const lang = getLangFromUrl(Astro.url);
                     </span>
                   )}
                 </header>
-                <p class="mb-1 text-[0.8rem] leading-tight">{description}</p>
+                <p class="mb-1 text-base leading-tight">{description}</p>
                 <footer class="flex flex-wrap gap-2 text-xs">
                   {highlights.map((highlight) => (
                     <span class="flex items-center rounded-md bg-stone-700/40 px-[0.6rem] py-[0.2rem] font-medium print:bg-stone-200/60">
