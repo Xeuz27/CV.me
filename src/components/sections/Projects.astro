@@ -22,38 +22,65 @@ const lang = getLangFromUrl(Astro.url);
           name,
           type,
           isActive,
+          preview,
           show = true
         }) => {
-          console.log(isActive);
           if (!show) return;
           return (
-            <li class="pt-[18px] print:pt-3">
-              <article class="flex h-full flex-col gap-3 rounded-sm print:gap-2">
-                <header class="flex flex-row items-center gap-1">
-                  <h4 class="text-2xl font-medium leading-none text-stone-300/90 hover:text-white print:text-stone-700/80">
+            <li class="pt-[52px] first:pt-0 print:pt-3 first:print:!pt-0">
+              <article class="flex flex-col">
+                <main class="flex h-full flex-col gap-3 print:gap-2">
+                  <header class="flex flex-row items-center gap-1 max-md:justify-between">
+                    <h4 class="max-xs:text-lg min-xs:text-base text-stone-300/90 hover:text-white sm:text-xl md:text-2xl print:text-stone-700/80">
+                      <a
+                        class="max-xs:flex-col flex gap-1 font-medium leading-none hover:underline  hover:underline-offset-2 "
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title={`${lang === "" ? `Go to ${name}` : `Ir a ${name}`}`}
+                      >
+                        <span class="whitespace-nowrap">{name}</span>
+                        <span class="max-xs:hidden">•</span>
+                        <span class="whitespace-nowrap">{type}</span>
+                      </a>
+                    </h4>
+                    {isActive && (
+                      <span class="mb-1 px-2 text-4xl leading-none text-green-500/80">
+                        &bull;
+                      </span>
+                    )}
+                  </header>
+                  <p class="mb-1 text-base leading-tight">{description}</p>
+                  <footer class="flex flex-wrap gap-2 text-xs">
+                    {highlights.map((highlight) => (
+                      <span class="flex items-center rounded-md bg-stone-700/40 px-[0.6rem] py-[0.2rem] font-medium print:bg-stone-200/60">
+                        {highlight}
+                      </span>
+                    ))}
+                  </footer>
+                </main>
+                {preview && (
+                  <section class="p-8 px-0 print:hidden">
                     <a
-                      class="leading-none hover:underline hover:underline-offset-2"
+                      class="flex gap-8 overflow-hidden max-md:flex-col-reverse md:gap-4"
                       href={url}
                       target="_blank"
                       title={`${lang === "" ? `Go to ${name}` : `Ir a ${name}`}`}
+                      rel="noopener noreferrer"
                     >
-                      {name} • {type}
+                      <img
+                        class="mx-auto aspect-auto max-h-[580px] md:max-h-64 lg:max-h-96 xl:max-h-[420px]"
+                        src={preview[1]}
+                        alt=""
+                      />
+                      <img
+                        class="mx-auto aspect-video max-h-64 max-sm:max-h-72 lg:max-h-96 xl:max-h-[420px]"
+                        src={preview[0]}
+                        alt=""
+                      />
                     </a>
-                  </h4>
-                  {isActive && (
-                    <span class="text-3xl leading-none text-green-500/80">
-                      &bull;
-                    </span>
-                  )}
-                </header>
-                <p class="mb-1 text-base leading-tight">{description}</p>
-                <footer class="flex flex-wrap gap-2 text-xs">
-                  {highlights.map((highlight) => (
-                    <span class="flex items-center rounded-md bg-stone-700/40 px-[0.6rem] py-[0.2rem] font-medium print:bg-stone-200/60">
-                      {highlight}
-                    </span>
-                  ))}
-                </footer>
+                  </section>
+                )}
               </article>
             </li>
           );
