@@ -216,7 +216,11 @@
       "isActive": true,
       "description": "Sitio web tipo landing page para empresa de servicios de construccion-reparaciones",
       "highlights": ["SEO", "Astro", "Blog"],
-      "url": "https://petit-prime-solutions.vercel.app/"
+      "url": "https://petit-prime-solutions.vercel.app/",
+      "preview": [
+        "/petitPrimeSolutionsDesktop.png",
+        "/petitPrimeSolutionsMobile.png"
+      ]
     },
     {
       "name": "NvStore | Clothing store",
@@ -231,7 +235,8 @@
         "En desarrollo"
       ],
       "url": "https://nvstore.vercel.app/",
-      "isActive": true
+      "isActive": true,
+      "preview": ["/nvstoreDesktop.png", "/nvstoreMobile.png"]
     },
     {
       "name": "Shoppi",
@@ -247,7 +252,8 @@
         "Realtime database"
       ],
       "url": "https://dark-shoppi.vercel.app/shop",
-      "isActive": false
+      "isActive": false,
+      "preview": ["/shoppiDesktop.png", "/shoppiMobile.png"]
     },
     {
       "name": "NvStore",
@@ -272,7 +278,8 @@
       "highlights": ["Landing page", "Linktree", "Open Source", "SEO"],
       "url": "https://xeuz27.github.io/yidev.io/",
       "github": "https://github.com/Xeuz27/yidev.io",
-      "isActive": true
+      "isActive": true,
+      "preview": ["/yidevIoDesktop.png", "/yidevIoMobile.png"]
     },
     {
       "name": "Sumz-ai",
