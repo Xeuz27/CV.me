@@ -16,7 +16,7 @@ const { title, description, ogImage } = Astro.props;
   <head>
     <BaseHead title={title} description={description} ogImage={ogImage} />
   </head>
-  <body class="relative">
+  <body class="max-xs:pb-14 relative">
     <slot />
     <LanguageSwitcher />
     <div

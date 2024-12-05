@@ -12,9 +12,10 @@ const lang = getLangFromUrl(Astro.url);
 
 const { name, label, location } = basics;
 const { city, region } = location;
+console.log(lang);
 ---
 
-<Section classes={`${lang === "es" ? "print:mb-1" : ""}`}>
+<Section classes={`${lang === "es" ? "print:!mb-1" : ""}`}>
   <div
     class="flex flex-col-reverse items-center justify-between gap-2 sm:flex-row"
   >
@@ -25,7 +26,7 @@ const { city, region } = location;
         {name}
       </h1>
       <h2
-        class="my-1 text-balance text-lg font-medium leading-tight text-subtitle print:text-base print:leading-none print:text-inherit"
+        class="my-1 text-balance text-lg font-medium leading-tight text-subtitle lg:text-xl print:text-base print:leading-none print:text-inherit"
       >
         {label}
       </h2>

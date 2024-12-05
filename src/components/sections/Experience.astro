@@ -18,13 +18,13 @@ const lang = getLangFromUrl(Astro.url);
             <article>
               <header class="mb-3 flex flex-col-reverse items-center justify-between sm:flex-row">
                 <div class="flex flex-col gap-[2px] max-sm:w-full">
-                  <h4 class="text-lg tracking-normal text-stone-200/50 max-sm:flex max-sm:justify-between print:text-stone-600/70">
+                  <h4 class="text-lg tracking-normal text-stone-200/55 max-sm:flex max-sm:justify-between print:text-stone-600/70">
                     {lang === "" ? "Company" : "Empresa"}:
                     <span class="text-stone-100/90 print:text-stone-800">
                       {name}
                     </span>
                   </h4>
-                  <h5 class="text-sm text-stone-200/40 max-sm:flex max-sm:justify-between print:text-stone-400/50">
+                  <h5 class="text-sm text-stone-200/60 max-sm:flex max-sm:justify-between print:text-stone-400/50">
                     {lang === "" ? "Role: " : "Rol: "}
                     <span class="text-stone-100/70 print:text-stone-400">
                       {position}

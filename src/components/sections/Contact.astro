@@ -41,13 +41,13 @@ const printInfo = [phone, email, githubUrl, url, linkedinUrl];
 <Section title={lang === "" ? "Contact Me" : `Contactos`}>
   <footer class="hidden print:flex print:p-0">
     <ul
-      class="divide-separatorPrint flex w-full flex-col gap-y-[2px] divide-y-[2px]"
+      class="flex w-full flex-col gap-y-[2px] divide-y-[2px] divide-separatorPrint"
     >
       {
         printInfo.map(({ label, href, data }) => (
           <li class="flex items-center justify-between text-xs sm:text-base">
             <span>{label}:</span>
-            <a target="_blank" rel="nofollow" href={href}>
+            <a target="_blank" rel="nofollow noreferrer" href={href}>
               {data}
             </a>
           </li>
@@ -68,7 +68,7 @@ const printInfo = [phone, email, githubUrl, url, linkedinUrl];
             }
             `}
           target="_blank"
-          rel="nofollow"
+          rel="nofollow noreferrer"
         >
           <Mail />
           <span class="sr-only">
@@ -118,7 +118,7 @@ const printInfo = [phone, email, githubUrl, url, linkedinUrl];
     <a
       href={`${url.href}`}
       target="_blank"
-      rel="dofollow"
+      rel="dofollow noreferrer"
       title={`
       ${
         lang === "es"
