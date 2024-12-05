@@ -20,7 +20,7 @@ const lang = getLangFromUrl(Astro.url);
                 <div class="flex w-full flex-col gap-[3px] divide-y-[2px] divide-separator text-stone-100/55 print:divide-separatorPrint print:text-stone-400/60">
                   <h4 class="flex justify-between text-sm tracking-normal sm:text-base">
                     {lang === "" ? "School" : "Escuela"}:{" "}
-                    <a href={url} target="_blank" rel="nofollow">
+                    <a href={url} target="_blank" rel="nofollow noreferrer">
                       <span>{institution}</span>
                     </a>
                   </h4>
@@ -28,7 +28,6 @@ const lang = getLangFromUrl(Astro.url);
                     {lang === "" ? "Title" : "Titulo"}:
                     <a
                       target="_blank"
-                      rel="dofollow"
                       title={`
                           ${
                             lang === "es"
@@ -45,7 +44,7 @@ const lang = getLangFromUrl(Astro.url);
                     {lang === "" ? "Profile" : "Perfil"}:
                     <a
                       target="_blank"
-                      rel="noFollow"
+                      rel="noFollow noreferrer"
                       title={`
                           ${
                             lang === "es"
