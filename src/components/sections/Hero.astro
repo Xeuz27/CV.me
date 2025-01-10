@@ -12,7 +12,6 @@ const lang = getLangFromUrl(Astro.url);
 
 const { name, label, location } = basics;
 const { city, region } = location;
-console.log(lang);
 ---
 
 <Section classes={`${lang === "es" ? "print:!mb-1" : ""}`}>
