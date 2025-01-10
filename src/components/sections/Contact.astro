@@ -1,21 +1,10 @@
 ---
 import Section from "@components/Section.astro";
 
-import Github from "@icons/Github.astro";
-import Linkedin from "@icons/Linkedin.astro";
-import Mail from "@icons/Mail.astro";
-import Web from "@icons/Website.astro";
-import X from "@icons/X.astro";
-
 import { getI18N, getLangFromUrl } from "@utils/i18n";
 
-import type { SocialIcon } from "@types";
+import Icon from "@components/icons/Icon.astro";
 
-const SOCIAL_ICONS: SocialIcon = {
-  Github,
-  Linkedin,
-  X
-};
 const { basics } = getI18N(Astro.currentLocale);
 const { name, email, phone, url, profiles } = basics;
 
@@ -35,6 +24,8 @@ const githubUrl = {
 };
 
 const printInfo = [phone, email, githubUrl, url, linkedinUrl];
+
+const contactIconStyles = "pointer-events-none size-6 text-inherit";
 ---
 
 <Section title={lang === "" ? "Contact Me" : `Contactos`}>
@@ -54,7 +45,9 @@ const printInfo = [phone, email, githubUrl, url, linkedinUrl];
       }
     </ul>
   </footer>
-  <footer class="no-print flex gap-2 text-[#888] print:hidden">
+  <footer
+    class="no-print flex gap-3 text-[#484848] max-sm:text-[#787878] print:hidden"
+  >
     {
       email && (
         <a
@@ -69,7 +62,7 @@ const printInfo = [phone, email, githubUrl, url, linkedinUrl];
           target="_blank"
           rel="nofollow noreferrer"
         >
-          <Mail />
+          <Icon icon="Mail" classes={contactIconStyles} />
           <span class="sr-only">
             {lang == "es"
               ? `Enviar correo electronico a ${name} al correo ${email.data}`
@@ -126,7 +119,7 @@ const printInfo = [phone, email, githubUrl, url, linkedinUrl];
       }
       `}
     >
-      <Web />
+      <Icon icon="Website" classes={contactIconStyles} />
       <span class="sr-only"
         >{
           lang === "es"
@@ -137,7 +130,6 @@ const printInfo = [phone, email, githubUrl, url, linkedinUrl];
     </a>
     {
       profiles.map(({ network, url, show = true }) => {
-        const Icon = SOCIAL_ICONS[network];
         return (
           <a
             class={`${show === false && "!hidden"}`}
@@ -148,11 +140,10 @@ const printInfo = [phone, email, githubUrl, url, linkedinUrl];
                   ? `visitar el perfil de ${name} en ${network}`
                   : `Go to Jesus' ${network} `
               }
-              
               `}
             target="_blank"
           >
-            <Icon />
+            <Icon icon={network} classes={contactIconStyles} />
             <span class="sr-only">
               {lang === "es"
                 ? `visitar el perfil de ${name} en ${network}`
@@ -170,13 +161,17 @@ const printInfo = [phone, email, githubUrl, url, linkedinUrl];
     align-items: center;
     justify-content: center;
     border: 1px solid #393939;
-    padding: 4px;
-    border-radius: 6px;
-    transition: all 0.5s ease;
+    padding: 10px;
+    border-radius: 12px;
+    transition: all 0.5s;
   }
   footer.no-print a:hover {
-    background-color: #1f1f1f;
-    border: 1px solid #888;
+    background-color: rgb(8, 31, 92);
+    border: 1px solid #dfdfdf;
+    @apply drop-shadow-[0_0px_8px_#1037a1];
+  }
+  footer.no-print a:hover {
+    color: #dfdfdf;
   }
   footer.print li a:hover {
     text-decoration: underline;
