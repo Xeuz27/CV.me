@@ -16,8 +16,8 @@ const lang = getLangFromUrl(Astro.url);
         return (
           <li>
             <article>
-              <header class="mb-2 flex flex-col items-center justify-between ">
-                <div class="flex w-full flex-col gap-[3px] divide-y-[2px] divide-separator text-stone-100/55 print:divide-separatorPrint print:text-stone-400/60">
+              <header class="mb-2 flex flex-col items-center justify-between text-stone-100/55  print:text-stone-500/60">
+                <div class="flex w-full flex-col gap-[3px] divide-y-[2px] divide-separator print:divide-separatorPrint">
                   <h4 class="flex justify-between text-sm tracking-normal sm:text-base">
                     {lang === "" ? "School" : "Escuela"}:{" "}
                     <a href={url} target="_blank" rel="nofollow noreferrer">
@@ -58,7 +58,7 @@ const lang = getLangFromUrl(Astro.url);
                     </a>
                   </h6>
                 </div>
-                <time class="mt-2 min-w-fit text-nowrap text-lg">
+                <time class="mt-2 min-w-fit text-nowrap text-lg text-inherit">
                   {startDate} | {endDate}
                 </time>
               </header>

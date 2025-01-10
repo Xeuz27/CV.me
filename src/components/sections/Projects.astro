@@ -29,11 +29,11 @@ const lang = getLangFromUrl(Astro.url);
           return (
             <li class="pt-[52px] first:pt-0 print:pt-3 first:print:!pt-0">
               <article class="flex flex-col">
-                <main class="flex h-full flex-col gap-3 print:gap-2">
+                <main class="flex h-full flex-col gap-3 print:gap-1">
                   <header class="flex flex-row items-center gap-1 max-md:justify-between">
-                    <h4 class="max-xs:text-lg min-xs:text-base text-stone-300/90 hover:text-white sm:text-xl md:text-2xl print:text-stone-700/80">
+                    <h4 class="min-xs:text-base text-stone-300/90 hover:text-white max-xs:text-lg sm:text-xl md:text-2xl print:text-stone-700/80">
                       <a
-                        class="max-xs:flex-col flex gap-1 font-medium leading-none hover:underline  hover:underline-offset-2 "
+                        class="flex gap-1 font-medium leading-none hover:underline hover:underline-offset-2  max-xs:flex-col "
                         href={url}
                         target="_blank"
                         rel="noopener noreferrer"
