@@ -1,0 +1,29 @@
+---
+import Github from "./Github.astro";
+import Linkedin from "./Linkedin.astro";
+import Mail from "./Mail.astro";
+import Phone from "./Phone.astro";
+import Translate from "./translate.astro";
+import Website from "./Website.astro";
+import Whatsapp from "./Whatsapp.astro";
+import World from "./World.astro";
+import X from "./X.astro";
+
+const { icon, classes } = Astro.props;
+
+const Icons: Record<string, string | any> = {
+  Github,
+  Linkedin,
+  Mail,
+  Phone,
+  Translate,
+  Website,
+  Whatsapp,
+  World,
+  X
+};
+
+const Render = Icons[icon];
+---
+
+<Render classes={classes} />
