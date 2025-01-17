@@ -16,7 +16,7 @@ const { title, description, ogImage } = Astro.props;
   <head>
     <BaseHead title={title} description={description} ogImage={ogImage} />
   </head>
-  <body class="max-xs:pb-14 relative">
+  <body class="relative max-xs:pb-14">
     <slot />
     <LanguageSwitcher />
     <div
@@ -24,5 +24,17 @@ const { title, description, ogImage } = Astro.props;
       class="pointer-events-none fixed inset-0 before:absolute before:inset-0 before:bg-repeat before:opacity-10"
     >
     </div>
-  </body>
+  </body><!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZP7PVPZNQ3"
+  ></script>
+  <script>
+    //@ts-nocheck
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-ZP7PVPZNQ3");
+  </script>
 </html>
