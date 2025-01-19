@@ -1,0 +1,86 @@
+---
+import { getI18N } from "@utils/i18n";
+import { getCollection } from "astro:content";
+import Icon from "./icons/Icon.astro";
+
+const { basics } = getI18N(Astro.currentLocale);
+const { profiles } = basics;
+
+const linkedinInfo = profiles.find(({ network }) => network === "Linkedin");
+const linkedinUrl = {
+  icon: "Linkedin",
+  href: linkedinInfo?.url,
+  data: linkedinInfo?.url
+};
+const githubInfo = profiles.find(({ network }) => network === "Github");
+const githubUrl = {
+  icon: "Github",
+  href: githubInfo?.url,
+  data: githubInfo?.username
+};
+
+const socials = [
+  { ...githubUrl },
+  { ...linkedinUrl },
+  { icon: "Instagram", href: "https://instagram.com/yidev27" }
+];
+
+const casos = await getCollection("caseStudies");
+---
+
+<footer
+  class="absolute bottom-0 left-0 right-0 flex flex-col gap-5 border-t p-4 text-center print:hidden"
+>
+  <section id="logo" class="">
+    <!-- <img src="/logo" alt=""> -->
+    <h2 class="text-2xl font-bold tracking-tight text-white md:text-3xl">
+      Jesus Gutierrez • Yidev27
+    </h2>
+  </section>
+  <section>
+    <ul class="flex justify-center gap-6">
+      {
+        socials.map(({ icon, href }) => {
+          return (
+            <li class="flex place-content-center items-center">
+              <a
+                href={href}
+                class="hover:bg-[rgb(8, 31, 92)] flex items-center transition-all duration-500 hover:text-[#dfdfdf] hover:drop-shadow-[0_0px_8px_#1037a1]"
+              >
+                <Icon
+                  icon={icon}
+                  classes="size-6 md:size-8 pointer-events-none"
+                />
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </section>
+  <section class="">
+    <h3 class="mb-2 text-gray-200 md:text-xl">Casos de Estudio</h3>
+    <ul>
+      {
+        casos.map((caso) => {
+          return (
+            <li>
+              <a
+                class="tracking-wide text-gray-200/80 underline decoration-gray-200/80 underline-offset-2 transition-all duration-300 hover:text-white hover:drop-shadow-[0_0px_8px_rgb(32,124,250)] md:text-lg"
+                href={Astro.url + "/casos-de-estudio/" + caso.slug}
+              >
+                {caso.slug}
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </section>
+  <!-- <section>
+    agregar Faqs y fqs page?
+  </section> -->
+  <h3 class="whitespace-nowrap text-sm tracking-tighter text-gray-300">
+    Copyright © 2024-Present ~ Per Aspera Ad Astra.
+  </h3>
+</footer>
