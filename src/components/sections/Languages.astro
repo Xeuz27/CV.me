@@ -7,7 +7,7 @@ const { languages } = getI18N(Astro.currentLocale);
 const lang = getLangFromUrl(Astro.url);
 ---
 
-<Section classes="print:mb-12" title={lang === "" ? "Languages" : `Idiomas`}>
+<Section classes="print:mb-12" title={lang === "en" ? "Languages" : `Idiomas`}>
   <ul
     class="flex flex-col gap-2 divide-y-[2px] divide-separator print:divide-separatorPrint"
   >

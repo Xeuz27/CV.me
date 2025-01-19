@@ -7,6 +7,6 @@ const { summary } = basics;
 const lang = getLangFromUrl(Astro.url);
 ---
 
-<Section title={lang === "" ? "About Me" : `Sobre mí`}>
+<Section title={lang === "en" ? "About Me" : `Sobre mí`}>
   <p class="leading-tight">{summary}</p>
 </Section>

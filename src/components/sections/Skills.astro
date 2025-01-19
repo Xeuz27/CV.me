@@ -5,7 +5,7 @@ import { getLangFromUrl } from "../../utils/i18n";
 const lang = getLangFromUrl(Astro.url);
 ---
 
-<Section title={lang === "" ? "Skills" : `Habilidades`}>
+<Section title={lang === "en" ? "Skills" : `Habilidades`}>
   <ul class="inline-flex flex-wrap gap-3">
     {
       hardSkills.map(({ name }) => (

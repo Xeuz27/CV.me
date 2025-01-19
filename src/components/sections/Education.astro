@@ -9,7 +9,7 @@ const { name } = basics;
 const lang = getLangFromUrl(Astro.url);
 ---
 
-<Section title={lang === "" ? "Certificates" : "Certificados"}>
+<Section title={lang === "en" ? "Certificates" : "Certificados"}>
   <ul class="flex flex-col gap-6">
     {
       education.map(({ institution, url, area, startDate, endDate }) => {
