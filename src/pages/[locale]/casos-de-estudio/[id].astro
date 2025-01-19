@@ -1,0 +1,40 @@
+---
+//@ts-nocheck
+import Section from "@components/Section.astro";
+import Layout from "@layouts/Layout.astro";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const locales = ["es", "en"];
+  const casos = await getCollection("caseStudies");
+  return locales.flatMap((locale) =>
+    casos.map((caso) => ({
+      params: { locale, id: caso.slug },
+      props: { caso }
+    }))
+  );
+}
+const { caso } = Astro.props;
+const { data, slug } = caso;
+const { title, author, img, description } = data;
+
+const { Content } = await render(caso);
+export const prerender = true;
+---
+
+<Layout
+  title="caso de estudio..."
+  description="Hire yidev27 To create your Website. App and Websites Developer. Committed to boost technological advancement, my focus is on leading entrepreneurs and small business owners towards new perspectives of success in the digital field. Providing knowledge and strategies to stand out and thrive in the technological world."
+  ogImage="https://ik.imagekit.io/0oguwfou0i/yi-printable-portfolio?updatedAt=1707175630120"
+>
+  <Section classes={"p-4 sm:p-16"}>
+    <div
+      class="prose prose-sm prose-invert -z-20 max-w-none max-sm:prose-h1:text-2xl"
+    >
+      <h1 class="relative -z-10" transition:name={`title-${slug}`}>
+        {title}
+      </h1>
+      <Content />
+    </div>
+  </Section>
+</Layout>
