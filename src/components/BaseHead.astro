@@ -10,6 +10,7 @@ const canonicalURL = new URL("https://cv-me-zeta.vercel.app/");
 const socialImageURL = new URL(ogImage ? ogImage : "/open-graph.png", Astro.url)
   .href;
 const siteTitle = `${title}`;
+import { ClientRouter } from "astro:transitions";
 import "../styles/global.css";
 ---
 
@@ -73,6 +74,8 @@ import "../styles/global.css";
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" itemprop="image" content={socialImageURL} />
+
+<ClientRouter />
 
 <!-- RSS auto-discovery -->
 <!-- <link

@@ -16,11 +16,15 @@
     white 60%
   );
 }
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.3s;
+}
 ::-webkit-scrollbar {
-  @apply w-3 bg-[#070a12] md:w-2;
+  @apply w-2 bg-[#0d1527];
 }
 ::-webkit-scrollbar-thumb {
-  @apply cursor-pointer rounded-full  bg-[#999999];
+  @apply w-1 cursor-pointer rounded-full bg-[#999999];
 }
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-[#d3d3d3];
