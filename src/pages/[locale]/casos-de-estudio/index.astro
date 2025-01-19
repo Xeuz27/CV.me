@@ -1,0 +1,65 @@
+---
+import Section from "@components/Section.astro";
+import Layout from "@layouts/Layout.astro";
+import { getReadingTime } from "@utils/readTime";
+import { getCollection } from "astro:content";
+
+const casos = await getCollection("caseStudies");
+export async function getStaticPaths() {
+  // Define the languages you want to support
+  return [{ params: { locale: "en" } }, { params: { locale: "es" } }];
+}
+
+export const prerender = true;
+---
+
+<Layout
+  title="caso de estudio..."
+  description="Hire yidev27 To create your Website. App and Websites Developer. Committed to boost technological advancement, my focus is on leading entrepreneurs and small business owners towards new perspectives of success in the digital field. Providing knowledge and strategies to stand out and thrive in the technological world."
+  ogImage="https://ik.imagekit.io/0oguwfou0i/yi-printable-portfolio?updatedAt=1707175630120"
+>
+  <main class="container mx-auto p-4 sm:p-16 print:p-0">
+    <h1 class="mb-12 text-center text-5xl font-bold text-mainTitle">
+      {Astro.currentLocale === "en" ? "Case Studies" : "Casos De Estudio"}
+    </h1>
+    <Section>
+      <ul class="grid gap-6 md:grid-cols-1">
+        {
+          casos.map((caso) => {
+            const { slug, data, body } = caso;
+            const { title, author, img, description } = data;
+
+            const readTime = getReadingTime(body);
+
+            return (
+              <article class="flex gap-4 max-md:flex-col md:max-h-96 ">
+                <a
+                  href={`/${Astro.currentLocale}/casos-de-estudio/${slug}`}
+                  class="mb-2 transition hover:scale-110 xl:mb-0"
+                >
+                  {/* // transition:name={`img-${slug}`} -> when transitioned stays on top of the page ??? not fixable with z-index */}
+                  <img class="w-[430px] rounded" src={`${img}`} alt={title} />
+                </a>
+                <a href={`/${Astro.currentLocale}/casos-de-estudio/${slug}`}>
+                  <div class="flex flex-col justify-center">
+                    <span
+                      transition:name={`title-${slug}`}
+                      class="-z-10 mb-2 text-xl font-bold leading-tight text-white"
+                    >
+                      {title}
+                    </span>
+
+                    <p class="mb-4 text-gray-300">{description}</p>
+                    <span class="text-xs">
+                      {readTime} minutos de lectura ⏳
+                    </span>
+                  </div>
+                </a>
+              </article>
+            );
+          })
+        }
+      </ul>
+    </Section>
+  </main>
+</Layout>
