@@ -2,17 +2,21 @@
 import Translate from "@components/icons/translate.astro";
 import { getLangFromUrl } from "@utils/i18n";
 
+const url = Astro.url;
 const lang = getLangFromUrl(Astro.url);
-const url = lang === "" ? "/es" : "/";
+
+let pathnameSplitted = url.pathname.split("/");
+pathnameSplitted[1] = pathnameSplitted[1] === "en" ? "es" : "en";
 ---
 
-<div class="fixed right-5 top-5 print:hidden">
+<div class="print:hidden">
   <a
-    href={url}
-    title={`${lang === "" ? "Traducir al Español" : " Translate to English"}`}
-    class="flex items-center gap-1 text-3xl uppercase text-white/80 hover:text-white"
+    id="languageSwitcher"
+    href={url.origin + pathnameSplitted.join("/")}
+    title={`${lang === "en" ? "Traducir al Español" : " Translate to English"}`}
+    class="flex items-center gap-1 text-3xl uppercase"
   >
     <Translate classes="size-7 mt-[2.5px] text-inherit pointer-events-none" />
-    {lang === "" ? "Es" : "En"}
+    {lang === "en" ? "Es" : "En"}
   </a>
 </div>
