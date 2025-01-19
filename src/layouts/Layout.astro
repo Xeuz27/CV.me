@@ -1,6 +1,7 @@
 ---
 import BaseHead from "@components/BaseHead.astro";
-import LanguageSwitcher from "@components/LanguageSwitcher.astro";
+import Footer from "@components/Footer.astro";
+import Header from "@components/Header.astro";
 
 interface Props {
   title: string;
@@ -9,32 +10,36 @@ interface Props {
 }
 
 const { title, description, ogImage } = Astro.props;
+const locale = Astro.currentLocale;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={locale}>
   <head>
     <BaseHead title={title} description={description} ogImage={ogImage} />
   </head>
-  <body class="relative max-xs:pb-14">
-    <slot />
-    <LanguageSwitcher />
+  <body class="relative h-full min-h-dvh pt-12">
+    <Header locale={locale} />
+    <div class="pb-56">
+      <slot />
+    </div>
+    <Footer />
     <div
       id="noise"
       class="pointer-events-none fixed inset-0 before:absolute before:inset-0 before:bg-repeat before:opacity-10"
     >
     </div>
-  </body><!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZP7PVPZNQ3"
-  ></script>
-  <script>
-    //@ts-nocheck
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZP7PVPZNQ3"
+    ></script>
+    <script>
+      //@ts-nocheck
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    gtag("config", "G-ZP7PVPZNQ3");
-  </script>
+      gtag("config", "G-ZP7PVPZNQ3");
+    </script>
+  </body><!-- Google tag (gtag.js) -->
 </html>
