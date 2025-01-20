@@ -1,4 +1,5 @@
 ---
+// @ts-nocheck
 import { getI18N } from "@utils/i18n";
 import { getCollection } from "astro:content";
 import Icon from "./icons/Icon.astro";
@@ -9,14 +10,12 @@ const { profiles } = basics;
 const linkedinInfo = profiles.find(({ network }) => network === "Linkedin");
 const linkedinUrl = {
   icon: "Linkedin",
-  href: linkedinInfo?.url,
-  data: linkedinInfo?.url
+  href: linkedinInfo?.url
 };
 const githubInfo = profiles.find(({ network }) => network === "Github");
 const githubUrl = {
   icon: "Github",
-  href: githubInfo?.url,
-  data: githubInfo?.username
+  href: githubInfo?.url
 };
 
 const socials = [
@@ -44,6 +43,7 @@ const casos = await getCollection("caseStudies");
           return (
             <li class="flex place-content-center items-center">
               <a
+                title={href}
                 target="_blank"
                 rel="noopener noreferrer nofollow"
                 href={href}
@@ -68,10 +68,20 @@ const casos = await getCollection("caseStudies");
           return (
             <li>
               <a
+                title={
+                  Astro.site +
+                  Astro.currentLocale +
+                  "/casos-de-estudio/" +
+                  caso.slug
+                }
                 class="tracking-wide text-gray-200/80 underline decoration-gray-200/80 underline-offset-2 transition-all duration-300 hover:text-white hover:drop-shadow-[0_0px_8px_rgb(32,124,250)] md:text-lg"
-                href={Astro.url + "casos-de-estudio/" + caso.slug}
+                href={
+                  Astro.site +
+                  Astro.currentLocale +
+                  "/casos-de-estudio/" +
+                  caso.slug
+                }
                 target="_blank"
-                rel="noopener noreferrer nofollow"
               >
                 {caso.slug}
               </a>
