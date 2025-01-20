@@ -27,6 +27,13 @@ export default {
       fontSize: {
         sizeInherit: "inherit",
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            color: "rgb(180, 180, 180)",
+          },
+        },
+      },
     },
   },
   plugins: [
