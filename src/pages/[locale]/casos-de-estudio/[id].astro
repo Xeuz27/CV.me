@@ -29,9 +29,12 @@ export const prerender = true;
 >
   <Section classes={"p-4 sm:p-16"}>
     <div
-      class="prose prose-sm prose-invert -z-20 max-w-none max-sm:prose-h1:text-2xl"
+      class="prose prose-sm prose-invert -z-20 max-w-none tracking-wide sm:prose-base max-sm:prose-h1:text-2xl"
     >
-      <h1 class="relative -z-10" transition:name={`title-${slug}`}>
+      <h1
+        class="relative -z-10 text-balance text-center"
+        transition:name={`title-${slug}`}
+      >
         {title}
       </h1>
       <Content />
