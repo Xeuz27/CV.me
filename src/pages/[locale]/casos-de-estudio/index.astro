@@ -32,30 +32,36 @@ export const prerender = true;
             const readTime = getReadingTime(body);
 
             return (
-              <article class="flex gap-4 max-md:flex-col md:max-h-96 ">
-                <a
-                  href={`/${Astro.currentLocale}/casos-de-estudio/${slug}`}
-                  class="mb-2 transition hover:scale-110 xl:mb-0"
-                >
-                  {/* // transition:name={`img-${slug}`} -> when transitioned stays on top of the page ??? not fixable with z-index */}
-                  <img class="w-[430px] rounded" src={`${img}`} alt={title} />
-                </a>
-                <a href={`/${Astro.currentLocale}/casos-de-estudio/${slug}`}>
-                  <div class="flex flex-col justify-center">
-                    <span
-                      transition:name={`title-${slug}`}
-                      class="-z-10 mb-2 text-xl font-bold leading-tight text-white"
-                    >
-                      {title}
-                    </span>
+              <li>
+                <article class="flex gap-4 max-md:flex-col md:max-h-96 ">
+                  <a
+                    title={`ver caso de estudio de ${slug}`}
+                    href={`/${Astro.currentLocale}/casos-de-estudio/${slug}`}
+                    class="mb-2 transition hover:scale-110 xl:mb-0"
+                  >
+                    {/* // transition:name={`img-${slug}`} -> when transitioned stays on top of the page ??? not fixable with z-index */}
+                    <img class="w-[430px] rounded" src={`${img}`} alt={title} />
+                  </a>
+                  <a
+                    title={`ver caso de estudio de ${slug}`}
+                    href={`/${Astro.currentLocale}/casos-de-estudio/${slug}`}
+                  >
+                    <div class="flex flex-col justify-center">
+                      <span
+                        transition:name={`title-${slug}`}
+                        class="-z-10 mb-2 text-xl font-bold leading-tight text-sectionTitle"
+                      >
+                        {title}
+                      </span>
 
-                    <p class="mb-4 text-gray-300">{description}</p>
-                    <span class="text-xs">
-                      {readTime} minutos de lectura ⏳
-                    </span>
-                  </div>
-                </a>
-              </article>
+                      <p class="mb-4">{description}</p>
+                      <span class="text-xs text-stone-200">
+                        {readTime} minutos de lectura ⏳
+                      </span>
+                    </div>
+                  </a>
+                </article>
+              </li>
             );
           })
         }
