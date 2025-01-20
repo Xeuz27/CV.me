@@ -20,7 +20,12 @@ const lang = getLangFromUrl(Astro.url);
                 <div class="flex w-full flex-col gap-[3px] divide-y-[2px] divide-separator print:divide-separatorPrint">
                   <h4 class="flex justify-between text-sm tracking-normal sm:text-base">
                     {lang === "" ? "School" : "Escuela"}:{" "}
-                    <a href={url} target="_blank" rel="nofollow noreferrer">
+                    <a
+                      title={url}
+                      href={url}
+                      target="_blank"
+                      rel="nofollow noreferrer"
+                    >
                       <span>{institution}</span>
                     </a>
                   </h4>

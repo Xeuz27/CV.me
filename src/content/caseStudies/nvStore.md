@@ -7,7 +7,7 @@ date: date
 ---
 
 <!-- intro -->
-<p>En este caso de estudio, te mostramos el paso a paso de cómo ayudamos a <a href="https://nvstore.vercel.app/" target='_blank' rel='noreferrer nofollow noopener'>NV Store</a> a construir una tienda eCommerce funcional mientras optimizábamos su presencia en Google.</p>
+<p>En este caso de estudio, te mostramos el paso a paso de cómo ayudamos a <a title='ir a https://nvstore.vercel.app/' href="https://nvstore.vercel.app/" target='_blank' rel='noreferrer nofollow noopener'>NV Store</a> a construir una tienda eCommerce funcional mientras optimizábamos su presencia en Google.</p>
 
 <!-- contexto del proyecto -->
 
@@ -54,7 +54,7 @@ date: date
 
 <h3>Diseño del Sitio Web</h3>
 
-<p>El diseño del sitio web se basó en experiencias previas con otro eCommerce construido íntegramente en <a href="https://es.react.dev/" target='_blank' rel='noreferrer nofollow noopener'>React</a>. Se seleccionaron y adaptaron las funcionalidades más efectivas y visualmente agradables para este nuevo proyecto. Al no haber especificaciones claras, el desarrollo visual se realizó de manera iterativa. La base del diseño consistió en matchear los colores del logo de la marca "NV", estableciendo un tono básico para el fondo y un tono de acento complementario. Se optó por una interfaz sencilla y funcional, enfocada en destacar los elementos esenciales como productos, precios y botones de compra, asegurando que fueran bien visibles y fácilmente navegables, especialmente en dispositivos móviles.</p>
+<p>El diseño del sitio web se basó en experiencias previas con otro eCommerce construido íntegramente en <a title='ver la documentacion de ReactJS' href="https://es.react.dev/" target='_blank' rel='noreferrer nofollow noopener'>React</a>. Se seleccionaron y adaptaron las funcionalidades más efectivas y visualmente agradables para este nuevo proyecto. Al no haber especificaciones claras, el desarrollo visual se realizó de manera iterativa. La base del diseño consistió en matchear los colores del logo de la marca "NV", estableciendo un tono básico para el fondo y un tono de acento complementario. Se optó por una interfaz sencilla y funcional, enfocada en destacar los elementos esenciales como productos, precios y botones de compra, asegurando que fueran bien visibles y fácilmente navegables, especialmente en dispositivos móviles.</p>
 
 <p>Estos requerimientos fueron definidos y priorizados por mí, con el objetivo de garantizar una experiencia fluida y centrada en el usuario.</p>
 
@@ -79,11 +79,11 @@ date: date
 
 <h3>Lanzamiento y Post-Implementación</h3>
 
-<p>El sitio fue publicado utilizando <a href="https://vercel.com/" target='_blank' rel='noreferrer nofollow noopener'>Vercel</a>, lo que permitió una experiencia de integracion continua gracias al uso de repositorios de <a href="https://github.com/" target='_blank' rel='noreferrer noopener'>GitHub</a>. Los cambios realizados en el código se desplegaban automáticamente, proporcionando un entorno de pruebas y producción en tiempo real para verificar el funcionamiento tanto en desarrollo como en producción.</p>
+<p>El sitio fue publicado utilizando <a title='ir a Vercel.com' href="https://vercel.com/" target='_blank' rel='noreferrer nofollow noopener'>Vercel</a>, lo que permitió una experiencia de integracion continua gracias al uso de repositorios de <a title='ir a Github' href="https://github.com/" target='_blank' rel='noreferrer noopener'>GitHub</a>. Los cambios realizados en el código se desplegaban automáticamente, proporcionando un entorno de pruebas y producción en tiempo real para verificar el funcionamiento tanto en desarrollo como en producción.</p>
 
 <p>Después del lanzamiento, se monitorearon métricas iniciales con la consola de búsqueda de Google. Esto incluyó el análisis de impresiones, clics y términos de búsqueda relacionados para ajustar la estrategia de SEO. También se evaluó el origen del tráfico y los dispositivos utilizados por los visitantes, lo que permitió realizar optimizaciones específicas y mejorar la relevancia del sitio en los resultados de búsqueda.</p>
 
-<p>Este proyecto demuestra cómo un enfoque estratégico, centrado en las necesidades específicas del cliente y apoyado en tecnologías modernas como <a href="https://astro.build/" target='_blank' rel='noreferrer nofollow noopener'>Astro</a>, puede transformar la presencia digital de una marca. Desde la creación de un <strong>sitio web visualmente atractivo y funcional</strong> hasta la implementación de <strong>optimizaciones de SEO</strong> para captar la atención de una audiencia local, cada paso fue diseñado para generar confianza y aumentar la visibilidad en un mercado competitivo.</p>
+<p>Este proyecto demuestra cómo un enfoque estratégico, centrado en las necesidades específicas del cliente y apoyado en tecnologías modernas como <a title='ver la documentacion de AstroJS' href="https://astro.build/" target='_blank' rel='noreferrer nofollow noopener'>Astro</a>, puede transformar la presencia digital de una marca. Desde la creación de un <strong>sitio web visualmente atractivo y funcional</strong> hasta la implementación de <strong>optimizaciones de SEO</strong> para captar la atención de una audiencia local, cada paso fue diseñado para generar confianza y aumentar la visibilidad en un mercado competitivo.</p>
 
 <p>Los resultados hablan por sí mismos: un sitio web eficiente, accesible y alineado con los objetivos del negocio. Esto no solo <strong>posiciona a la marca</strong> como una opción confiable en su industria, sino que también sienta las bases para un crecimiento sostenible.</p>
 
