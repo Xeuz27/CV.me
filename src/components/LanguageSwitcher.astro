@@ -9,14 +9,12 @@ let pathnameSplitted = url.pathname.split("/");
 pathnameSplitted[1] = pathnameSplitted[1] === "en" ? "es" : "en";
 ---
 
-<div class="print:hidden">
-  <a
-    id="languageSwitcher"
-    href={url.origin + pathnameSplitted.join("/")}
-    title={`${lang === "en" ? "Traducir al Español" : " Translate to English"}`}
-    class="flex items-center gap-1 text-3xl uppercase"
-  >
-    <Translate classes="size-7 mt-[2.5px] text-inherit pointer-events-none" />
-    {lang === "en" ? "Es" : "En"}
-  </a>
-</div>
+<a
+  id="languageSwitcher"
+  href={url.origin + pathnameSplitted.join("/")}
+  title={`${lang === "en" ? "Traducir al Español" : " Translate to English"}`}
+  class="flex items-center gap-1 text-3xl uppercase print:hidden"
+>
+  <Translate classes="size-7 mt-[2.5px] text-inherit pointer-events-none" />
+  {lang === "en" ? "Es" : "En"}
+</a>
