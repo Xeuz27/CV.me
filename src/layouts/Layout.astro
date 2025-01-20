@@ -17,6 +17,19 @@ const locale = Astro.currentLocale;
 <html lang={locale}>
   <head>
     <BaseHead title={title} description={description} ogImage={ogImage} />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DD9T91CN0F"
+    ></script>
+    <script>
+      // @ts-nocheck -->
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-DD9T91CN0F");
+    </script>
   </head>
   <body class="relative h-full min-h-dvh pt-12">
     <Header locale={locale} />
@@ -29,17 +42,5 @@ const locale = Astro.currentLocale;
       class="pointer-events-none fixed inset-0 before:absolute before:inset-0 before:bg-repeat before:opacity-10"
     >
     </div>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZP7PVPZNQ3"
-    ></script>
-    <script>
-      //@ts-nocheck
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-ZP7PVPZNQ3");
-    </script>
-  </body><!-- Google tag (gtag.js) -->
+  </body>
 </html>
