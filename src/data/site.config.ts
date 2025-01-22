@@ -8,9 +8,9 @@ interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   author: "yidev27", // Site author
-  title: "Jesus gutierrez • Desarrollador Web FullStack • Curriculum", // Site title.
+  title: "Yidev • Jesus gutierrez • Desarrollador Web", // Site title.
   description:
-    "Contrata a yidev27 para crear tus Paginas y aplicaciones web. Comprometido en impulsar el avance tecnológico, Brindando conocimientos y estrategias para destacar y prosperar en el mundo tecnológico.", // Description to display in the meta tags
+    "Desarrollador Fullstack, creando mi primera pagina web en el 2021 #Javascript | Mcbo Ve", // Description to display in the meta tags
   mision:
     "Impulsar el avance tecnológico al liderar a emprendedores y pequeños empresarios hacia nuevas perspectivas de éxito en el ámbito digital. Proporcionar conocimientos y estrategias innovadoras para destacar y prosperar en un mundo tecnológico en constante evolución.",
   vision:
