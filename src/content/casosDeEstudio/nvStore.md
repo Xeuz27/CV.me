@@ -9,6 +9,11 @@ date: 20250122T000000-0400
 <!-- intro -->
 <p>En este caso de estudio, te mostramos el paso a paso de cómo ayudamos a <a title='ir a https://nvstore.vercel.app/' href="https://nvstore.vercel.app/" target='_blank' rel='noreferrer nofollow noopener'>NV Store</a> a construir una tienda eCommerce funcional mientras optimizábamos su presencia en Google.</p>
 
+<div class="flex gap-2 overflow-hidden max-md:flex-col-reverse md:gap-4">
+<img class="mx-auto aspect-auto max-h-[580px] md:max-h-64 lg:max-h-96 xl:max-h-[360px]" src='/nvstoreMobile.png' alt="" />
+<img class="mx-auto aspect-video max-h-64 max-sm:max-h-72 lg:max-h-96 xl:max-h-[360px]" src='/nvstoreDesktop.png' alt="" />
+</div>
+
 <!-- contexto del proyecto -->
 
 <h2>Contexto del Proyecto</h2>
@@ -16,7 +21,56 @@ date: 20250122T000000-0400
 
 <p>El cliente también necesitaba un <strong>sitio web funcional</strong> y accesible que permitiera a los visitantes explorar su <strong>catálogo de productos</strong>, aunque inicialmente simple, con la opción de ser redirigidos a un canal de atención al cliente <strong>(por WhatsApp)</strong> para concretar compras o resolver dudas. Este enfoque aprovecharía la comodidad que sus clientes ya encuentran al interactuar directamente en <strong>WhatsApp Business,</strong> donde gestionaban sus ventas de forma manual.</p>
 
+<figure>
+    <picture>
+        <img class="mx-auto" src='/diagrama.png' alt="" />
+    </picture>
+    <figcaption class='text-white/90 text-center text-sm font-normal sm:text-base'>diagrama de flujo que se espera de los usuarios</figcaption>
+</figure>
+
 <p>Aunque contaban con una <strong>presencia activa en redes sociales,</strong> su visibilidad en Google era prácticamente nula. Por eso, acudieron a nosotros en busca de un <strong>sitio web personalizado, rápido, seguro y optimizado para SEO</strong>, capaz de <strong>posicionar la marca en buscadores y canalizar el tráfico hacia sus productos.</strong> El objetivo final era <strong>convertir a visitantes locales y potenciales en clientes</strong>, sin depender únicamente de esfuerzos constantes en redes sociales.</p>
+
+<div class='md:hidden'>
+<figure>
+    <picture>
+        <img class="mx-auto aspect-auto max-h-[650px] md:max-h-64 lg:max-h-96 xl:max-h-[720px]" src='/busquedaMobile1.png' alt="" />
+    </picture>
+    <figcaption class='text-white/90 text-center text-sm font-normal sm:text-base'>busqueda de el Nombre de la tienda en su Localidad</figcaption>
+</figure>
+
+<figure>
+    <picture>
+        <img class="mx-auto aspect-auto max-h-[650px] md:max-h-64 lg:max-h-96 xl:max-h-[720px]" src='/busquedaMobile2.png' alt="" />
+    </picture>
+    <figcaption class='text-white/90 text-center text-sm font-normal sm:text-base'>busqueda de el Nombre de el Sitio Web</figcaption>
+</figure>
+
+<figure>
+    <picture>
+        <img class="mx-auto aspect-auto max-h-[650px] md:max-h-64 lg:max-h-96 xl:max-h-[720px]" src='/busquedaMobile.png' alt="" />
+    </picture>
+    <figcaption class='text-white/90 text-center text-sm font-normal sm:text-base'>Captura de pantalla de los resultados de busqueda en PC de escritorio</figcaption>
+</figure>
+
+</div>
+
+<div class='flex gap-1 max-md:hidden'>
+
+<figure class='w-[248px] place-items-center px-1'>
+    <picture class=''>
+        <img class="aspect-auto max-h-[580px] lg:max-h-96" src='/busquedaMobile1.png' alt="" />
+    </picture>
+     <figcaption class='text-white/90 text-center text-sm font-normal sm:text-base'>busqueda de el Nombre de la tienda en su Localidad en Dispositivo Movil</figcaption>
+</figure>
+
+<figure class='h-min '>
+    <picture class='h-min'>
+        <img class="aspect-video h-[384px] max-lg:max-h-[320px]" src='/busqueda.png' alt="" />
+    </picture>
+    <figcaption class='text-white/90 text-center text-sm font-normal sm:text-base'>Captura de pantalla de los resultados de busqueda en PC de escritorio</figcaption>
+</figure>
+
+</div>
 
 <!-- Investigación Inicial y Planificación -->
 
