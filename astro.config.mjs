@@ -7,7 +7,7 @@ export default defineConfig({
   site: "https://yidev.vercel.app",
   integrations: [tailwind()],
   i18n: {
-    defaultLocale: "en",
+    defaultLocale: "es",
     locales: ["en", "es"],
     routing: {
       prefixDefaultLocale: true,

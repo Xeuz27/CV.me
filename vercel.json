@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/linktree",
+      "destination": "https://obsoleto.vercel.app/"
+    },
+    {
+      "source": "/linktree/:match(.*)",
+      "destination": "https://obsoleto.vercel.app/:match"
+    }
+  ]
+}
