@@ -1,10 +1,10 @@
 ---
 import Section from "@components/Section.astro";
 import Layout from "@layouts/Layout.astro";
+import { getCasos } from "@utils/i18n";
 import { getReadingTime } from "@utils/readTime";
-import { getCollection } from "astro:content";
 
-const casos = await getCollection("caseStudies");
+const casos = await getCasos(Astro.currentLocale);
 export async function getStaticPaths() {
   // Define the languages you want to support
   return [{ params: { locale: "en" } }, { params: { locale: "es" } }];
@@ -40,7 +40,11 @@ export const prerender = true;
                     class="mb-2 transition hover:scale-110 xl:mb-0"
                   >
                     {/* // transition:name={`img-${slug}`} -> when transitioned stays on top of the page ??? not fixable with z-index */}
-                    <img class="w-[430px] rounded" src={`${img}`} alt={title} />
+                    <img
+                      class="w-[430px] min-w-64 rounded "
+                      src={`${img}`}
+                      alt={title}
+                    />
                   </a>
                   <a
                     title={`ver caso de estudio de ${slug}`}
