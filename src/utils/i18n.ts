@@ -3,6 +3,7 @@ import spanish from "@data/cv.json";
 
 import { siteConfig as englishData } from "@data/site.config-english.ts";
 import { siteConfig as spanishData } from "@data/site.config.ts";
+import { getCollection } from "astro:content";
 
 export const languages = {
   en: "English",
@@ -25,3 +26,10 @@ export function getLangFromUrl(url: URL) {
   if (lang in languages) return lang;
   return "";
 }
+export const getCasos = async (currentLocale?: string) => {
+  let casos =
+    currentLocale === "en"
+      ? await getCollection("caseStudies")
+      : await getCollection("casosDeEstudio");
+  return casos;
+};
