@@ -1,90 +1,93 @@
 ---
-title: "Estrategias y Desarrollo: Cómo Diseñamos un eCommerce y Posicionamos una Marca en Google"
-author: jesus gutierrezx
+title: "Strategy Development: How we Design an eCommerce and position a brand in Google"
+author: jesus gutierrez
 img: /nvstoreDesktop.png
-description: "En este caso de estudio, te mostramos el paso a paso de cómo ayudamos a NV Store a construir una tienda eCommerce funcional mientras optimizábamos su presencia en Google."
+description: "In this Case Study i'll show you the thought process of how I help NV Store in building a functional online Ecommerce while optimizing their online presence in Google."
 date: date
 ---
 
 <!-- intro -->
-<p>En este caso de estudio, te mostramos el paso a paso de cómo ayudamos a <a title='ir a https://nvstore.vercel.app/' href="https://nvstore.vercel.app/" target='_blank' rel='noreferrer nofollow noopener'>NV Store</a> a construir una tienda eCommerce funcional mientras optimizábamos su presencia en Google.</p>
+<p>In this Case Study i'll show you the thought process of how I help <a title='ir a https://nvstore.vercel.app/' href="https://nvstore.vercel.app/" target='_blank' rel='noreferrer nofollow noopener'>NV Store</a> in building a functional online Ecommerce while optimizing their online presence in Google.</p>
 
 <!-- contexto del proyecto -->
 
-<h2>Contexto del Proyecto</h2>
-<p>El cliente es una tienda online especializada en ropa y accesorios deportivos, con un enfoque principal en <strong>productos para mujeres.</strong> Como una marca nueva y pequeña, su principal desafío era <strong>aumentar su presencia digital</strong> para competir con marcas más establecidas. Buscaban <strong>mejorar su visibilidad en Google</strong>, <strong>atraer tráfico orgánico</strong> con mayor intención de compra y, eventualmente, convertir ese tráfico en ventas.</p>
+<h2>Project context</h2>
 
-<p>El cliente también necesitaba un <strong>sitio web funcional</strong> y accesible que permitiera a los visitantes explorar su <strong>catálogo de productos</strong>, aunque inicialmente simple, con la opción de ser redirigidos a un canal de atención al cliente (por WhatsApp) para concretar compras o resolver dudas. Este enfoque aprovecharía la comodidad que sus clientes ya encuentran al interactuar directamente en WhatsApp Business, donde gestionaban sus ventas de forma manual.</p>
+<p>The client is an <strong>online store selling sportswear and accessories</strong>, with a primary focus on <strong>products for women.</strong> As a new and small brand, their main challenge was <strong>increasing their digital presence</strong> to compete with more established brands. They aimed to <strong>improve their visibility on Google</strong>, <strong>attracting organic traffic with higher purchase intent</strong>, and ultimately to <strong>convert that traffic into sales.</strong></p>
 
-<p>Aunque contaban con una presencia activa en redes sociales, su visibilidad en Google era prácticamente nula. Por eso, acudieron a nosotros en busca de un <strong>sitio web personalizado</strong>, rápido, seguro y <strong>optimizado para SEO</strong>, capaz de posicionar la marca en buscadores y canalizar el tráfico hacia sus productos. El objetivo final era <strong>convertir a visitantes locales y potenciales en clientes</strong>, sin depender únicamente de esfuerzos constantes en redes sociales.</p>
+<p>The client also needed a <strong>functional and accessible website</strong> that would allow visitors to explore their <strong>product catalog</strong>—initially simple—with the option to be redirected to a customer service channel <strong>(via WhatsApp)</strong> to complete purchases or resolve inquiries. This approach leveraged the convenience their customers already found in interacting directly through <strong>WhatsApp Business,</strong> where they manage sales manually.</p>
+
+<p>Although they had an <strong>active presence on social media</strong>, their visibility on Google was practically nonexistent. That’s why they turned to us for a <strong>customized, fast, secure, and SEO-optimized website</strong>—one that could <strong>position their brand in search engines and drive traffic to their products.</strong> The ultimate goal was to <strong>convert local visitors and potential customers</strong> without relying solely on constant efforts on social media.</p>
 
 <!-- Investigación Inicial y Planificación -->
 
-<h2>Investigación Inicial y Planificación</h2>
-<p>Dado que la marca no contaba con un posicionamiento previo en Google, la estrategia inicial se centró en establecer una presencia básica pero efectiva. Esto implicó la <strong>identificación de palabras clave</strong> relevantes que reflejaran su ubicación geográfica, su rubro (tienda de ropa deportiva) y su dirección, asegurando que fuera fácilmente encontrable por clientes locales.</p>
+<h2>Initial Research and Planning</h2>
+<p>Since the brand had no prior positioning on Google, the initial strategy focused on establishing a basic yet effective presence. This involved the <strong>identification of relevant keywords</strong> that reflected their <strong>geographic location, industry (sportswear store), and address,</strong> ensuring they could be easily found by <strong>local customers.</strong></p>
 
-<p>Se realizó un análisis de la competencia, evaluando perfiles de otras tiendas locales mejor posicionadas y sus reseñas para identificar puntos clave de mejora. Como estrategia diferenciadora, se propuso la creación de un <strong>sitio web único y completamente personalizado</strong>, que reflejara fielmente la identidad visual y estilo de la marca del cliente.</p>
+<p>A competitive analysis was conducted, <strong>evaluating the profiles of other well-ranked local stores and their reviews</strong> to identify key areas for improvement. As a differentiating strategy, we proposed the <strong>creation of a unique and fully customized website</strong> that would faithfully reflect the client's brand identity and style.</p>
 
-<p>Durante esta etapa, se identificaron necesidades específicas para el <strong>sitio web</strong>, como un diseño que facilitara el acceso al catálogo de productos desde cualquier dispositivo, con tiempos de carga rápidos y un flujo claro hacia la sección de atención al cliente por WhatsApp. Además, se planificó una estructura que incluyera:</p>
+<p>During this stage, specific needs for the website were identified, such as <strong>a design that facilitated access to the product catalog from any device,</strong> with <strong>fast loading times</strong> and a clear <strong>flow to the customer service section via WhatsApp.</strong> Additionally, a structure was planned that included:</p>
 
 <ul>
 <li>
- Un <strong>call to action</strong> visible hacia la tienda online.
+ <p>A visible <strong>call to action</strong> to the <strong>web store</strong>.</p>
 </li>
 <li>
- <strong>Productos destacados</strong> en oferta, con un temporizador para crear un <strong>sentido de urgencia</strong>.
+<p><strong>Featured products</strong> on sale, with a timer to create a <strong>sense of urgency</strong>.</p>
 </li>
 <li>
- <strong>Reseñas de clientes recientes</strong> directamente integradas desde Google Reviews, para generar <strong>confianza</strong>.
+<p><strong>Recent customer reviews</strong> directly integrated from <strong>Google Reviews</strong>, <strong>to build trust</strong>.</p>
 </li>
 <li>
- Un footer con la visión de la marca e iconos hacia <strong>redes sociales</strong>, para captar prospectos que no estuvieran listos para comprar.
+ <p>A footer with the brand's vision and <strong>social media icons</strong>, to <strong>capture prospects who weren't ready to make a purchase.</strong></p>
 </li>
 </ul>
 
-<p>En cuanto a las tecnologías, se optó por <bold>Astro</bold>, un metaframework especializado en crear <strong>sitios web estáticos</strong>, ideal para <strong>optimizar el SEO</strong>. Esto permitió incorporar React para <strong>mejorar la experiencia de usuario (UX)</strong>, aprovechando interacciones dinámicas sin comprometer los tiempos de carga.</p>
+<p>Regarding technologies, <strong>Astro</strong> was chosen, a meta-framework specialized in creating <strong>static websites</strong>, ideal for <strong>optimizing SEO</strong>. This allowed the integration of React to <strong>enhance the user experience (UX)</strong>, leveraging dynamic interactions without compromising loading times.</p>
 
-<p>El desarrollo se planificó en fases, comenzando con el <strong>diseño básico del sitio web</strong>, incluyendo las secciones de catálogo y productos destacados. Posteriormente, se realizaron iteraciones para <strong>optimizar el diseño de la interfaz (UI)</strong>, simplificando la navegación y reduciendo fricciones para los usuarios. Una vez establecido el sitio, se integraron palabras clave coherentes con los objetivos y se creó un perfil de negocio vinculado al sitio web, potenciando la <strong>estrategia de posicionamiento orgánico</strong>.</p>
+<p>The development was planned in phases, starting with a basic design of the website, including the catalog and featured product sections. Subsequently, iterations were made to <strong>optimize the user interface (UI) design</strong>, simplifying navigation and reducing friction for users. Once the site was established, <strong>relevant keywords were integrated</strong> in line with the objectives, and a <strong>business profile linked to the website was created,</strong> enhancing the <strong>organic positioning strategy.</strong></p>
 
-<p>Finalmente, la planificación priorizó un enfoque de mejora continua, incorporando funcionalidades según las necesidades emergentes del cliente y los comentarios iniciales de los usuarios.</p>
+<p>Finally, the planning prioritized a continuous improvement approach, incorporating functionalities based on the client's evolving needs and initial user feedback.</p>
 
 <!-- implementacion del proyecto -->
 
-<h2>Implementación del Proyecto</h2>
+<h2>Proyect implementation</h2>
 
-<h3>Diseño del Sitio Web</h3>
+<h3>Website Design</h3>
 
-<p>El diseño del sitio web se basó en experiencias previas con otro eCommerce construido íntegramente en <a title='ver la documentacion de ReactJS' href="https://es.react.dev/" target='_blank' rel='noreferrer nofollow noopener'>React</a>. Se seleccionaron y adaptaron las funcionalidades más efectivas y visualmente agradables para este nuevo proyecto. Al no haber especificaciones claras, el desarrollo visual se realizó de manera iterativa. La base del diseño consistió en matchear los colores del logo de la marca "NV", estableciendo un tono básico para el fondo y un tono de acento complementario. Se optó por una interfaz sencilla y funcional, enfocada en destacar los elementos esenciales como productos, precios y botones de compra, asegurando que fueran bien visibles y fácilmente navegables, especialmente en dispositivos móviles.</p>
+<p>The website design was based on previous experiences with another <strong>eCommerce project built entirely in <a title='view the ReactJS documentation' href="https://react.dev/" target='_blank' rel='noreferrer nofollow noopener'>React.</a></strong> The most effective and visually appealing functionalities were selected and adapted for this new project. Since there were no clear specifications, the visual development was carried out iteratively. <strong>The design foundation was centered on matching the colors of the brand's "NV" logo,</strong> establishing a primary background tone and a complementary accent tone. A <strong>simple and functional interface</strong> was chosen, focusing on highlighting essential elements such as products, prices, and purchase buttons, ensuring they were <strong>highly visible and easily navigable, especially on mobile devices.</strong></p>
 
-<p>Estos requerimientos fueron definidos y priorizados por mí, con el objetivo de garantizar una experiencia fluida y centrada en el usuario.</p>
+<p>This requirements were stablished and prioritized by me, having in mind that the goal was to guarantee a <strong>fluid experience focused on the user.</strong></p>
 
-<h3>Desarrollo Técnico</h3>
+<h3>Technical Development</h3>
 
-<p>La integración de Astro con frameworks de renderizado del lado del cliente como React es bastante directa gracias a la estructura de Astro. Sin embargo, uno de los mayores retos fue decidir qué partes del sitio serían generadas estáticamente para optimizar el SEO y cuáles se mantendrían como componentes dinámicos para mejorar la interactividad.</p>
+<p>The integration of Astro with client-side rendering frameworks like React is quite straightforward thanks to Astro's structure. However, one of the biggest challenges was deciding which parts of the site would be statically generated to <strong>optimize SEO</strong> and which would remain <strong>dynamic components to enhance interactivity.</strong></p>
 
-<p>Para reducir las llamadas a la API y mejorar los tiempos de carga, se diseñaron componentes optimizados que almacenan la información estática de productos, como títulos y descripciones, mientras que la parte interactiva quedó limitada a lo esencial. Un caso particular fue el temporizador de ofertas: se diseñó un componente híbrido que muestra un temporizador interactivo en dispositivos modernos, pero una fecha estática en aquellos más antiguos o con menor capacidad, como mi teléfono actual.</p>
-<!-- asdasd -->
+<p>To <strong>reduce API calls</strong> and <strong>improve loading times</strong>, optimized components were designed to store static product information, such as titles and descriptions, while <strong>interactivity was kept to the essentials.</strong> A particular case was the offer timer: a hybrid component was designed to display an interactive countdown on modern devices <strong>while showing a static date on older or lower-capacity devices—like my current phone.</strong></p>
 
-<p>En cuanto a las funcionalidades personalizadas, se evitó el procesamiento de pagos directamente en el sitio. En su lugar, se implementó un sistema que redirige a los usuarios al canal de atención al cliente mediante un botón de checkout en el carrito de compras, enviando la solicitud a través de una URL.</p>
+<p>Regarding custom functionalities, <strong>direct payment processing was avoided</strong> on the site. Instead, a logic was implemented that <strong>redirects users to the customer service channel</strong> via a checkout button in the shopping cart.</p>
 
-<h3>Contenido y SEO</h3>
+<h3>SEO and Content</h3>
 
-<p>Para optimizar el SEO, se aprovechó la capacidad de Astro para <strong>generar contenido estático</strong>, permitiendo que el sitio esté completamente renderizado desde el inicio. Esto <strong>mejora la indexación en motores de búsqueda</strong> al incluir palabras clave relevantes y <strong>estructurar correctamente el HTML</strong>. Aunque el contenido aún es limitado, se incluyó información básica sobre los servicios de la tienda, como delivery y opciones de pago flexibles. Las palabras clave seleccionadas son de baja competencia, enfocadas en búsquedas locales, como "tiendas de ropa deportiva" dentro de la ciudad y el nombre específico de la tienda.</p>
+<p>To optimize SEO, <a title='see AstroJS docs' href="https://astro.build/" target='_blank' rel='noreferrer nofollow noopener'>Astro's</a> capability to <strong>generate static content</strong> was leveraged, allowing the site to be fully rendered from the start. This <strong>improves search engine indexing by including relevant keywords</strong> and <strong>structuring the HTML correctly.</strong> Although the content is still limited, <strong>basic information about the store's services,</strong> such as delivery and flexible payment options, was included. <strong>The selected keywords have low competition,</strong> focusing on <strong>local searches within the city</strong> and the specific <bold>name of the store.</bold></p>
 
-<h3>Pruebas y Ajustes</h3>
+<h3>Adjustments and Testing</h3>
 
-<p>El sitio se lanzó cuando las funcionalidades esenciales (home y catálogo de productos) estaban listas. Las pruebas se realizaron principalmente en mi computadora y teléfono de gama baja para asegurar tiempos de carga rápidos y una experiencia responsiva en dispositivos con diferentes tamaños de pantalla. Además, se realizaron búsquedas en Google con diferentes términos para verificar cómo aparecía el sitio en los resultados de búsqueda y realizar ajustes en consecuencia.</p>
+<p>The site was launched once the essential features <strong>(home and product catalog)</strong> were ready. Testing was primarily conducted on <strong>my computer and a low-end phone</strong> to ensure <strong>fast loading times and a responsive experience across different screen sizes.</strong> Additionally, Google searches were performed using various terms to check how the site appeared in search results and make adjustments accordingly.</p>
 
-<p>La retroalimentación del cliente y los usuarios iniciales fue clave para realizar ajustes. Se eliminaron servicios irrelevantes heredados del sitio anterior y se verificó la <strong>compatibilidad en distintos dispositivos</strong>, corrigiendo <strong>problemas de visualización en pantallas más pequeñas</strong>.</p>
+<p><strong>Client and initial users feedback was key to making adjustments.</strong> Irrelevant services inherited from the previous site were removed, and <strong>compatibility across different devices was verified,</strong> correcting display issues on smaller screens.</p>
 
-<h3>Lanzamiento y Post-Implementación</h3>
+<h3>Launch and Post-Implementation</h3>
 
-<p>El sitio fue publicado utilizando <a title='ir a Vercel.com' href="https://vercel.com/" target='_blank' rel='noreferrer nofollow noopener'>Vercel</a>, lo que permitió una experiencia de integracion continua gracias al uso de repositorios de <a title='ir a Github' href="https://github.com/" target='_blank' rel='noreferrer noopener'>GitHub</a>. Los cambios realizados en el código se desplegaban automáticamente, proporcionando un entorno de pruebas y producción en tiempo real para verificar el funcionamiento tanto en desarrollo como en producción.</p>
+<p>The site was deployed using <a title='Go to Vercel.com' href="https://vercel.com/" target='_blank' rel='noreferrer nofollow noopener'>Vercel</a>, enabling a seamless continuous integration experience through <a title='Go to GitHub' href="https://github.com/" target='_blank' rel='noreferrer noopener'>GitHub</a> repositories. <strong>Any changes made to the code were automatically deployed,</strong> providing a testing and a production environment to verify functionality in both development and live settings.</p>
 
-<p>Después del lanzamiento, se monitorearon métricas iniciales con la consola de búsqueda de Google. Esto incluyó el análisis de impresiones, clics y términos de búsqueda relacionados para ajustar la estrategia de SEO. También se evaluó el origen del tráfico y los dispositivos utilizados por los visitantes, lo que permitió realizar optimizaciones específicas y mejorar la relevancia del sitio en los resultados de búsqueda.</p>
+<p>After the launch, initial <strong>metrics were monitored using <a title='go to google search console' href="https://search.google.com/search-console/about" target='_blank' rel='noreferrer nofollow noopener'>Google Search Console.</a></strong> This included analyzing impressions, clicks, and related search terms to refine the <strong>SEO strategy.</strong> Additionally, the traffic sources and devices used by visitors were evaluated, allowing for specific optimizations to enhance the site's relevance in search results.</p>
 
-<p>Este proyecto demuestra cómo un enfoque estratégico, centrado en las necesidades específicas del cliente y apoyado en tecnologías modernas como <a title='ver la documentacion de AstroJS' href="https://astro.build/" target='_blank' rel='noreferrer nofollow noopener'>Astro</a>, puede transformar la presencia digital de una marca. Desde la creación de un <strong>sitio web visualmente atractivo y funcional</strong> hasta la implementación de <strong>optimizaciones de SEO</strong> para captar la atención de una audiencia local, cada paso fue diseñado para generar confianza y aumentar la visibilidad en un mercado competitivo.</p>
+<p>This project demonstrates how a strategic approach, <strong>focused on the client's specific needs</strong> and supported by modern technologies like <a title='view AstroJS documentation' href="https://astro.build/" target='_blank' rel='noreferrer nofollow noopener'>Astro</a>, can transform a brand's digital presence. From creating a <strong>visually appealing and functional website</strong> to implementing <strong>SEO optimizations</strong> to attract a local audience, every step was designed <strong>to build trust and increase visibility in a competitive market.</strong></p>
 
-<p>Los resultados hablan por sí mismos: un sitio web eficiente, accesible y alineado con los objetivos del negocio. Esto no solo <strong>posiciona a la marca</strong> como una opción confiable en su industria, sino que también sienta las bases para un crecimiento sostenible.</p>
+<p>The results speak for themselves: an <strong>efficient, accessible website aligned with the business objectives.</strong> This not only <strong>positions the brand as a trustworthy option</strong> in its industry but also lays the foundation for sustainable growth.</p>
 
-<p>Si estás buscando mejorar la forma en que tu negocio se presenta en el mundo digital, este caso es una invitación a explorar soluciones similares. Con la combinación adecuada de diseño, tecnología y estrategia, puedes conectar con tus clientes de una manera más significativa y efectiva.</p>
+<h2>Ready to Skyrocket your sells?</h2>
+<p>If you're looking to <strong>improve how your business presents itself in the digital world,</strong> this case serves as an invitation to <strong>explore similar solutions.</strong> With the right combination of <strong>design, technology, and strategy,</strong> you can connect with your customers in a more meaningful and effective way.</p>
+
+<p>Are You are Ready to <strong>take your business to the next level</strong> with an <strong>optimized and visually appealing website?</strong> send me an instagram direct message at <a href="https://ig.me/m/yidev27" target='_blank' rel='noreferrer nofollow noopener'>@yidev27</a> today and discover how I can help you to <strong>enhance your online presence and attract more customers.</strong> Let’s talk!</p>
