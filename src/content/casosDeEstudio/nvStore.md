@@ -3,7 +3,7 @@ title: "Estrategias y Desarrollo: Cómo Diseñamos un eCommerce y Posicionamos u
 author: jesus gutierrez
 img: /nvstoreDesktop.png
 description: "En este caso de estudio, te mostramos el paso a paso de cómo ayudamos a NV Store a construir una tienda eCommerce funcional mientras optimizábamos su presencia en Google."
-date: date
+date: 20250122T000000-0400
 ---
 
 <!-- intro -->
