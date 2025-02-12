@@ -1,10 +1,10 @@
 ---
 import Section from "@components/Section.astro";
 
-import { getI18N, getLangFromUrl } from "../../utils/i18n";
+import { getI18N } from "../../utils/i18n";
 const { basics } = getI18N(Astro.currentLocale);
 const { summary } = basics;
-const lang = getLangFromUrl(Astro.url);
+const lang = Astro.currentLocale;
 ---
 
 <Section title={lang === "en" ? "About Me" : `Sobre mí`}>

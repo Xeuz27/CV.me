@@ -1,14 +1,14 @@
 ---
 import Section from "@components/Section.astro";
 
-import { getI18N, getLangFromUrl } from "@utils/i18n";
+import { getI18N } from "@utils/i18n";
 
 import Icon from "@components/icons/Icon.astro";
 
 const { basics } = getI18N(Astro.currentLocale);
 const { name, email, phone, url, profiles } = basics;
 
-const lang = getLangFromUrl(Astro.url);
+const lang = Astro.currentLocale;
 
 const linkedinInfo = profiles.find(({ network }) => network === "Linkedin");
 const linkedinUrl = {

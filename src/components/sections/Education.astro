@@ -1,12 +1,12 @@
 ---
 import Section from "@components/Section.astro";
 
-import { getI18N, getLangFromUrl } from "@utils/i18n";
+import { getI18N } from "@utils/i18n";
 
 const { education, basics } = getI18N(Astro.currentLocale);
 const { name } = basics;
 
-const lang = getLangFromUrl(Astro.url);
+const lang = Astro.currentLocale;
 ---
 
 <Section title={lang === "en" ? "Certificates" : "Certificados"}>
@@ -19,7 +19,7 @@ const lang = getLangFromUrl(Astro.url);
               <header class="mb-2 flex flex-col items-center justify-between text-stone-100/55  print:text-stone-500/60">
                 <div class="flex w-full flex-col gap-[3px] divide-y-[2px] divide-separator print:divide-separatorPrint">
                   <h4 class="flex justify-between text-sm tracking-normal sm:text-base">
-                    {lang === "" ? "School" : "Escuela"}:{" "}
+                    {lang === "en" ? "School" : "Escuela"}:{" "}
                     <a
                       title={url}
                       href={url}
@@ -30,7 +30,7 @@ const lang = getLangFromUrl(Astro.url);
                     </a>
                   </h4>
                   <h5 class="flex justify-between pt-1 text-sm text-inherit sm:text-base">
-                    {lang === "" ? "Title" : "Titulo"}:
+                    {lang === "en" ? "Title" : "Titulo"}:
                     <a
                       target="_blank"
                       title={`
@@ -46,7 +46,7 @@ const lang = getLangFromUrl(Astro.url);
                     </a>
                   </h5>
                   <h6 class="flex justify-between pt-1 text-sm text-inherit sm:text-base">
-                    {lang === "" ? "Profile" : "Perfil"}:
+                    {lang === "en" ? "Profile" : "Perfil"}:
                     <a
                       target="_blank"
                       rel="noFollow noreferrer"

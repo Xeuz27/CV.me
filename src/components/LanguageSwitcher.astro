@@ -1,9 +1,8 @@
 ---
 import Translate from "@components/icons/translate.astro";
-import { getLangFromUrl } from "@utils/i18n";
 
 const url = Astro.url;
-const lang = getLangFromUrl(Astro.url);
+const lang = Astro.currentLocale;
 
 let pathnameSplitted = url.pathname.split("/");
 pathnameSplitted[1] = pathnameSplitted[1] === "en" ? "es" : "en";

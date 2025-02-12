@@ -1,9 +1,9 @@
 ---
 import Section from "@components/Section.astro";
-import { getI18N, getLangFromUrl } from "@utils/i18n";
+import { getI18N } from "@utils/i18n";
 
 const { projects } = getI18N(Astro.currentLocale);
-const lang = getLangFromUrl(Astro.url);
+const lang = Astro.currentLocale;
 ---
 
 <Section
@@ -37,7 +37,7 @@ const lang = getLangFromUrl(Astro.url);
                         href={url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        title={`${lang === "" ? `Go to ${name}` : `Ir a ${name}`}`}
+                        title={`${lang === "en" ? `Go to ${name}` : `Ir a ${name}`}`}
                       >
                         <span class="whitespace-nowrap">{name}</span>
                         <span class="max-xs:hidden">•</span>
@@ -65,7 +65,7 @@ const lang = getLangFromUrl(Astro.url);
                       class="flex gap-8 overflow-hidden max-md:flex-col-reverse md:gap-4"
                       href={url}
                       target="_blank"
-                      title={`${lang === "" ? `Go to ${name}` : `Ir a ${name}`}`}
+                      title={`${lang === "en" ? `Go to ${name}` : `Ir a ${name}`}`}
                       rel="noopener noreferrer"
                     >
                       <img

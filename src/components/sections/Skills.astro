@@ -1,8 +1,7 @@
 ---
 import Section from "@components/Section.astro";
 import { hardSkills } from "@data/cv.json";
-import { getLangFromUrl } from "../../utils/i18n";
-const lang = getLangFromUrl(Astro.url);
+const lang = Astro.currentLocale;
 ---
 
 <Section title={lang === "en" ? "Skills" : `Habilidades`}>

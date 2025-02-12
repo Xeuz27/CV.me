@@ -4,11 +4,11 @@ import img from "@images/me.jpg";
 import World from "@components/icons/World.astro";
 import Section from "@components/Section.astro";
 
-import { getI18N, getLangFromUrl } from "@utils/i18n";
+import { getI18N } from "@utils/i18n";
 import { Image } from "astro:assets";
 
 const { basics } = getI18N(Astro.currentLocale);
-const lang = getLangFromUrl(Astro.url);
+const lang = Astro.currentLocale;
 
 const { name, label, location } = basics;
 const { city, region } = location;
