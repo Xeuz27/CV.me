@@ -10,4 +10,7 @@ export default defineConfig({
     defaultLocale: "es",
     locales: ["en", "es"],
   },
+  build: {
+    format: "file",
+  },
 });
