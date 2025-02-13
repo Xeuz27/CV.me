@@ -15,6 +15,8 @@ export async function getStaticPaths() {
   // Define the languages you want to support
   return [{ params: { locale: "en" } }, { params: { locale: "es" } }];
 }
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+let locales = ["es", "en"];
 
 const { title, description } = getI18NData(Astro.currentLocale);
 ---
@@ -24,7 +26,28 @@ const { title, description } = getI18NData(Astro.currentLocale);
   description={description}
   ogImage="https://ik.imagekit.io/0oguwfou0i/yi-printable-portfolio?updatedAt=1707175630120"
 >
-  <main class="container mx-auto p-4 sm:p-16 print:p-0">
+  <Fragment slot="head">
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+    <!-- Alternate Links -->
+    {
+      locales.map((locale) => {
+        return (
+          <link
+            rel="alternate"
+            href={canonicalURL + locale}
+            hreflang={locale}
+          />
+        );
+      })
+    }
+    <link
+      rel="alternate"
+      href="https://yidev.vercel.app/"
+      hreflang="x-default"
+    />
+  </Fragment>
+  <main slot="default-slot" class="container mx-auto p-4 sm:p-16 print:p-0">
     <Hero />
     <Contact />
     <About />

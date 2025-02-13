@@ -2,7 +2,7 @@
 //@ts-nocheck
 import Section from "@components/Section.astro";
 import Layout from "@layouts/Layout.astro";
-import { getCasos } from "@utils/i18n";
+import { getCasos, getLangFromUrl } from "@utils/i18n";
 import { render } from "astro:content";
 
 export async function getStaticPaths() {
@@ -19,6 +19,13 @@ export async function getStaticPaths() {
   );
   return rutas.flat();
 }
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+let currentLocale = getLangFromUrl(canonicalURL);
+let altLocale = currentLocale === "en" ? "es" : "en";
+
+let locales = ["es", "en"];
+
 const { caso } = Astro.props;
 const { data, slug } = caso;
 const { title, author, img, description } = data;
@@ -32,7 +39,28 @@ export const prerender = true;
   description="Hire yidev27 To create your Website. App and Websites Developer. Committed to boost technological advancement, my focus is on leading entrepreneurs and small business owners towards new perspectives of success in the digital field. Providing knowledge and strategies to stand out and thrive in the technological world."
   ogImage="https://ik.imagekit.io/0oguwfou0i/yi-printable-portfolio?updatedAt=1707175630120"
 >
-  <Section classes={"p-4 sm:p-16"}>
+  <Fragment slot="head">
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+    <!-- Alternate Links -->
+    {
+      locales.map((locale) => {
+        return (
+          <link
+            rel="alternate"
+            href={canonicalURL.href.replace(currentLocale, locale)}
+            hreflang={locale}
+          />
+        );
+      })
+    }
+    <link
+      rel="alternate"
+      href={"https://yidev.vercel.app/es/casos-de-estudio/" + slug}
+      hreflang="x-default"
+    />
+  </Fragment>
+  <Section slot="default-slot" classes={"p-4 sm:p-16"}>
     <div
       class="prose prose-sm prose-invert -z-20 max-w-none tracking-wider sm:prose-base prose-a:text-[rgb(106,190,251)] hover:prose-a:text-sky-700 prose-strong:font-normal max-sm:prose-h1:text-2xl"
     >
