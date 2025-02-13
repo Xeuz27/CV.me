@@ -11,6 +11,7 @@ export default defineConfig({
     locales: ["en", "es"],
   },
   build: {
-    format: "file",
+    format: "directory",
   },
+  trailingSlash: "ignore",
 });
