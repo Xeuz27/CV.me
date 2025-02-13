@@ -13,5 +13,5 @@ export default defineConfig({
   build: {
     format: "directory",
   },
-  trailingSlash: "ignore",
+  trailingSlash: "never",
 });
