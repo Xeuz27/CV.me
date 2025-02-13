@@ -36,7 +36,7 @@ const { title, description } = getI18NData(Astro.currentLocale);
         return (
           <link
             rel="alternate"
-            href={canonicalURL.href.replace(currentLocale, "") + locale}
+            href={canonicalURL.href.replace(currentLocale, locale)}
             hreflang={locale}
           />
         );
