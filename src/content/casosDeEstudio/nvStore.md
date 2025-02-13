@@ -10,8 +10,8 @@ date: 20250122T000000-0400
 <p>En este caso de estudio, te mostramos el paso a paso de cómo ayudamos a <a title='ir a https://nvstore.vercel.app/' href="https://nvstore.vercel.app/" target='_blank' rel='noreferrer nofollow noopener'>NV Store</a> a construir una tienda eCommerce funcional mientras optimizábamos su presencia en Google.</p>
 
 <div class="flex gap-2 overflow-hidden max-md:flex-col-reverse md:gap-4">
-<img class="mx-auto aspect-auto max-h-[580px] md:max-h-64 lg:max-h-96 xl:max-h-[360px]" src='/nvstoreMobile.png' alt="" />
-<img class="mx-auto aspect-video max-h-64 max-sm:max-h-72 lg:max-h-96 xl:max-h-[360px]" src='/nvstoreDesktop.png' alt="" />
+<img class="mx-auto aspect-auto max-h-[580px] md:max-h-64 lg:max-h-96 xl:max-h-[360px]" src='/nvstoreMobile.png' alt="nvstore en vista movil" />
+<img class="mx-auto aspect-video max-h-64 max-sm:max-h-72 lg:max-h-96 xl:max-h-[360px]" src='/nvstoreDesktop.png' alt="nvstore en vista de escritorio" />
 </div>
 
 <!-- contexto del proyecto -->
@@ -23,7 +23,7 @@ date: 20250122T000000-0400
 
 <figure>
     <picture>
-        <img class="mx-auto" src='/diagrama.png' alt="" />
+        <img class="mx-auto" src='/diagrama.png' alt="un diagrama de flujo esperado del usuario" />
     </picture>
     <figcaption class='text-white/90 text-center text-sm font-normal sm:text-base'>diagrama de flujo que se espera de los usuarios</figcaption>
 </figure>
@@ -33,21 +33,21 @@ date: 20250122T000000-0400
 <div class='md:hidden'>
 <figure>
     <picture>
-        <img class="mx-auto aspect-auto max-h-[650px] md:max-h-64 lg:max-h-96 xl:max-h-[720px]" src='/busquedaMobile1.png' alt="" />
+        <img class="mx-auto aspect-auto max-h-[650px] md:max-h-64 lg:max-h-96 xl:max-h-[720px]" src='/busquedaMobile1.png' alt="una captura de pantalla de la busqueda de el Nombre de la tienda en su Localidad" />
     </picture>
     <figcaption class='text-white/90 text-center text-sm font-normal sm:text-base'>busqueda de el Nombre de la tienda en su Localidad</figcaption>
 </figure>
 
 <figure>
     <picture>
-        <img class="mx-auto aspect-auto max-h-[650px] md:max-h-64 lg:max-h-96 xl:max-h-[720px]" src='/busquedaMobile2.png' alt="" />
+        <img class="mx-auto aspect-auto max-h-[650px] md:max-h-64 lg:max-h-96 xl:max-h-[720px]" src='/busquedaMobile2.png' alt="una captura de pantalla de la busqueda de el Nombre de el Sitio Web" />
     </picture>
     <figcaption class='text-white/90 text-center text-sm font-normal sm:text-base'>busqueda de el Nombre de el Sitio Web</figcaption>
 </figure>
 
 <figure>
     <picture>
-        <img class="mx-auto aspect-auto max-h-[650px] md:max-h-64 lg:max-h-96 xl:max-h-[720px]" src='/busquedaMobile.png' alt="" />
+        <img class="mx-auto aspect-auto max-h-[650px] md:max-h-64 lg:max-h-96 xl:max-h-[720px]" src='/busquedaMobile.png' alt="una captura de pantalla de los resultados de busqueda en PC de escritorio" />
     </picture>
     <figcaption class='text-white/90 text-center text-sm font-normal sm:text-base'>Captura de pantalla de los resultados de busqueda en PC de escritorio</figcaption>
 </figure>
@@ -58,14 +58,14 @@ date: 20250122T000000-0400
 
 <figure class='w-[248px] place-items-center px-1'>
     <picture class=''>
-        <img class="aspect-auto max-h-[580px] lg:max-h-96" src='/busquedaMobile1.png' alt="" />
+        <img class="aspect-auto max-h-[580px] lg:max-h-96" src='/busquedaMobile1.png' alt="una captura de pantalla de la busqueda de el Nombre de la tienda en su Localidad" />
     </picture>
      <figcaption class='text-white/90 text-center text-sm font-normal sm:text-base'>busqueda de el Nombre de la tienda en su Localidad en Dispositivo Movil</figcaption>
 </figure>
 
 <figure class='h-min '>
     <picture class='h-min'>
-        <img class="aspect-video h-[384px] max-lg:max-h-[320px]" src='/busqueda.png' alt="" />
+        <img class="aspect-video h-[384px] max-lg:max-h-[320px]" src='/busqueda.png' alt="una captura de pantalla de los resultados de busqueda en pc de escritorio" />
     </picture>
     <figcaption class='text-white/90 text-center text-sm font-normal sm:text-base'>Captura de pantalla de los resultados de busqueda en PC de escritorio</figcaption>
 </figure>
