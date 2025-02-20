@@ -116,8 +116,21 @@ date: 20250122T000000-0400
 
 <p><strong>La integración de Astro con frameworks de renderizado del lado del cliente como React</strong> es bastante directa gracias a la estructura del mismo. Sin embargo, <strong>uno de los mayores retos fue decidir qué partes del sitio serían generadas estáticamente para optimizar el SEO y cuáles se mantendrían como componentes dinámicos para mejorar la interactividad.</strong></p>
 
-<p><strong>Para reducir las llamadas a la API y mejorar los tiempos de carga,</strong> se diseñaron <strong>componentes optimizados que almacenan la información estática de productos, como títulos y descripciones,</strong> mientras que la parte interactiva quedó limitada a lo esencial. Un caso particular fue el temporizador de ofertas: se diseñó un componente híbrido que muestra un <strong>temporizador interactivo</strong> en dispositivos modernos, pero una <strong>fecha estática en aquellos más antiguos o con menor capacidad,</strong> como mi <strong>teléfono actual.</strong></p>
-<!-- asdasd -->
+<p><strong>Para reducir las llamadas a la API y mejorar los tiempos de carga,</strong> se diseñaron <strong>componentes optimizados que almacenan la información estática de productos, como títulos y descripciones,</strong> mientras que la parte interactiva quedó limitada a lo esencial. <strong>Un caso particular fue el temporizador de ofertas:</strong> se diseñó un componente híbrido que muestra un <strong>temporizador interactivo</strong> en dispositivos modernos, pero una <strong>fecha estática en aquellos más antiguos o con menor capacidad,</strong> como mi <strong>teléfono actual.</strong></p>
+<div class="flex gap-2 overflow-hidden justify-center max-sm:flex-col md:gap-4">
+<figure >
+    <picture >
+<img class="mx-auto sm:max-lg:max-h-[539px] max-h-[620px]" src='/captura-nvstore-reloj.jpg' alt="captura de pantalla de nvstore" />
+</picture>
+<figcaption class='text-white/90 text-center text-sm font-normal sm:text-base'>componente contador hasta final de fecha funcional</figcaption>
+</figure>
+<figure>
+    <picture>
+<img class="mx-auto sm:max-lg:max-h-[539px] max-h-[620px]" src='/captura-nvstore-reloj-1.jpg' alt="captura de pantalla de nvstore" />
+</picture>
+<figcaption class='text-white/90 text-center text-sm font-normal sm:text-base'>componente contador hasta final de fecha funcional</figcaption>
+</figure>
+</div>
 
 <p>En cuanto a las funcionalidades personalizadas, <strong>se evitó el procesamiento de pagos directamente en el sitio.</strong> En su lugar, se implementó una logica <strong>que redirige a los usuarios al canal de atención al cliente</strong> mediante un botón de checkout en el carrito de compras.</p>
 
