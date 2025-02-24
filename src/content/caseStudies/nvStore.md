@@ -9,6 +9,10 @@ date: 20250122T000000-0400
 <!-- intro -->
 <p>In this Case Study i'll show you the thought process of how I help <a title='ir a https://nvstore.vercel.app/' href="https://nvstore.vercel.app/" target='_blank' rel='noreferrer nofollow noopener'>NV Store</a> in building a functional online Ecommerce while optimizing their online presence in Google.</p>
 
+<div class="flex gap-2 overflow-hidden max-md:flex-col-reverse md:gap-4">
+<img class="mx-auto aspect-auto max-h-[580px] md:max-h-64 lg:max-h-96 xl:max-h-[360px]" src='/nvstoreMobile.png' alt="mobile view of nvstore" />
+<img class="mx-auto aspect-video max-h-64 max-sm:max-h-72 lg:max-h-96 xl:max-h-[360px]" src='/nvstoreDesktop.png' alt="desktop view of nvstore" />
+</div>
 <!-- contexto del proyecto -->
 
 <h2>Project context</h2>
@@ -17,8 +21,53 @@ date: 20250122T000000-0400
 
 <p>The client also needed a <strong>functional and accessible website</strong> that would allow visitors to explore their <strong>product catalog</strong>—initially simple—with the option to be redirected to a customer service channel <strong>(via WhatsApp)</strong> to complete purchases or resolve inquiries. This approach leveraged the convenience their customers already found in interacting directly through <strong>WhatsApp Business,</strong> where they manage sales manually.</p>
 
+<figure>
+    <picture>
+        <img class="mx-auto" src='/flow-en.png' alt="user flow expected" />
+    </picture>
+    <figcaption class='text-white/90 text-center text-sm font-normal sm:text-base'>user flow expected</figcaption>
+</figure>
+
 <p>Although they had an <strong>active presence on social media</strong>, their visibility on Google was practically nonexistent. That’s why they turned to us for a <strong>customized, fast, secure, and SEO-optimized website</strong>—one that could <strong>position their brand in search engines and drive traffic to their products.</strong> The ultimate goal was to <strong>convert local visitors and potential customers</strong> without relying solely on constant efforts on social media.</p>
 
+<div class='md:hidden'>
+<figure>
+    <picture>
+        <img class="mx-auto aspect-auto max-h-[650px] md:max-h-64 lg:max-h-96 xl:max-h-[720px]" src='/busquedaMobile1.png' alt="screenshot searching for the name of the store in its location" />
+    </picture>
+    <figcaption class='text-white/90 text-center text-sm font-normal sm:text-base'>Searching for the name of the store in its Location</figcaption>
+</figure>
+
+<figure>
+    <picture>
+        <img class="mx-auto aspect-auto max-h-[650px] md:max-h-64 lg:max-h-96 xl:max-h-[720px]" src='/busquedaMobile2.png' alt="screenshot searching for the name of the Website" />
+    </picture>
+    <figcaption class='text-white/90 text-center text-sm font-normal sm:text-base'>Searching for the name of the Website</figcaption>
+</figure>
+
+<figure>
+    <picture>
+        <img class="mx-auto aspect-auto max-h-[650px] md:max-h-64 lg:max-h-96 xl:max-h-[720px]" src='/busquedaMobile.png' alt="Screenshot of the search results pages in a desktop device" />
+    </picture>
+    <figcaption class='text-white/90 text-center text-sm font-normal sm:text-base'>Search results pages in a desktop device</figcaption>
+</figure>
+</div>
+
+<div class='flex gap-1 max-md:hidden'>
+<figure class='w-[248px] place-items-center px-1'>
+    <picture class=''>
+        <img class="aspect-auto max-h-[580px] lg:max-h-96" src='/busquedaMobile1.png' alt="screenshot searching for the name of the store in its location" />
+    </picture>
+     <figcaption class='text-white/90 text-center text-sm font-normal sm:text-base'>Searching for the name of the store in its Location in a mobile device</figcaption>
+</figure>
+
+<figure class='h-min '>
+    <picture class='h-min'>
+        <img class="aspect-video h-[384px] max-lg:max-h-[320px]" src='/busqueda.png' alt="Search results pages in a desktop device" />
+    </picture>
+    <figcaption class='text-white/90 text-center text-sm font-normal sm:text-base'>Search results pages in a desktop device</figcaption>
+</figure>
+</div>
 <!-- Investigación Inicial y Planificación -->
 
 <h2>Initial Research and Planning</h2>
@@ -64,6 +113,23 @@ date: 20250122T000000-0400
 <p>The integration of Astro with client-side rendering frameworks like React is quite straightforward thanks to Astro's structure. However, one of the biggest challenges was deciding which parts of the site would be statically generated to <strong>optimize SEO</strong> and which would remain <strong>dynamic components to enhance interactivity.</strong></p>
 
 <p>To <strong>reduce API calls</strong> and <strong>improve loading times</strong>, optimized components were designed to store static product information, such as titles and descriptions, while <strong>interactivity was kept to the essentials.</strong> A particular case was the offer timer: a hybrid component was designed to display an interactive countdown on modern devices <strong>while showing a static date on older or lower-capacity devices—like my current phone.</strong></p>
+
+<div class="flex gap-2 overflow-hidden justify-center max-sm:flex-col md:gap-4">
+<figure >
+    <picture >
+<img class="mx-auto sm:max-lg:max-h-[539px] max-h-[620px]" src='/captura-nvstore-reloj.jpg' alt="functional countdown offer component " />
+</picture>
+<figcaption class='text-white/90 text-center text-sm font-normal sm:text-base'>
+Functional countdown component until End-date</figcaption>
+</figure>
+<figure>
+    <picture>
+<img class="mx-auto sm:max-lg:max-h-[539px] max-h-[620px]" src='/captura-nvstore-reloj-1.jpg' alt="static countdown offer component" />
+</picture>
+<figcaption class='text-white/90 text-center text-sm font-normal sm:text-base'>
+Countdown component with static End-date</figcaption>
+</figure>
+</div>
 
 <p>Regarding custom functionalities, <strong>direct payment processing was avoided</strong> on the site. Instead, a logic was implemented that <strong>redirects users to the customer service channel</strong> via a checkout button in the shopping cart.</p>
 

@@ -122,13 +122,13 @@ date: 20250122T000000-0400
     <picture >
 <img class="mx-auto sm:max-lg:max-h-[539px] max-h-[620px]" src='/captura-nvstore-reloj.jpg' alt="captura de pantalla de nvstore" />
 </picture>
-<figcaption class='text-white/90 text-center text-sm font-normal sm:text-base'>componente contador hasta final de fecha funcional</figcaption>
+<figcaption class='text-white/90 text-center text-sm font-normal sm:text-base'>componente de cuenta regresiva hasta final de fecha funcional</figcaption>
 </figure>
 <figure>
     <picture>
 <img class="mx-auto sm:max-lg:max-h-[539px] max-h-[620px]" src='/captura-nvstore-reloj-1.jpg' alt="captura de pantalla de nvstore" />
 </picture>
-<figcaption class='text-white/90 text-center text-sm font-normal sm:text-base'>componente contador hasta final de fecha funcional</figcaption>
+<figcaption class='text-white/90 text-center text-sm font-normal sm:text-base'>componente de cuenta regresiva hasta final de fecha estatico</figcaption>
 </figure>
 </div>
 
