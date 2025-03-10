@@ -1,0 +1,84 @@
+---
+import Button from "@components/UiComponents/Button.astro";
+import Span from "@components/UiComponents/Span.astro";
+---
+
+<section
+  class="relative h-[85dvh] overflow-hidden bg-cover bg-center bg-no-repeat"
+>
+  <div class="absolute inset-0 h-[90%] bg-main/55"></div>
+  <div id="image" class="absolute inset-0 -z-10">
+    <figure class="absolute inset-0">
+      <picture>
+        <!-- <source srcset="/ws1.avif" type="image/avif" />
+        <source srcset="/ws1.webp" type="image/webp" /> -->
+
+        <img
+          src="/rayas.jpg"
+          class="bottom-10 left-28 h-full w-full scale-125 max-lg:hidden"
+          alt="imagen presentacion de la tienda NV store"
+        />
+      </picture>
+    </figure>
+    <figure class="absolute inset-0">
+      <picture>
+        <!-- <source srcset="/nv1.avif" type="image/avif" />
+        <source srcset="/nv1.webp" type="image/webp" /> -->
+
+        <img
+          src="/rayas.jpg"
+          class="relative -top-5 h-full w-full scale-125 xs:scale-110 lg:hidden"
+          alt="imagen presentacion de la tienda NV store"
+        />
+      </picture>
+    </figure>
+  </div>
+
+  <div
+    class="max relative mx-auto flex max-w-screen-xl justify-center px-4 py-32 sm:px-6 lg:flex lg:h-full lg:items-center lg:px-8"
+  >
+    <div class="max-w-xl text-center text-white">
+      <h1 class="text-3xl font-extrabold leading-[1.1] sm:text-5xl">
+        Lorem ipsum dolor sit.
+
+        <Span
+          size="inherit"
+          propStyles="to-90% !from-35% block text-pretty"
+          weight="extrabold"
+        >
+          Lorem ipsum dolor sit.
+        </Span>
+      </h1>
+
+      <p
+        class="mt-8 max-w-lg font-semibold !leading-[1.15] tracking-wide sm:text-2xl"
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+        assumenda quis, molestiae sunt quod praesentium facere numquam
+        distinctio hic earum nulla fuga quibusdam voluptatem ducimus.
+
+        <Span
+          size="inherit"
+          propStyles="tracking-wider to-90% !from-35%"
+          weight="extrabold"
+        >
+          Lorem, ipsum.
+        </Span>
+
+        Lorem ipsum dolor sit.
+      </p>
+
+      <div class="mt-8 flex flex-wrap justify-center gap-4 text-center">
+        <a href="/shop">
+          <Button type="primary" size="lg">Ver Tienda</Button>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  #image {
+    -webkit-mask-image: linear-gradient(black 80%, transparent 90%);
+    mask-image: linear-gradient(black 85%, transparent 90%);
+  }
+</style>

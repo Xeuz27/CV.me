@@ -1,0 +1,30 @@
+---
+//@ts-nocheck
+const { size, weight, propStyles = "" } = Astro.props;
+
+const sizes = {
+  sm: "text-lg lg:text-2xl xl:text-3xl",
+  md: "text-2xl",
+  lg: "text-4xl md:text-5xl lg:text-7xl",
+  inherit: "text-sizeInherit"
+};
+const weights = {
+  thin: "font-thin",
+  extralight: "font-extralight",
+  light: "font-light",
+  normal: "font-normal",
+  medium: "font-medium",
+  semibold: "font-semibold",
+  bold: "font-bold",
+  extrabold: "font-extrabold",
+  black: "font-black"
+};
+const defaultStyles =
+  "text-nowrap bg-gradient-to-b max-sm:text-2xl from-blue-600 from-40% to-60% to-[#0a1947] bg-clip-text text-transparent";
+---
+
+<span
+  class:list={`${propStyles}  ${defaultStyles} ${sizes[size]} ${weights[weight]}`}
+>
+  <slot />
+</span>

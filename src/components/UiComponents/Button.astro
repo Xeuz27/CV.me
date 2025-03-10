@@ -1,0 +1,31 @@
+---
+//@ts-nocheck
+const { type, size, onClickFn = () => {} } = Astro.props;
+
+const defaultClasses =
+  "block w-full rounded border-[1px] bg-main transition-all duration-300 border-[#393939] text-base tracking-widest font-bold focus:outline-none";
+const ButtonType = {
+  primary: "text-[#484848]",
+  secondary: "bg-gray-200 text-sky-800 hover:bg-gray-300 active:text-sky-800"
+};
+const ButtonSize = {
+  none: "px-0 py-1",
+  sm: "py-2.5",
+  lg: "px-12 py-3"
+};
+---
+
+<span
+  onclick={onClickFn()}
+  class={`${defaultClasses} ${ButtonType[type]} ${ButtonSize[size]}`}
+>
+  <slot />
+</span>
+<style>
+  span:hover {
+    color: #dfdfdf;
+    background-color: rgb(8, 31, 92);
+    border: 1px solid #dfdfdf;
+    @apply drop-shadow-[0_0px_12px_#1037a1];
+  }
+</style>
