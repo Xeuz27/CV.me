@@ -34,7 +34,9 @@ const locale = Astro.currentLocale;
   </head>
   <body class="relative h-full min-h-dvh pt-12">
     <Header locale={locale} />
-    <slot name="default-slot" />
+    <div class="pb-56">
+      <slot name="default-slot" />
+    </div>
     <Footer />
     <div
       id="noise"
