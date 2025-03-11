@@ -31,15 +31,17 @@ export const prerender = true;
     <link rel="canonical" href={canonicalURL} />
     <!-- Alternate Links -->
     {
-      locales.map((locale) => {
-        return (
-          <link
-            rel="alternate"
-            href={canonicalURL.href.replace(currentLocale, locale)}
-            hreflang={locale}
-          />
-        );
-      })
+      locales
+        .filter((locale) => locale !== currentLocale)
+        .map((locale) => {
+          return (
+            <link
+              rel="alternate"
+              href={canonicalURL.href.replace(currentLocale, locale)}
+              hreflang={locale}
+            />
+          );
+        })
     }
     <link
       rel="alternate"

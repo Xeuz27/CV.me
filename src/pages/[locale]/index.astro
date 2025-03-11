@@ -30,15 +30,17 @@ const { title, description } = getI18NData(Astro.currentLocale);
     <link rel="canonical" href={canonicalURL} />
     <!-- Alternate Links -->
     {
-      locales.map((locale) => {
-        return (
-          <link
-            rel="alternate"
-            href={canonicalURL.href.replace(currentLocale, locale)}
-            hreflang={locale}
-          />
-        );
-      })
+      locales
+        .filter((locale) => locale !== currentLocale)
+        .map((locale) => {
+          return (
+            <link
+              rel="alternate"
+              href={canonicalURL.href.replace(currentLocale, locale)}
+              hreflang={locale}
+            />
+          );
+        })
     }
     <link
       rel="alternate"
@@ -46,7 +48,7 @@ const { title, description } = getI18NData(Astro.currentLocale);
       hreflang="x-default"
     />
   </Fragment>
-  <main slot="default-slot" class="container mx-auto p-4 sm:p-16 print:p-0">
+  <main slot="default-slot" class="container mx-auto p-4 sm:pt-16 print:p-0">
     <Hero />
     <Contact />
     <About />
