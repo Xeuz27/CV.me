@@ -4,15 +4,14 @@ import Span from "@components/UiComponents/Span.astro";
 ---
 
 <section
-  class="relative h-[85dvh] overflow-hidden bg-cover bg-center bg-no-repeat"
+  class="relative flex h-[80dvh] flex-col justify-center overflow-hidden bg-cover bg-center bg-no-repeat sm:h-[85dvh]"
 >
-  <div class="absolute inset-0 h-[90%] bg-main/55"></div>
+  <div class="absolute inset-0 bg-main/55"></div>
   <div id="image" class="absolute inset-0 -z-10">
     <figure class="absolute inset-0">
       <picture>
         <!-- <source srcset="/ws1.avif" type="image/avif" />
         <source srcset="/ws1.webp" type="image/webp" /> -->
-
         <img
           src="/rayas.jpg"
           class="bottom-10 left-28 h-full w-full scale-125 max-lg:hidden"
@@ -35,7 +34,7 @@ import Span from "@components/UiComponents/Span.astro";
   </div>
 
   <div
-    class="max relative mx-auto flex max-w-screen-xl justify-center px-4 py-32 sm:px-6 lg:flex lg:h-full lg:items-center lg:px-8"
+    class="max relative mx-auto flex max-w-screen-xl justify-center px-4 sm:px-6 sm:py-[5.5rem] lg:flex lg:h-full lg:items-center lg:px-8 lg:pt-6"
   >
     <div class="max-w-xl text-center text-white">
       <h1 class="text-3xl font-extrabold leading-[1.1] sm:text-5xl">
@@ -78,7 +77,7 @@ import Span from "@components/UiComponents/Span.astro";
 </section>
 <style>
   #image {
-    -webkit-mask-image: linear-gradient(black 80%, transparent 90%);
-    mask-image: linear-gradient(black 85%, transparent 90%);
+    -webkit-mask-image: linear-gradient(black 90%, transparent 95%);
+    mask-image: linear-gradient(black 90%, transparent 95%);
   }
 </style>
