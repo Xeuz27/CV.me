@@ -3,9 +3,9 @@
 const { type, size, onClickFn = () => {} } = Astro.props;
 
 const defaultClasses =
-  "block w-full rounded border-[1px] bg-main transition-all duration-300 border-[#393939] text-base tracking-widest font-bold focus:outline-none";
+  "block w-fit mx-auto hover:cursor-pointer rounded mt-4 border-[1px] bg-main transition-all duration-300 border-[#808080] text-base tracking-widest font-bold focus:outline-none";
 const ButtonType = {
-  primary: "text-[#484848]",
+  primary: "text-[#959595]",
   secondary: "bg-gray-200 text-sky-800 hover:bg-gray-300 active:text-sky-800"
 };
 const ButtonSize = {
@@ -23,9 +23,9 @@ const ButtonSize = {
 </span>
 <style>
   span:hover {
-    color: #dfdfdf;
+    color: #fff;
     background-color: rgb(8, 31, 92);
-    border: 1px solid #dfdfdf;
+    border: 1px solid #fff;
     @apply drop-shadow-[0_0px_12px_#1037a1];
   }
 </style>

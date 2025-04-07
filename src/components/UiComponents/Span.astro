@@ -1,6 +1,6 @@
 ---
 //@ts-nocheck
-const { size, weight, propStyles = "" } = Astro.props;
+const { size, weight, text, propStyles = "" } = Astro.props;
 
 const sizes = {
   sm: "text-lg lg:text-2xl xl:text-3xl",
@@ -20,11 +20,18 @@ const weights = {
   black: "font-black"
 };
 const defaultStyles =
-  "text-nowrap bg-gradient-to-b max-sm:text-2xl from-blue-600 from-40% to-60% to-[#0a1947] bg-clip-text text-transparent";
+  "sm:text-nowrap bg-gradient-to-b from-blue-600 from-40% to-60% sm:to-[#0a1947] to-cyan-900 bg-clip-text text-transparent";
 ---
 
-<span
-  class:list={`${propStyles}  ${defaultStyles} ${sizes[size]} ${weights[weight]}`}
->
-  <slot />
-</span>
+{
+  text.split(" ").map((word) => {
+    return (
+      <span
+        class:list={`${propStyles}  ${defaultStyles} ${sizes[size]} ${weights[weight]}`}
+      >
+        {" "}
+        {word}{" "}
+      </span>
+    );
+  })
+}
