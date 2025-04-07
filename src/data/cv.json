@@ -65,6 +65,97 @@
       "highlights": ["Started the company"]
     }
   ],
+  "benefits": [
+    {
+      "title": " Acompañamiento estratégico y visión a largo plazo",
+      "icon": "🚀",
+      "body": "Me involucro en un proyecto de principio a fin, asegurandome de que este crezca conforme <span class='text-white font-semibold'>tu negoicio también crece</span>"
+    },
+    {
+      "title": " Enfoque analítico y soluciones personalizadas",
+      "icon": "🎯",
+      "body": "Analizo cada detalle del proceso de venta o captación de clientes para proponer <strong class='text-white font-semibold'>estratégias que optimicen tus conversiones y visibilidad.</strong>"
+    },
+    {
+      "title": " Experiencia integral y atención detallada",
+      "icon": "🤝",
+      "body": "Más allá del desarrollo web, mi experiencia en atención al cliente, ventas y contabilidad me ha permitido abordar proyectos con una visión más completa, enfocada en <strong class='text-white font-semibold'>resultados reales y diferenciación en el mercado.</strong>"
+    }
+  ],
+  "services": [
+    {
+      "title": "💻 Desarrollo Web",
+      "id": "a flex-row-reverse",
+      "imgUrl": "/handCoding.webp",
+      "inner": [
+        {
+          "prop1": "¿Qué hace diferente tu servicio de desarrollo web?",
+          "prop2": "No utilizo CMS como WordPress; desarrollo desde cero para mayor personalización y mejor rendimiento."
+        },
+        {
+          "prop1": "¿Cómo impacta un buen desarrollo web en un negocio?",
+          "prop2": "Es la primera impresión de tu marca online, transmitiendo confianza, seguridad y profesionalismo."
+        }
+      ]
+    },
+    {
+      "title": "📈 SEO",
+      "id": "b",
+      "imgUrl": "/seo.avif",
+      "inner": [
+        {
+          "prop1": "¿Qué estrategias usas para mejorar el posicionamiento web?",
+          "prop2": "Depende del negocio, pero pueden ser SEO local, creación de contenido o mejora en atención al cliente."
+        },
+        {
+          "prop1": "¿Cuánto tiempo se tarda en ver resultados en SEO?",
+          "prop2": "Los primeros resultados pueden verse entre 6 meses y 1 año; los óptimos, de 1 a 2 años."
+        },
+        {
+          "prop1": "¿Qué negocios pueden beneficiarse más del SEO?",
+          "prop2": "Empresas de servicios (construcción, clínicas, restaurantes), tiendas en línea, agencias de marketing y más."
+        }
+      ]
+    },
+    {
+      "title": "⚡ Optimización Web",
+      "id": "c flex-row-reverse",
+      "imgUrl": "/bugFixing.webp",
+      "inner": [
+        {
+          "prop1": "¿Cuáles son los problemas más comunes que solucionas?",
+          "prop2": "Largos tiempos de carga, archivos pesados, optimización de servidores y accesibilidad."
+        },
+        {
+          "prop1": "¿Cómo me afecta la velocidad de de carga de mi sitio web?",
+          "prop2": "Un tiempo de carga mayor a 2-3 segundos puede hacer que los usuarios abandonen la web incluso antes de entrar."
+        },
+        {
+          "prop1": "¿Haces solo optimización técnica o también mejoras en UX/UI?",
+          "prop2": "Principalmente técnica, pero si es necesario, se mejoran flujos y navegación para facilitar la conversión."
+        }
+      ]
+    },
+    {
+      "title": "🛠️ Mantenimiento Web",
+      "id": "d",
+      "imgUrl": "/maintenance.webp",
+      "inner": [
+        {
+          "prop1": "¿Qué incluye el servicio de mantenimiento web?",
+          "prop2": "Actualización de software, copias de seguridad y mejoras en seguridad."
+        },
+        {
+          "prop1": "¿Cada cuánto tiempo se recomienda hacer mantenimiento?",
+          "prop2": "Depende del sitio: algunos requieren actualizaciones cada 6 meses mientras que otros las requieren semanal o mensualmente."
+        },
+        {
+          "prop1": "¿Solo das mantenimiento a webs que tú desarrollaste?",
+          "prop2": "Preferiblemente sí, pero puedo evaluar sitios externos si es necesario."
+        }
+      ]
+    }
+  ],
   "volunteer": [
     {
       "organization": "Organization",

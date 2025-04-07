@@ -65,6 +65,97 @@
       "highlights": ["Started the company"]
     }
   ],
+  "benefits": [
+    {
+      "title": " Strategic Support and Long-Term Vision",
+      "icon": "🚀",
+      "body": "I get involved in a project from start to finish, making sure it grows as <span class='text-white font-semibold'>your business grows too</span>."
+    },
+    {
+      "title": " Analytical Approach and Tailored Solutions",
+      "icon": "🎯",
+      "body": "I analyze every detail of the sales or client acquisition process to propose <strong class='text-white font-semibold'>strategies that boost your conversions and visibility.</strong>"
+    },
+    {
+      "title": "Comprehensive Experience and Detailed Attention",
+      "icon": "🤝",
+      "body": "Beyond web development, my background in customer service, sales, and accounting allows me to approach projects with a more complete vision, focused on <strong class='text-white font-semibold'>real results and market differentiation.</strong>"
+    }
+  ],
+  "services": [
+    {
+      "title": "💻 Web Development",
+      "id": "a flex-row-reverse",
+      "imgUrl": "/handCoding.webp",
+      "inner": [
+        {
+          "prop1": "What makes your web development service different?",
+          "prop2": "I don’t use CMS platforms like WordPress—I build everything from scratch for greater customization and performance."
+        },
+        {
+          "prop1": "How does a quality website impact a business?",
+          "prop2": "It’s your brand’s first impression online, conveying trust, security, and professionalism."
+        }
+      ]
+    },
+    {
+      "title": "📈 SEO",
+      "id": "b",
+      "imgUrl": "/seo.avif",
+      "inner": [
+        {
+          "prop1": "What strategies do you use to improve SEO?",
+          "prop2": "It depends on the business—it could be local SEO, content creation, or improving customer service touchpoints."
+        },
+        {
+          "prop1": "How long does it take to see SEO results?",
+          "prop2": "Initial results can appear in 6 to 12 months. Optimal results usually show after 1 to 2 years."
+        },
+        {
+          "prop1": "What types of businesses benefit most from SEO?",
+          "prop2": "Service providers (like construction companies, clinics, restaurants), online stores, marketing agencies, and more."
+        }
+      ]
+    },
+    {
+      "title": "⚡ Web Optimization",
+      "id": "c flex-row-reverse",
+      "imgUrl": "/bugFixing.webp",
+      "inner": [
+        {
+          "prop1": "What are the most common issues you fix?",
+          "prop2": "Slow loading times, heavy files, server performance issues, and accessibility problems."
+        },
+        {
+          "prop1": "How does my website's loading speed affect me?",
+          "prop2": "If your site takes more than 2–3 seconds to load, users may leave before even seeing it."
+        },
+        {
+          "prop1": "Do you only do technical optimization, or also UX/UI improvements?",
+          "prop2": "Mostly technical—but if needed, I also enhance navigation and user flows to boost conversions."
+        }
+      ]
+    },
+    {
+      "title": "🛠️ Web Maintenance",
+      "id": "d",
+      "imgUrl": "/maintenance.webp",
+      "inner": [
+        {
+          "prop1": "What does your web maintenance service include?",
+          "prop2": "Software updates, regular backups, and security improvements."
+        },
+        {
+          "prop1": "How often should a site be maintained?",
+          "prop2": "It depends—some websites need updates every 6 months, others weekly or monthly."
+        },
+        {
+          "prop1": "Do you only maintain websites you’ve built?",
+          "prop2": "Preferably yes, but I’m open to reviewing external sites if needed."
+        }
+      ]
+    }
+  ],
   "volunteer": [
     {
       "organization": "Organization",
