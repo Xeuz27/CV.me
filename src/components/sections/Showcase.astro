@@ -1,0 +1,131 @@
+---
+import Section from "@components/Section.astro";
+import { getI18N, getLangFromUrl } from "@utils/i18n";
+
+const { services } = getI18N(Astro.currentLocale);
+const lang = getLangFromUrl(Astro.url);
+---
+
+<Section classes="text-center sss section mb-16 xl:max-w-[1450px]">
+  <h2
+    class="sectionTitle mb-8 py-4 text-center text-6xl font-bold tracking-wide text-sectionTitle max-lg:bg-main/90 max-lg:backdrop-blur-sm"
+  >
+    {lang === "en" ? "Services" : "Servicios"}
+  </h2>
+  <main class="endTrigger relative flex flex-col gap-12 overflow-hidden">
+    {
+      services.map((item) => (
+        <article
+          class={`carta left-0 right-0 -z-10 flex justify-center max-md:flex-col max-md:justify-between ${item.id}`}
+        >
+          <div class="place-content-center ">
+            <img
+              src={"/imgs/services" + item.imgUrl}
+              class="mx-auto aspect-square max-w-[420px] max-sm:w-full md:max-w-[320px] lg:max-w-[520px]"
+              alt=""
+            />
+          </div>
+          <section class="-red-200 flex flex-col justify-center md:w-1/2">
+            <h3 class="text-2xl font-bold text-white/95 xs:text-3xl lg:text-4xl xl:text-5xl">
+              {item.title}
+            </h3>
+            <ul class=" flex flex-col items-center gap-4 p-2">
+              {item.inner?.map((item) => (
+                <li class="flex max-w-xs flex-col justify-center sm:max-w-sm ">
+                  <h4 class="text-balance text-lg font-bold leading-4 text-white/90 xs:text-xl/6">
+                    {"✔️ "}
+                    {item.prop1}
+                  </h4>
+                  <p class={`text-pretty py-2 text-base/none text-white/85`}>
+                    {item.prop2}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </section>
+        </article>
+      ))
+    }
+    <div class="spacer"></div>
+  </main>
+</Section>
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  document.addEventListener("astro:page-load", () => {
+    if (
+      window.location.pathname === "/" ||
+      window.location.pathname === "/en" ||
+      window.location.pathname === "/es"
+    ) {
+      gsap.registerPlugin(ScrollTrigger);
+      let mm = gsap.matchMedia();
+      mm.add("(max-width: 1024px)", () => {
+        gsap.to(".sectionTitle", {
+          scrollTrigger: {
+            trigger: ".sectionTitle",
+            endTrigger: ".sss",
+            pin: true,
+            start: "top 64px",
+            end: "bottom 160px",
+            pinSpacing: false
+          }
+        });
+      });
+      mm.add("(min-width: 1024px)", () => {
+        gsap.to(".sectionTitle", {
+          scrollTrigger: {
+            trigger: ".sectionTitle",
+            pin: true,
+            start: "top 64px",
+            end: "+=3800",
+            pinSpacing: false
+          }
+        });
+        gsap.to("article.a", {
+          scrollTrigger: {
+            trigger: "article.a",
+            pin: true,
+            start: "top 150px",
+            end: "+=500",
+            pinSpacing: true,
+            scrub: true
+          },
+          opacity: 0
+        });
+        gsap.to("article.b", {
+          scrollTrigger: {
+            trigger: "article.b",
+            pin: true,
+            start: "top 150px",
+            end: "+=500",
+            pinSpacing: true,
+            scrub: true
+          },
+          opacity: 0
+        });
+        gsap.to("article.c", {
+          scrollTrigger: {
+            trigger: "article.c",
+            pin: true,
+            start: "top 150px",
+            end: "+=500",
+            pinSpacing: true,
+            scrub: true
+          },
+          opacity: 0
+        });
+        gsap.to("article.d", {
+          scrollTrigger: {
+            trigger: "article.d",
+            pin: true,
+            start: "top 150px",
+            end: "+=200",
+            scrub: true
+          },
+          opacity: 0
+        });
+      });
+    }
+  });
+</script>

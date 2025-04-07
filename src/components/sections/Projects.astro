@@ -6,10 +6,12 @@ const { projects } = getI18N(Astro.currentLocale);
 const lang = Astro.currentLocale;
 ---
 
-<Section
-  classes="print:mt-1"
-  title={lang === "en" ? "Personal Experience" : `Experiencia Personal`}
->
+<Section classes="print:mt-1">
+  <h2
+    class="sectionTitlee mb-8 bg-main/90 py-4 text-center text-6xl font-bold tracking-wide text-sectionTitle backdrop-blur-sm"
+  >
+    {lang === "en" ? "Some Projects" : `Algunos Trabajos`}
+  </h2>
   <ul
     class="flex flex-col gap-6 divide-y-[2px] divide-separator pt-2 print:gap-4 print:divide-separatorPrint"
   >
@@ -89,3 +91,44 @@ const lang = Astro.currentLocale;
     }
   </ul>
 </Section>
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  document.addEventListener("astro:page-load", () => {
+    if (
+      window.location.pathname === "/" ||
+      window.location.pathname === "/en" ||
+      window.location.pathname === "/es"
+    ) {
+      const parentDiv = (string: any) =>
+        document.querySelector(string).parentNode;
+      gsap.registerPlugin(ScrollTrigger);
+      let mm = gsap.matchMedia();
+      mm.add("(max-width: 1024px)", () => {
+        gsap.to(".sectionTitlee", {
+          scrollTrigger: {
+            trigger: ".sectionTitlee",
+            endTrigger: parentDiv(".sectionTitlee"),
+            pin: true,
+            start: "top 64px",
+            end: "bottom 160px",
+            pinSpacing: false
+          }
+        });
+      });
+      mm.add("(min-width: 1024px)", () => {
+        gsap.to(".sectionTitlee", {
+          scrollTrigger: {
+            trigger: ".sectionTitlee",
+            endTrigger: parentDiv(".sectionTitlee"),
+            pin: true,
+            start: "top 63px",
+            end: "bottom 160px",
+            pinSpacing: false
+          }
+        });
+      });
+    }
+  });
+</script>

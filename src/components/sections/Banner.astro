@@ -1,12 +1,13 @@
 ---
 import Button from "@components/UiComponents/Button.astro";
 import Span from "@components/UiComponents/Span.astro";
+const lang = Astro.currentLocale;
 ---
 
 <section
-  class="relative flex h-[80dvh] flex-col justify-center overflow-hidden bg-cover bg-center bg-no-repeat sm:h-[85dvh]"
+  class="relative flex h-[80dvh] justify-center overflow-hidden bg-cover bg-center bg-no-repeat max-lg:flex-col max-sm:justify-center sm:h-[85dvh] lg:justify-around"
 >
-  <div class="absolute inset-0 bg-main/55"></div>
+  <div class="absolute inset-0 bg-main/80"></div>
   <div id="image" class="absolute inset-0 -z-10">
     <figure class="absolute inset-0">
       <picture>
@@ -34,47 +35,83 @@ import Span from "@components/UiComponents/Span.astro";
   </div>
 
   <div
-    class="max relative mx-auto flex max-w-screen-xl justify-center px-4 sm:px-6 sm:py-[5.5rem] lg:flex lg:h-full lg:items-center lg:px-8 lg:pt-6"
+    class="relative flex max-w-screen-xl items-center justify-center max-sm:px-4 sm:py-[.5rem] lg:flex lg:h-full lg:items-center"
   >
-    <div class="max-w-xl text-center text-white">
-      <h1 class="text-3xl font-extrabold leading-[1.1] sm:text-5xl">
-        Lorem ipsum dolor sit.
-
-        <Span
-          size="inherit"
-          propStyles="to-90% !from-35% block text-pretty"
-          weight="extrabold"
-        >
-          Lorem ipsum dolor sit.
-        </Span>
-      </h1>
-
-      <p
-        class="mt-8 max-w-lg font-semibold !leading-[1.15] tracking-wide sm:text-2xl"
+    <div class="max-w-3xl text-center text-white">
+      <h1
+        class="z-10 text-balance text-3xl font-extrabold leading-[1.1] drop-shadow-[0_0px_12px_rgb(0,0,0)] sm:text-5xl"
       >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-        assumenda quis, molestiae sunt quod praesentium facere numquam
-        distinctio hic earum nulla fuga quibusdam voluptatem ducimus.
+        {lang === "en" ? "Boost your business with" : `Impulsa tu negocio con`}
+        <Span
+          size="inherit"
+          propStyles="to-90% !from-35%"
+          weight="extrabold"
+          text={lang === "en" ? "impactful Web development" : `desarrollo web`}
+        />
+        {lang === "en" ? "" : `de alto impacto.`}
+      </h1>
+      <p
+        class="z-10 mx-auto mt-4 font-semibold !leading-[1.15] tracking-normal drop-shadow-[0_0px_12px_rgb(0,0,0)] max-sm:max-w-[430px] sm:text-2xl"
+      >
+        {lang === "en" ? "I help " : `Ayudo a `}
 
         <Span
           size="inherit"
-          propStyles="tracking-wider to-90% !from-35%"
+          propStyles="tracking-wide to-90% !from-35%"
           weight="extrabold"
-        >
-          Lorem, ipsum.
-        </Span>
-
-        Lorem ipsum dolor sit.
+          text={lang === "en"
+            ? "entrepreneurs and small businesses "
+            : `emprendedores y pequeñas empresas `}
+        />
+        {
+          lang === "en"
+            ? "grow with smart digital strategies. Take your online presence to the next level!"
+            : `a destacar en el mundo digital con estrategias y tecnología innovadora. ¡Lleva tu presencia online al siguiente nivel!`
+        }
       </p>
-
-      <div class="mt-8 flex flex-wrap justify-center gap-4 text-center">
-        <a href="/shop">
-          <Button type="primary" size="lg">Ver Tienda</Button>
-        </a>
-      </div>
+      <Button type="primary" size="lg"
+        ><a
+          href="https://www.instagram.com/m/yidev27"
+          target="_blank"
+          rel="noreferrer noopener nofollow"
+          >{lang === "en" ? "Contact" : `Contactar`}</a
+        ></Button
+      >
     </div>
   </div>
+  <div class="z-1 flex items-center justify-center max-sm:mt-4">
+    <a
+      class=""
+      href="https://storyset.com/people"
+      rel="noreferrer noopener nofollow"
+      target="_blank"
+    >
+      <img
+        class="mb-8 aspect-square h-auto max-h-[550px] drop-shadow-[0_0_15px_rgb(5,25,120,1)] max-sm:size-40 sm:max-lg:size-80 lg:max-xl:size-96"
+        src="/imgs/services/WebsiteCreator.avif"
+        alt="ilustracion de yidev27 creando un sitio web"
+      />
+    </a>
+  </div>
+  <div
+    class="absolute bottom-2 left-0 right-0 flex animate-bounce justify-center text-white"
+  >
+    <svg
+      id="arrow-horizontal"
+      xmlns="http://www.w3.org/2000/svg"
+      class="size-12 rotate-90 animate-pulse"
+      viewBox="0 0 46 16"
+      fill="currentColor"
+    >
+      <path
+        id="Path_10"
+        data-name="Path 10"
+        d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+        transform="translate(30)"></path>
+    </svg>
+  </div>
 </section>
+
 <style>
   #image {
     -webkit-mask-image: linear-gradient(black 90%, transparent 95%);
