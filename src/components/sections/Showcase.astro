@@ -1,5 +1,6 @@
 ---
 import Section from "@components/Section.astro";
+import FigureImg from "@components/UiComponents/FigureImg.astro";
 import { getI18N, getLangFromUrl } from "@utils/i18n";
 
 const { services } = getI18N(Astro.currentLocale);
@@ -18,11 +19,11 @@ const lang = getLangFromUrl(Astro.url);
         <article
           class={`carta left-0 right-0 -z-10 flex justify-center max-md:flex-col max-md:justify-between ${item.id}`}
         >
-          <div class="place-content-center ">
-            <img
-              src={"/imgs/services" + item.imgUrl}
-              class="mx-auto aspect-square max-w-[420px] max-sm:w-full md:max-w-[320px] lg:max-w-[520px]"
-              alt=""
+          <div class="place-content-center">
+            <FigureImg
+              alt={item.title}
+              img={`/imgs/services/${item.imgUrl}`}
+              classes="mx-auto aspect-square max-w-[420px] max-sm:w-full md:max-w-[320px] lg:max-w-[520px]"
             />
           </div>
           <section class="-red-200 flex flex-col justify-center md:w-1/2">

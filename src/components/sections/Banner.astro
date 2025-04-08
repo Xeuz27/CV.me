@@ -1,11 +1,13 @@
 ---
+import Icon from "@components/icons/Icon.astro";
 import Button from "@components/UiComponents/Button.astro";
+import FigureImg from "@components/UiComponents/FigureImg.astro";
 import Span from "@components/UiComponents/Span.astro";
 const lang = Astro.currentLocale;
 ---
 
 <section
-  class="relative flex h-[80dvh] justify-center overflow-hidden bg-cover bg-center bg-no-repeat max-lg:flex-col max-sm:justify-center sm:h-[85dvh] lg:justify-around"
+  class="relative flex h-[80dvh] justify-center overflow-hidden bg-cover bg-center bg-no-repeat max-lg:flex-col max-sm:justify-center sm:h-[85dvh] sm:px-16 lg:justify-around"
 >
   <div class="absolute inset-0 bg-main/80"></div>
   <div id="image" class="absolute inset-0 -z-10">
@@ -81,34 +83,24 @@ const lang = Astro.currentLocale;
   </div>
   <div class="z-1 flex items-center justify-center max-sm:mt-4">
     <a
-      class=""
       href="https://storyset.com/people"
       rel="noreferrer noopener nofollow"
       target="_blank"
     >
-      <img
-        class="mb-8 aspect-square h-auto max-h-[550px] drop-shadow-[0_0_15px_rgb(5,25,120,1)] max-sm:size-40 sm:max-lg:size-80 lg:max-xl:size-96"
-        src="/imgs/services/WebsiteCreator.avif"
+      <FigureImg
         alt="ilustracion de yidev27 creando un sitio web"
+        img="/imgs/services/WebsiteCreator"
+        classes="mb-8 aspect-square h-auto max-h-[550px] drop-shadow-[0_0_15px_rgb(5,25,120,1)] max-sm:size-40 sm:max-lg:size-80"
       />
     </a>
   </div>
   <div
     class="absolute bottom-2 left-0 right-0 flex animate-bounce justify-center text-white"
   >
-    <svg
-      id="arrow-horizontal"
-      xmlns="http://www.w3.org/2000/svg"
-      class="size-12 rotate-90 animate-pulse"
-      viewBox="0 0 46 16"
-      fill="currentColor"
-    >
-      <path
-        id="Path_10"
-        data-name="Path 10"
-        d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
-        transform="translate(30)"></path>
-    </svg>
+    <Icon
+      icon="DownArrow"
+      classes="size-12 rotate-90 animate-pulse sm:size-16"
+    />
   </div>
 </section>
 
