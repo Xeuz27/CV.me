@@ -1,0 +1,20 @@
+---
+const { img, alt, classes, figClasses = "", pictureClasses = "" } = Astro.props;
+const extensiones = ["avif", "webp", "png", "jpg"];
+---
+
+<figure class={figClasses}>
+  <picture class={pictureClasses}>
+    {
+      extensiones.map((ext, index) => {
+        if (index === 3) {
+          return (
+            <img src={`${img}.${ext}`} class={classes} alt={alt} title={alt} />
+          );
+        } else {
+          return <source srcset={`${img}.${ext}`} type={`image/${ext}`} />;
+        }
+      })
+    }
+  </picture>
+</figure>
