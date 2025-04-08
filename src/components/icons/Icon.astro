@@ -1,4 +1,5 @@
 ---
+import DownArrow from "./DownArrow.astro";
 import Github from "./Github.astro";
 import Instagram from "./Instagram.astro";
 import Linkedin from "./Linkedin.astro";
@@ -13,6 +14,7 @@ import X from "./X.astro";
 const { icon, classes } = Astro.props;
 
 const Icons: Record<string, string | any> = {
+  DownArrow,
   Github,
   Instagram,
   Linkedin,
