@@ -86,7 +86,7 @@
     {
       "title": "💻 Desarrollo Web",
       "id": "a flex-row-reverse",
-      "imgUrl": "/handCoding.webp",
+      "imgUrl": "handCoding",
       "inner": [
         {
           "prop1": "¿Qué hace diferente tu servicio de desarrollo web?",
@@ -101,7 +101,7 @@
     {
       "title": "📈 SEO",
       "id": "b",
-      "imgUrl": "/seo.avif",
+      "imgUrl": "seo",
       "inner": [
         {
           "prop1": "¿Qué estrategias usas para mejorar el posicionamiento web?",
@@ -120,7 +120,7 @@
     {
       "title": "⚡ Optimización Web",
       "id": "c flex-row-reverse",
-      "imgUrl": "/bugFixing.webp",
+      "imgUrl": "bugFixing",
       "inner": [
         {
           "prop1": "¿Cuáles son los problemas más comunes que solucionas?",
@@ -139,7 +139,7 @@
     {
       "title": "🛠️ Mantenimiento Web",
       "id": "d",
-      "imgUrl": "/maintenance.webp",
+      "imgUrl": "maintenance",
       "inner": [
         {
           "prop1": "¿Qué incluye el servicio de mantenimiento web?",
