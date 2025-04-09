@@ -11,29 +11,18 @@ const lang = Astro.currentLocale;
 >
   <div class="absolute inset-0 bg-main/80"></div>
   <div id="image" class="absolute inset-0 -z-10">
-    <figure class="absolute inset-0">
-      <picture>
-        <!-- <source srcset="/ws1.avif" type="image/avif" />
-        <source srcset="/ws1.webp" type="image/webp" /> -->
-        <img
-          src="/rayas.jpg"
-          class="bottom-10 left-28 h-full w-full scale-125 max-lg:hidden"
-          alt="imagen presentacion de la tienda NV store"
-        />
-      </picture>
-    </figure>
-    <figure class="absolute inset-0">
-      <picture>
-        <!-- <source srcset="/nv1.avif" type="image/avif" />
-        <source srcset="/nv1.webp" type="image/webp" /> -->
-
-        <img
-          src="/rayas.jpg"
-          class="relative -top-5 h-full w-full scale-125 xs:scale-110 lg:hidden"
-          alt="imagen presentacion de la tienda NV store"
-        />
-      </picture>
-    </figure>
+    <FigureImg
+      img="rayas"
+      figClasses="absolute inset-0"
+      alt="fondo de el hero"
+      classes="bottom-10 left-28 h-full w-full scale-125 max-lg:hidden"
+    />
+    <FigureImg
+      img="rayas"
+      figClasses="absolute inset-0"
+      alt="fondo de el hero"
+      classes="relative -top-5 h-full w-full scale-125 xs:scale-110 lg:hidden"
+    />
   </div>
 
   <div
