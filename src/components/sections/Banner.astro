@@ -3,6 +3,8 @@ import Icon from "@components/icons/Icon.astro";
 import Button from "@components/UiComponents/Button.astro";
 import FigureImg from "@components/UiComponents/FigureImg.astro";
 import Span from "@components/UiComponents/Span.astro";
+import Image from "astro/components/Image.astro";
+import meCreator from "../../images/meCreator.png";
 const lang = Astro.currentLocale;
 ---
 
@@ -60,14 +62,16 @@ const lang = Astro.currentLocale;
             : `a destacar en el mundo digital con estrategias y tecnología innovadora. ¡Lleva tu presencia online al siguiente nivel!`
         }
       </p>
-      <Button type="primary" size="lg"
-        ><a
-          href="https://www.instagram.com/m/yidev27"
-          target="_blank"
-          rel="noreferrer noopener nofollow"
-          >{lang === "en" ? "Contact" : `Contactar`}</a
-        ></Button
+      <Button
+        as="a"
+        variant="primary"
+        size="lg"
+        href="https://www.instagram.com/m/yidev27"
+        target="_blank"
+        rel="noreferrer noopener nofollow"
       >
+        {lang === "en" ? "Contact" : `Contactar`}
+      </Button>
     </div>
   </div>
   <div class="z-1 flex items-center justify-center max-sm:mt-4">
@@ -76,10 +80,12 @@ const lang = Astro.currentLocale;
       rel="noreferrer noopener nofollow"
       target="_blank"
     >
-      <FigureImg
-        alt="ilustracion de yidev27 creando un sitio web"
-        img="/imgs/services/WebsiteCreator"
-        classes="mb-8 aspect-square h-auto max-h-[550px] drop-shadow-[0_0_15px_rgb(5,25,120,1)] max-sm:size-40 sm:max-lg:size-80"
+      <Image
+        src={meCreator}
+        width={380}
+        height={380}
+        class="my-4 aspect-square h-auto max-h-[550px] drop-shadow-[0_0_50px_rgb(5,25,120,1)] max-sm:!size-44 sm:max-lg:size-80"
+        alt="A description of my image."
       />
     </a>
   </div>
@@ -94,6 +100,13 @@ const lang = Astro.currentLocale;
 </section>
 
 <style>
+  @media (max-height: 680px) {
+    section {
+      padding-top: 24px;
+      padding-bottom: 64px;
+      height: fit-content;
+    }
+  }
   #image {
     -webkit-mask-image: linear-gradient(black 90%, transparent 95%);
     mask-image: linear-gradient(black 90%, transparent 95%);
