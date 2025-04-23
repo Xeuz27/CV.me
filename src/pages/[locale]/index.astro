@@ -2,7 +2,7 @@
 import Banner from "@components/sections/Banner.astro";
 import Projects from "@components/sections/Projects.astro";
 import Services from "@components/sections/Services.astro";
-import Showcase from "@components/sections/Showcase.astro";
+import WhyMe from "@components/sections/WhyMe.astro";
 import Layout from "@layouts/Layout.astro";
 
 import { getI18NData, getLangFromUrl } from "@utils/i18n";
@@ -48,8 +48,8 @@ const { title, description } = getI18NData(Astro.currentLocale);
   <main slot="default-slot" class="print:p-0">
     <Banner />
     <div class="mx-auto p-4 pt-0">
+      <WhyMe />
       <Services />
-      <Showcase />
       <Projects />
     </div>
   </main>
