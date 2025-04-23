@@ -1,31 +1,74 @@
 ---
-//@ts-nocheck
-const { type, size, onClickFn = () => {} } = Astro.props;
+import type { HTMLTag, Polymorphic } from "astro/types";
 
-const defaultClasses =
-  "block w-fit mx-auto hover:cursor-pointer rounded mt-4 border-[1px] bg-main transition-all duration-300 border-[#808080] text-base tracking-widest font-bold focus:outline-none";
-const ButtonType = {
+type Props<Tag extends HTMLTag> = Polymorphic<{
+  as: Tag;
+  variant: keyof typeof variantClasses;
+  size: keyof typeof ButtonSizes;
+}>;
+
+const { as: Tag, class: className, size, variant, ...props } = Astro.props;
+
+const variantClasses: { [key: string]: string } = {
   primary: "text-[#959595]",
   secondary: "bg-gray-200 text-sky-800 hover:bg-gray-300 active:text-sky-800"
 };
-const ButtonSize = {
+
+const ButtonSizes = {
   none: "px-0 py-1",
   sm: "py-2.5",
   lg: "px-12 py-3"
 };
+
+const classes = [
+  "hoverClasses",
+  "block w-fit mx-auto hover:cursor-pointer rounded mt-4 border-[1px] bg-main transition-all duration-300 border-[#808080] text-base tracking-widest font-bold focus:outline-none",
+  variantClasses[variant as keyof typeof variantClasses],
+  ButtonSizes[size as keyof typeof ButtonSizes],
+  className
+];
 ---
 
-<span
-  onclick={onClickFn()}
-  class={`${defaultClasses} ${ButtonType[type]} ${ButtonSize[size]}`}
->
+<Tag class:list={classes} {...props} tabindex="0">
   <slot />
-</span>
+</Tag>
+
 <style>
-  span:hover {
+  @media (max-width: 450px) {
+    .hoverClasses {
+      color: #fff;
+      background-color: rgb(8, 31, 92);
+      border: 1px solid #fff;
+      @apply drop-shadow-[0_0px_12px_#1037a1];
+    }
+  }
+  .hoverClasses:hover {
     color: #fff;
     background-color: rgb(8, 31, 92);
     border: 1px solid #fff;
     @apply drop-shadow-[0_0px_12px_#1037a1];
   }
 </style>
+
+<!-- COMO USAR EL BUTTON COMO UN BUTTON CON FUNCIONES ON CLICK
+<Button
+id={"button"}
+as="button"
+data-action="func"
+variant="primary"
+size="lg"
+>
+button
+</Button>
+<script>
+  const actions = {
+    func: () => console.log(window.location.replace("/es/casos-de-estudio"))
+  };
+  document.querySelectorAll("[data-action]").forEach((btn) => {
+    const actionName = btn.getAttribute("data-action");
+    const fn = actions[actionName];
+    if (typeof fn === "function") {
+      btn.addEventListener("click", fn);
+    }
+  });
+</script> -->
