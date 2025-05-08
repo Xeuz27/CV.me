@@ -6,8 +6,7 @@ export interface Props {
 }
 
 const { title, description, ogImage } = Astro.props;
-const socialImageURL = new URL(ogImage ? ogImage : "/open-graph.png", Astro.url)
-  .href;
+const socialImageURL = new URL("/new-og.jpg", Astro.url).href;
 const siteTitle = `${title}`;
 import { ClientRouter } from "astro:transitions";
 import "../styles/global.css";
@@ -62,6 +61,7 @@ import "../styles/global.css";
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" itemprop="image" content={socialImageURL} />
 
+<!--TODO: add logo >>>> <meta property="og:logo" content="your value" /> -->
 <ClientRouter />
 
 <!-- RSS auto-discovery -->
