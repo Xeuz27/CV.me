@@ -14,7 +14,7 @@ const linkedinInfo = profiles.find(({ network }) => network === "Linkedin");
 const linkedinUrl = {
   label: "Linkedin",
   href: linkedinInfo?.url,
-  data: linkedinInfo?.url
+  data: linkedinInfo?.username
 };
 const githubInfo = profiles.find(({ network }) => network === "Github");
 const githubUrl = {
