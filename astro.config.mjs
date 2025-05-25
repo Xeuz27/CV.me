@@ -17,8 +17,8 @@ export default defineConfig({
     defaultLocale: "es",
     locales: ["en", "es"],
   },
+  trailingSlash: "ignore",
   build: {
     format: "directory",
   },
-  trailingSlash: "never",
 });
