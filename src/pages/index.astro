@@ -24,7 +24,7 @@ const { title, description } = getI18NData(Astro.currentLocale);
 >
   <Fragment slot="head">
     <!-- Canonical URL -->
-    <link rel="canonical" href={canonicalURL.origin} />
+    <link rel="canonical" href={canonicalURL.origin} hreflang="x-default" />
     <!-- Alternate Links -->
     {
       locales.map((locale) => {
