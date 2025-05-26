@@ -1,0 +1,194 @@
+---
+import Section from "@components/Section.astro";
+import { getLangFromUrl } from "@utils/i18n";
+
+// const { services } = getI18N(Astro.currentLocale);
+const lang = getLangFromUrl(Astro.url);
+
+const faqs = [
+  [
+    {
+      question: "¿Cuánto tiempo tomará desarrollar mi sitio web?",
+      answer:
+        "Por mas que quisiera decir un tiempo fijo, siempre depende de los requirimientos y el alcance de un proyecto, desde los sitios webs mas pequeños que pueden tardar varios dias o incluso semanas, hasta los mas grandes que pueden tardar 1 o varios meses. En lo personal me gusta trabajar con proyectos a largo plazo e ir extendiendo sus funcionalidades con el tiempo."
+    },
+    {
+      question: "¿Necesito tener el contenido listo antes de empezar?",
+      answer:
+        "preferiblemente sí. Tener textos, imágenes y objetivos claros acelera el proceso. Sin embargo, también puedo ayudarte a generar el contenido si es necesario."
+    },
+    {
+      question: "¿Qué pasos siguen una vez que decido contratar el proyecto?",
+      answer:
+        "Si decides contratar el proyecto, seguiría una entrevista para conocer más a detalle sobre tu negocio o lo que haces, que servicio ofreces o que productos vendes, todo esto para poder comprender tu vision sobre el negocio y cuales son tus objetivos a lograr"
+    },
+    {
+      question:
+        "¿Qué cosas están incluidas en el precio y qué se cobra por separado?",
+      answer:
+        "Dentro de el paquete de un servicio dado, como puede ser un sitio web, se incluye el dominio web y hosting (en caso de que no dispongas de uno), el diseño y el desarrollo web y la optimizacion para motores de busqueda (SEO), no incluye cualquier tipo de fotografias, al local, a los productos o al equipo ni diseño de logos o de marca ni cualquier tipo de branding"
+    },
+    {
+      question: "¿Ofrecen garantía en sus productos?",
+      answer:
+        "Sí, ofrecemos una garantía post-entrega de 90 días, durante la cual solucionamos cualquier error técnico relacionado con el desarrollo inicial del sitio sin costo adicional. Esta garantía cubre bugs o fallos en las funciones entregadas, pero no incluye cambios nuevos o adicionales al proyecto original."
+    }
+    // {
+    //   question: "¿Qué métodos de pago aceptan?",
+    //   answer:
+    //     "Aceptamos pagos con tarjeta de crédito, débito, transferencias bancarias y PayPal."
+    // },
+    // {
+    //   question: "¿Puedo cambiar un producto si no me queda bien?",
+    //   answer:
+    //     "Sí, puedes solicitar un cambio dentro de los primeros 15 días después de la compra."
+    // },
+    // {
+    //   question: "¿Ofrecen garantía en sus productos?",
+    //   answer:
+    //     "Sí, todos nuestros productos cuentan con una garantía de 6 meses por defectos de fábrica."
+    // }
+  ],
+
+  [
+    {
+      question: "How long will it take to develop my website?",
+      answer:
+        "As much as I'd like to give a fixed timeframe, it always depends on the project requirements and scope. Smaller websites can take several days or even weeks, while larger ones can take one or several months. Personally, I enjoy working on long-term projects and expanding their features over time."
+    },
+    {
+      question: "Do I need to have all the content ready before we start?",
+      answer:
+        "Preferably yes. Having clear text, images, and goals speeds up the process. However, I can also help you create the content if needed."
+    },
+    {
+      question: "What are the next steps once I decide to hire the project?",
+      answer:
+        "Once you decide to move forward, we’ll start with an interview to get a deeper understanding of your business — what you do, the services or products you offer — so I can better understand your vision and goals."
+    },
+    {
+      question: "What is included in the price and what is charged separately?",
+      answer:
+        "In a given Service, like the websit package we include the domain and hosting (if you don’t already have them), web design and development, and basic search engine optimization (SEO). It does not include photography (of your location, products, or team), logo design, or any branding services."
+    },
+    {
+      question: "Do you offer a warranty for your products?",
+      answer:
+        "Yes, we offer a 90-day post-delivery warranty, during which we fix any technical issues related to the original development at no additional cost. This warranty covers bugs or malfunctions in the delivered features, but not new changes or additions to the original project."
+    }
+  ]
+];
+
+let preguntas = lang === "en" ? faqs[1] : faqs[0];
+---
+
+<Section>
+  <h2
+    class="sectionTitle mb-8 py-4 text-center text-6xl font-bold tracking-wide text-sectionTitle max-sm:text-5xl"
+  >
+    {lang === "en" ? "Frequently asked questions" : "Preguntas frecuentes"}
+  </h2>
+  <p class="text-xl leading-tight">
+    {
+      lang === "en"
+        ? `Get answers to common queries about our services in our FAQ section. Find
+    solutions to your doubts and make informed decisions. We're here to provide
+    clarity and ensure a seamless experience for you.`
+        : "Obten respuestas para dudas comunes sobre nuestros servicios en nuestra seccion de preguntas frecuentes. Responde tus dudas y haz decisiones acertadas. Estamos aquí para ofrecer claridad y asegurar una experiencia digna de tus estandares para ti."
+    }
+  </p>
+  <main class="my-8">
+    <ul class="flex flex-col gap-2 divide-y-2 divide-gray-600/20">
+      {
+        preguntas.map(({ question, answer }, index) => {
+          return (
+            <li class=" pt-2">
+              <article class="cursor-pointer border-l-[3px] border-[#bbbbbb] p-4 max-sm:border-0 max-sm:px-0 md:hover:bg-[rgba(10,19,46,0.9)]">
+                <details
+                  name="faqs"
+                  class="pointer-events-none transition-all  [&:open>summary>span]:rotate-90 [&:open>summary>span]:bg-orange-950/80 [&:open>summary]:border-b-gray-400/40 [&:open>summary]:pb-2 [&:open_p]:pt-2"
+                >
+                  <summary class="flex items-center justify-between border border-b-2 border-transparent text-lg font-medium transition-all duration-500">
+                    <h3 class="inline-block text-balance text-base leading-[1lh] tracking-wide text-stone-50/80">{`${index + 1}. ${question}`}</h3>
+                    <span class="flex rotate-45 items-center justify-center rounded-full p-1 transition-all duration-500">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 23 23"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="size-5 text-white transition-colors duration-300"
+                      >
+                        <>
+                          <path d="M18 6 6 18" />
+                          <path d="m6 6 12 12" />
+                        </>
+                      </svg>
+                    </span>
+                  </summary>
+                  <div class="">
+                    <p class="">{answer}</p>
+                  </div>
+                </details>
+              </article>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </main>
+</Section>
+<style is:global>
+  ::details-content {
+    opacity: 0;
+    height: 0;
+    overflow: clip;
+    transition:
+      all 0.8s ease,
+      content-visibility 0.5s ease allow-discrete;
+  }
+
+  /* Browser supports interpolate-size */
+  @supports (interpolate-size: allow-keywords) {
+    :root {
+      interpolate-size: allow-keywords;
+    }
+
+    [open]::details-content {
+      opacity: 1;
+      height: auto;
+    }
+  }
+
+  /* Fallback for browsers with no interpolate-size support */
+  @supports not (interpolate-size: allow-keywords) {
+    article details div p {
+      overflow: hidden;
+    }
+    article details div {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: all 0.8s ease;
+    }
+    article details[open] div {
+      grid-template-rows: 1fr;
+    }
+    [open]::details-content {
+      height: calc(100%);
+      opacity: 1;
+      /* In case the contents should be taller than 150px */
+    }
+  }
+</style>
+<script>
+  let togglearOpenOnClick = (faq: Element) =>
+    faq.addEventListener("click", () =>
+      faq.querySelector("details")?.toggleAttribute("open")
+    );
+  document.addEventListener("astro:page-load", () => {
+    let articlesFaqs = document.querySelectorAll("section main ul li article");
+    articlesFaqs.forEach((faq) => togglearOpenOnClick(faq));
+  });
+</script>
