@@ -1,5 +1,6 @@
 ---
 import Banner from "@components/sections/Banner.astro";
+import Faqs from "@components/sections/Faqs.astro";
 import Projects from "@components/sections/Projects.astro";
 import Services from "@components/sections/Services.astro";
 import WhyMe from "@components/sections/WhyMe.astro";
@@ -49,6 +50,7 @@ const { title, description } = getI18NData(Astro.currentLocale);
       <WhyMe />
       <Services />
       <Projects />
+      <Faqs />
     </div>
   </main>
 </Layout>
