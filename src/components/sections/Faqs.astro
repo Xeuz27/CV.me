@@ -1,5 +1,6 @@
 ---
 import Section from "@components/Section.astro";
+import { generateFAQSchema } from "@utils/GenerateFaqSchemas";
 import { getLangFromUrl } from "@utils/i18n";
 
 // const { services } = getI18N(Astro.currentLocale);
@@ -80,6 +81,8 @@ const faqs = [
 ];
 
 let preguntas = lang === "en" ? faqs[1] : faqs[0];
+
+let faqSchema = generateFAQSchema(preguntas);
 ---
 
 <Section>
@@ -182,6 +185,7 @@ let preguntas = lang === "en" ? faqs[1] : faqs[0];
     }
   }
 </style>
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 <script>
   let togglearOpenOnClick = (faq: Element) =>
     faq.addEventListener("click", () =>
