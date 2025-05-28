@@ -26,6 +26,7 @@ const { title, description } = getI18NData(Astro.currentLocale);
   ogImage="https://ik.imagekit.io/0oguwfou0i/yi-printable-portfolio?updatedAt=1707175630120"
 >
   <Fragment slot="head">
+    <meta name="robots" content="noindex" />
     <!-- Canonical URL -->
     <link rel="canonical" href={canonicalURL} hreflang={currentLocale} />
     <!-- Alternate Links -->

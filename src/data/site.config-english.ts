@@ -8,7 +8,7 @@ interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   author: "yidev27", // Site author
-  title: "Jesus Gutierrez ~ Yidev27 | Fullstack Web developer", // Site title.
+  title: "Jesus Gutierrez ~ Yidev | Fullstack Web developer", // Site title.
   description: "Web Developer, creating my first web site in 2021. #javascript", // Description to display in the meta tags
   mision:
     "Impulsar el avance tecnológico al liderar a emprendedores y pequeños empresarios hacia nuevas perspectivas de éxito en el ámbito digital. Proporcionar conocimientos y estrategias innovadoras para destacar y prosperar en un mundo tecnológico en constante evolución.",

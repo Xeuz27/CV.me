@@ -8,7 +8,7 @@ interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   author: "yidev27", // Site author
-  title: "Jesus Gutierrez ~ Yidev27 | Desarrollador Web", // Site title.
+  title: "Jesus Gutierrez ~ Yidev | Desarrollador Web", // Site title.
   description:
     "Desarrollador Web, creando mi primera pagina web en el 2021 #Javascript", // Description to display in the meta tags
   mision:
