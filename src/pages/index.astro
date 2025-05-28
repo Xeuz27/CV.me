@@ -1,5 +1,6 @@
 ---
 import Banner from "@components/sections/Banner.astro";
+import CTA from "@components/sections/CTA.astro";
 import Faqs from "@components/sections/Faqs.astro";
 import Projects from "@components/sections/Projects.astro";
 import Services from "@components/sections/Services.astro";
@@ -19,7 +20,7 @@ const { title, description } = getI18NData(Astro.currentLocale);
 ---
 
 <Layout
-  title="Jesus Gutierrez ~ Yidev27 | Desarrollo Web"
+  title="Jesus Gutierrez ~ Yidev | Desarrollo Web"
   description={description + "."}
   ogImage="https://ik.imagekit.io/0oguwfou0i/yi-printable-portfolio?updatedAt=1707175630120"
 >
@@ -51,6 +52,7 @@ const { title, description } = getI18NData(Astro.currentLocale);
       <Services />
       <Projects />
       <Faqs />
+      <CTA />
     </div>
   </main>
 </Layout>
