@@ -1,0 +1,141 @@
+---
+//
+import Section from "@components/Section.astro";
+import Button from "@components/UiComponents/Button.astro";
+import me from "../../images/me.jpg";
+import { Image } from "astro:assets";
+---
+
+<Section classes="[&_h3]:text-center">
+  <h3 class="mb-2 text-3xl font-bold text-sectionTitle print:text-stone-700/90">
+    Cuentame tu idea!
+  </h3>
+  <p class="py-4 text-justify leading-5 tracking-wide max-xs:w-full xs:px-4">
+    Desde si necesitas ayuda con tu perfil de google my business para mejorar tu
+    presencia online o un sitio web para mostrar todos los servicios que ofrece
+    tu negocio
+  </p>
+  <div class="flex items-center justify-center gap-4 max-sm:flex-col">
+    <figure class="mx-auto">
+      <Image
+        src={me}
+        alt={"avatar de yidev"}
+        class={"max-h-56 max-w-72 max-xs:max-w-full sm:max-h-80 sm:max-w-80 "}
+      />
+      <figcaption class="font-normal text-white/80">avatar de yidev</figcaption>
+    </figure>
+    <form
+      id="form"
+      class="relative flex w-full flex-col justify-center gap-1.5 sm:w-2/4"
+    >
+      <div class="invisible absolute left-0 top-0 flex flex-col gap-0.5">
+        <label for="bots">anti-spam</label>
+        <input
+          type="text"
+          name="bots"
+          class="px-2 py-0.5 placeholder:font-bold placeholder:text-black"
+          placeholder="si ves esto dejalo vacio!"
+        />
+      </div>
+      <div class="flex flex-col gap-0.5">
+        <label for="name" class="font-medium tracking-wide"
+          >Nombre Completo</label
+        >
+        <input
+          name="name"
+          type="text"
+          required
+          class="rounded-md p-1 px-2 font-normal placeholder:tracking-wide placeholder:text-stone-950"
+          placeholder="Fulanito Perez"
+        />
+      </div>
+      <div class="flex flex-col gap-0.5">
+        <label for="email" class="font-medium tracking-wide">Correo</label>
+        <input
+          name="email"
+          type="email"
+          required
+          class="rounded-md p-1 px-2 font-normal placeholder:tracking-wide placeholder:text-stone-950"
+          placeholder="tucorreo@dominio.com"
+        />
+      </div>
+      <div class="flex flex-col gap-0.5">
+        <label for="message" class="font-medium tracking-wide">Mensaje</label>
+        <textarea
+          name="message"
+          required
+          class="rounded-md p-1 px-2 font-normal placeholder:tracking-wide placeholder:text-stone-950"
+          placeholder="tengo una tienda online por instagram y necesito un catalogo mas facil de compartir y mantener"
+          rows="5"></textarea>
+      </div>
+      <Button
+        id={"form-submit"}
+        type="submit"
+        as="button"
+        variant="primary"
+        size="lg"
+        class="mt-2 w-full !py-1.5 uppercase"
+      >
+        Enviar
+      </Button>
+    </form>
+  </div>
+</Section>
+<script>
+  import Toastify from "toastify-js";
+  import "toastify-js/src/toastify.css";
+
+  let form = document.getElementById("form");
+  document.addEventListener("astro:page-load", () => {
+    form?.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(e.target as HTMLFormElement);
+
+      //@ts-ignore
+      if (formData.get("bots").length >= 1) return;
+
+      await fetch("/api/v1/email", {
+        method: "POST",
+        body: formData
+      })
+        .then((res) => res.json())
+        .then((json) => {
+          Toastify({
+            className: "!duration-700",
+            gravity: "bottom",
+            position: "center",
+            offset: {
+              y: window.innerHeight / 3,
+              x: 0
+            },
+            text: "Enviado! ✔️",
+            style: {
+              bottom: "-50px",
+              border: "1px solid #efefef",
+              background: "#0b2276"
+            },
+            duration: 2500
+          }).showToast();
+        })
+        .catch((error) => {
+          Toastify({
+            className: "!duration-700",
+            gravity: "bottom",
+            position: "center",
+            offset: {
+              y: window.innerHeight / 3,
+              x: 0
+            },
+            text: "Error, por favor intenta de nuevo! ❌",
+            style: {
+              bottom: "-50px",
+              border: "1px solid #efefef",
+              background: "#0b2276"
+            },
+            duration: 2500
+          }).showToast();
+        });
+    });
+  });
+</script>
