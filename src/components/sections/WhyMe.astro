@@ -8,25 +8,25 @@ const lang = getLangFromUrl(Astro.url);
 
 <Section classes="text-center mb-16 xl:max-w-[1450px]">
   <h2
-    class="sectionTitleee mb-8 bg-main/90 py-8 text-6xl font-bold tracking-wide text-sectionTitle backdrop-blur-sm print:text-stone-700/90"
+    class="sectionTitleee mb-8 bg-main/90 py-8 text-6xl font-bold tracking-wide text-sectionTitle backdrop-blur-sm print:text-gray-700/90"
   >
     {lang === "en" ? "Why Choosing Me?" : "Por qué yo?"}
   </h2>
   <main class="">
     <ul
-      class="gap-6 divide-stone-100/30 max-lg:flex max-lg:flex-col max-lg:divide-y-[1px] lg:grid lg:grid-cols-3 lg:grid-rows-1 lg:gap-4 lg:divide-x-[1px]"
+      class="gap-6 divide-gray-100/30 max-lg:flex max-lg:flex-col max-lg:divide-y-[1px] lg:grid lg:grid-cols-3 lg:grid-rows-1 lg:gap-4 lg:divide-x-[1px]"
     >
       {
         benefits.map((item) => (
           <li class="row-span-1 lg:col-span-1">
             <article class="divide-y-[2px] divide-zinc-700/30 max-lg:last:pt-10 lg:last:pl-4">
-              <h3 class="flex items-center divide-x-[2px] divide-zinc-700/30 text-balance text-xl font-bold text-stone-100/80 lg:max-xl:min-h-32">
+              <h3 class="flex items-center divide-x-[2px] divide-zinc-700/30 text-balance text-xl font-bold text-gray-50/80 lg:max-xl:min-h-32">
                 <span class="pr-8 text-3xl lg:p-4">{item.icon}</span>
                 <span class="flex min-h-16 w-full justify-center py-4 pl-8 lg:p-4">
                   {item.title}
                 </span>
               </h3>
-              <p class="p-4" set:html={item.body} />
+              <p class="p-4 text-gray-100/70" set:html={item.body} />
             </article>
           </li>
         ))
