@@ -91,7 +91,7 @@ let faqSchema = generateFAQSchema(preguntas);
   >
     {lang === "en" ? "Frequently asked questions" : "Preguntas frecuentes"}
   </h2>
-  <p class="text-xl leading-tight">
+  <p class="text-xl leading-tight text-gray-200/80">
     {
       lang === "en"
         ? `Get answers to common queries about our services in our FAQ section. Find
@@ -105,14 +105,11 @@ let faqSchema = generateFAQSchema(preguntas);
       {
         preguntas.map(({ question, answer }, index) => {
           return (
-            <li class=" pt-2">
+            <li class="pt-2">
               <article class="cursor-pointer border-l-[3px] border-[#bbbbbb] p-4 max-sm:border-0 max-sm:px-0 md:hover:bg-[rgba(10,19,46,0.9)]">
-                <details
-                  name="faqs"
-                  class="pointer-events-none transition-all  [&:open>summary>span]:rotate-90 [&:open>summary>span]:bg-orange-950/80 [&:open>summary]:border-b-gray-400/40 [&:open>summary]:pb-2 [&:open_p]:pt-2"
-                >
+                <details name="faqs" class="pointer-events-none transition-all">
                   <summary class="flex items-center justify-between border border-b-2 border-transparent text-lg font-medium transition-all duration-500">
-                    <h3 class="inline-block text-balance text-base leading-[1lh] tracking-wide text-stone-50/80">{`${index + 1}. ${question}`}</h3>
+                    <h3 class="inline-block text-balance text-base leading-[1lh] tracking-wide text-gray-50/80">{`${index + 1}. ${question}`}</h3>
                     <span class="flex rotate-45 items-center justify-center rounded-full p-1 transition-all duration-500">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -132,7 +129,7 @@ let faqSchema = generateFAQSchema(preguntas);
                     </span>
                   </summary>
                   <div class="">
-                    <p class="">{answer}</p>
+                    <p class="text-gray-100/70">{answer}</p>
                   </div>
                 </details>
               </article>
@@ -144,6 +141,13 @@ let faqSchema = generateFAQSchema(preguntas);
   </main>
 </Section>
 <style is:global>
+  summary::marker {
+    display: none;
+  }
+  /* Para Safari */
+  summary::-webkit-details-marker {
+    display: none;
+  }
   ::details-content {
     opacity: 0;
     height: 0;
@@ -159,7 +163,7 @@ let faqSchema = generateFAQSchema(preguntas);
       interpolate-size: allow-keywords;
     }
 
-    [open]::details-content {
+    open::details-content {
       opacity: 1;
       height: auto;
     }
@@ -175,14 +179,28 @@ let faqSchema = generateFAQSchema(preguntas);
       grid-template-rows: 0fr;
       transition: all 0.8s ease;
     }
-    article details[open] div {
+    article details:open div {
       grid-template-rows: 1fr;
     }
-    [open]::details-content {
+    :open::details-content {
       height: calc(100%);
       opacity: 1;
       /* In case the contents should be taller than 150px */
     }
+  }
+
+  details:open summary {
+    /* border-color: rgb(156 163 175 / 0.4); gray-400/40 */
+    padding-bottom: 8px; /* pb-2 */
+    list-style-type: none; /* list-none */
+    @apply border-b-gray-400/40;
+  }
+  details:open summary span {
+    transform: rotate(90deg);
+    background-color: rgb(69 10 10 / 0.8); /* bg-red-950/80 */
+  }
+  details:open p {
+    padding-top: 8px; /* pt-2 */
   }
 </style>
 <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
