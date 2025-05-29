@@ -1,6 +1,7 @@
 ---
 //@ts-nocheck
 import Section from "@components/Section.astro";
+import CTA from "@components/sections/CTA.astro";
 import Layout from "@layouts/Layout.astro";
 import { getCasos, getLangFromUrl } from "@utils/i18n";
 import { render } from "astro:content";
@@ -76,5 +77,6 @@ export const prerender = true;
         <Content />
       </main>
     </div>
+    <CTA />
   </Section>
 </Layout>
