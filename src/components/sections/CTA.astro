@@ -7,10 +7,12 @@ import { Image } from "astro:assets";
 ---
 
 <Section classes="[&_h3]:text-center">
-  <h3 class="mb-2 text-3xl font-bold text-sectionTitle print:text-stone-700/90">
+  <div id="divisor" class="absolute left-0 right-0 h-0.5 w-[calc(100%)] bg-gray-800" />
+  <div class="pb-4" />
+  <h3 class="mb-2 text-3xl font-bold text-sectionTitle print:text-gray-700/90">
     Cuentame tu idea!
   </h3>
-  <p class="py-4 text-justify leading-5 tracking-wide max-xs:w-full xs:px-4">
+  <p class="py-4 text-justify leading-5 tracking-wide text-gray-200/80 max-xs:w-full xs:px-4">
     Desde si necesitas ayuda con tu perfil de google my business para mejorar tu
     presencia online o un sitio web para mostrar todos los servicios que ofrece
     tu negocio
@@ -19,21 +21,21 @@ import { Image } from "astro:assets";
     <figure class="mx-auto">
       <Image
         src={me}
-        alt={"avatar de yidev"}
+        alt={"Avatar de yidev"}
         class={"max-h-56 max-w-72 max-xs:max-w-full sm:max-h-80 sm:max-w-80 "}
       />
-      <figcaption class="font-normal text-white/80">avatar de yidev</figcaption>
+      <figcaption class="font-normal text-slate-100/80">Avatar de yidev</figcaption>
     </figure>
     <form
       id="form"
-      class="relative flex w-full flex-col justify-center gap-1.5 sm:w-2/4"
+      class="relative flex w-full flex-col justify-center gap-1.5 text-gray-100/80 sm:w-2/4"
     >
       <div class="invisible absolute left-0 top-0 flex flex-col gap-0.5">
         <label for="bots">anti-spam</label>
         <input
           type="text"
           name="bots"
-          class="px-2 py-0.5 placeholder:font-bold placeholder:text-black"
+          class="bg-gray-200 px-2 py-0.5 placeholder:font-bold placeholder:text-black"
           placeholder="si ves esto dejalo vacio!"
         />
       </div>
@@ -45,7 +47,7 @@ import { Image } from "astro:assets";
           name="name"
           type="text"
           required
-          class="rounded-md p-1 px-2 font-normal placeholder:tracking-wide placeholder:text-stone-950"
+          class="rounded-md bg-slate-100/90 p-1 px-2 font-normal placeholder:tracking-wide placeholder:text-stone-950"
           placeholder="Fulanito Perez"
         />
       </div>
@@ -55,7 +57,7 @@ import { Image } from "astro:assets";
           name="email"
           type="email"
           required
-          class="rounded-md p-1 px-2 font-normal placeholder:tracking-wide placeholder:text-stone-950"
+          class="rounded-md bg-slate-100/90 p-1 px-2 font-normal placeholder:tracking-wide placeholder:text-stone-950"
           placeholder="tucorreo@dominio.com"
         />
       </div>
@@ -64,7 +66,7 @@ import { Image } from "astro:assets";
         <textarea
           name="message"
           required
-          class="rounded-md p-1 px-2 font-normal placeholder:tracking-wide placeholder:text-stone-950"
+          class="rounded-md bg-slate-100/90 p-1 px-2 font-normal placeholder:tracking-wide placeholder:text-stone-950"
           placeholder="tengo una tienda online por instagram y necesito un catalogo mas facil de compartir y mantener"
           rows="5"></textarea>
       </div>
@@ -81,9 +83,15 @@ import { Image } from "astro:assets";
     </form>
   </div>
 </Section>
+<style>
+  #divisor {
+    -webkit-mask-image: linear-gradient( to right, transparent 0%, black 50%, transparent 100% );
+    mask-image: linear-gradient(  to right, transparent 0%, black 50%, transparent 100% );
+  }
+</style>
 <script>
   import Toastify from "toastify-js";
-  import "toastify-js/src/toastify.css";
+import "toastify-js/src/toastify.css";
 
   let form = document.getElementById("form");
   document.addEventListener("astro:page-load", () => {
