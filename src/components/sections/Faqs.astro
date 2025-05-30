@@ -163,7 +163,7 @@ let faqSchema = generateFAQSchema(preguntas);
       interpolate-size: allow-keywords;
     }
 
-    open::details-content {
+    [open]::details-content {
       opacity: 1;
       height: auto;
     }
@@ -179,27 +179,26 @@ let faqSchema = generateFAQSchema(preguntas);
       grid-template-rows: 0fr;
       transition: all 0.8s ease;
     }
-    article details:open div {
+    article details[open] div {
       grid-template-rows: 1fr;
     }
-    :open::details-content {
+    [open]::details-content {
       height: calc(100%);
       opacity: 1;
       /* In case the contents should be taller than 150px */
     }
   }
 
-  details:open summary {
-    /* border-color: rgb(156 163 175 / 0.4); gray-400/40 */
+  details[open] summary {
+    border-bottom-color: rgb(156 163 175 / 0.4); /* gray-400/40 */
     padding-bottom: 8px; /* pb-2 */
     list-style-type: none; /* list-none */
-    @apply border-b-gray-400/40;
   }
-  details:open summary span {
+  details[open] summary span {
     transform: rotate(90deg);
     background-color: rgb(69 10 10 / 0.8); /* bg-red-950/80 */
   }
-  details:open p {
+  details[open] p {
     padding-top: 8px; /* pt-2 */
   }
 </style>
