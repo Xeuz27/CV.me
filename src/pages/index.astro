@@ -45,14 +45,14 @@ const { title, description } = getI18NData(Astro.currentLocale);
       hreflang="x-default"
     />
   </Fragment>
-  <main slot="default-slot" class="print:p-0">
+  <div slot="default-slot" class="print:p-0">
     <Banner />
-    <div class="mx-auto p-4 pt-0">
+    <main class="mx-auto p-4 pt-0">
       <WhyMe />
       <Services />
       <Projects />
       <Faqs />
       <CTA />
-    </div>
-  </main>
+    </main>
+  </div>
 </Layout>
