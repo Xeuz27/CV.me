@@ -30,9 +30,10 @@ import { Image } from "astro:assets";
       id="form"
       class="relative flex w-full flex-col justify-center gap-1.5 text-gray-100/80 sm:w-2/4"
     >
-      <div class="invisible absolute left-0 top-0 flex flex-col gap-0.5">
+      <div tabindex="-1" class="invisible absolute left-0 top-0 flex flex-col gap-0.5">
         <label for="bots">anti-spam</label>
         <input
+          id="bots"
           type="text"
           name="bots"
           class="bg-gray-200 px-2 py-0.5 placeholder:font-bold placeholder:text-black"
@@ -44,29 +45,32 @@ import { Image } from "astro:assets";
           >Nombre Completo</label
         >
         <input
+          id="name"
           name="name"
           type="text"
           required
-          class="rounded-md bg-slate-100/90 p-1 px-2 font-normal placeholder:tracking-wide placeholder:text-stone-950"
+          class="rounded-md bg-slate-100/90 p-1 px-2 font-normal text-slate-950 placeholder:tracking-wide placeholder:text-stone-950"
           placeholder="Fulanito Perez"
         />
       </div>
       <div class="flex flex-col gap-0.5">
         <label for="email" class="font-medium tracking-wide">Correo</label>
         <input
+          id="email"
           name="email"
           type="email"
           required
-          class="rounded-md bg-slate-100/90 p-1 px-2 font-normal placeholder:tracking-wide placeholder:text-stone-950"
+          class="rounded-md bg-slate-100/90 p-1 px-2 font-normal text-slate-950 placeholder:tracking-wide placeholder:text-stone-950"
           placeholder="tucorreo@dominio.com"
         />
       </div>
       <div class="flex flex-col gap-0.5">
         <label for="message" class="font-medium tracking-wide">Mensaje</label>
         <textarea
+          id="message"
           name="message"
           required
-          class="rounded-md bg-slate-100/90 p-1 px-2 font-normal placeholder:tracking-wide placeholder:text-stone-950"
+          class="rounded-md bg-slate-100/90 p-1 px-2 font-normal text-slate-950 placeholder:tracking-wide placeholder:text-stone-950"
           placeholder="tengo una tienda online por instagram y necesito un catalogo mas facil de compartir y mantener"
           rows="5"></textarea>
       </div>
