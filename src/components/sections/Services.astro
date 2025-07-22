@@ -13,7 +13,7 @@ const lang = getLangFromUrl(Astro.url);
   >
     {lang === "en" ? "Services" : "Servicios"}
   </h2>
-  <main class="endTrigger relative flex flex-col gap-16 overflow-hidden">
+  <section class="endTrigger relative flex flex-col gap-16 overflow-hidden">
     {
       services.map((item) => (
         <article
@@ -50,7 +50,7 @@ const lang = getLangFromUrl(Astro.url);
       ))
     }
     <div class="spacer"></div>
-  </main>
+  </section>
 </Section>
 <script>
   import { gsap } from "gsap";

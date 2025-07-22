@@ -100,45 +100,43 @@ let faqSchema = generateFAQSchema(preguntas);
         : "Obten respuestas para dudas comunes sobre nuestros servicios en nuestra seccion de preguntas frecuentes. Responde tus dudas y haz decisiones acertadas. Estamos aquí para ofrecer claridad y asegurar una experiencia digna de tus estandares para ti."
     }
   </p>
-  <main class="my-8">
-    <ul class="flex flex-col gap-2 divide-y-2 divide-gray-600/20">
-      {
-        preguntas.map(({ question, answer }, index) => {
-          return (
-            <li class="pt-2">
-              <article class="cursor-pointer border-l-[3px] border-[#bbbbbb] p-4 max-sm:border-0 max-sm:px-0 md:hover:bg-[rgba(10,19,46,0.9)]">
-                <details name="faqs" class="pointer-events-none transition-all">
-                  <summary class="flex items-center justify-between border border-b-2 border-transparent text-lg font-medium transition-all duration-500">
-                    <h3 class="inline-block text-balance text-base leading-[1lh] tracking-wide text-gray-50/80">{`${index + 1}. ${question}`}</h3>
-                    <span class="flex rotate-45 items-center justify-center rounded-full p-1 transition-all duration-500">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 23 23"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="size-5 text-white transition-colors duration-300"
-                      >
-                        <>
-                          <path d="M18 6 6 18" />
-                          <path d="m6 6 12 12" />
-                        </>
-                      </svg>
-                    </span>
-                  </summary>
-                  <div class="">
-                    <p class="text-gray-100/70">{answer}</p>
-                  </div>
-                </details>
-              </article>
-            </li>
-          );
-        })
-      }
-    </ul>
-  </main>
+  <ul class="my-8 flex flex-col gap-2 divide-y-2 divide-gray-600/20">
+    {
+      preguntas.map(({ question, answer }, index) => {
+        return (
+          <li class="pt-2">
+            <article class="cursor-pointer border-l-[3px] border-[#bbbbbb] p-4 max-sm:border-0 max-sm:px-0 md:hover:bg-[rgba(10,19,46,0.9)]">
+              <details name="faqs" class="pointer-events-none transition-all">
+                <summary class="flex items-center justify-between border border-b-2 border-transparent text-lg font-medium transition-all duration-500">
+                  <h3 class="inline-block text-balance text-base leading-[1lh] tracking-wide text-gray-50/80">{`${index + 1}. ${question}`}</h3>
+                  <span class="flex rotate-45 items-center justify-center rounded-full p-1 transition-all duration-500">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 23 23"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="size-5 text-white transition-colors duration-300"
+                    >
+                      <>
+                        <path d="M18 6 6 18" />
+                        <path d="m6 6 12 12" />
+                      </>
+                    </svg>
+                  </span>
+                </summary>
+                <div class="">
+                  <p class="text-gray-100/70">{answer}</p>
+                </div>
+              </details>
+            </article>
+          </li>
+        );
+      })
+    }
+  </ul>
 </Section>
 <style is:global>
   summary::marker {
