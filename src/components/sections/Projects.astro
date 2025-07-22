@@ -31,7 +31,7 @@ const lang = Astro.currentLocale;
           return (
             <li class="pt-[52px] first:pt-0 print:pt-3 first:print:!pt-0">
               <article class="flex flex-col">
-                <main class="flex h-full flex-col gap-3 print:gap-1">
+                <section class="flex h-full flex-col gap-3 print:gap-1">
                   <header class="flex flex-row items-center gap-1 max-md:justify-between">
                     <h4 class="min-xs:text-base text-slate-100/80 hover:text-white max-xs:text-lg sm:text-xl md:text-2xl print:text-stone-700/80">
                       <a
@@ -47,22 +47,24 @@ const lang = Astro.currentLocale;
                       </a>
                     </h4>
                     {isActive && (
-                      <span class="mb-1 px-2 text-4xl leading-none text-green-500/80">
-                        &bull;
+                      <span class="mt-1.5 px-2 text-base leading-none text-green-500/80">
+                        Online
                       </span>
                     )}
                   </header>
-                  <p class="mb-1 text-base leading-tight text-slate-200/80">
-                    {description}
-                  </p>
-                  <footer class="flex flex-wrap gap-2 text-xs">
-                    {highlights.map((highlight) => (
-                      <span class="flex items-center rounded-md bg-slate-700/40 px-[0.6rem] py-[0.2rem] font-medium text-slate-200/80 print:bg-stone-200/60">
-                        {highlight}
-                      </span>
-                    ))}
+                  <footer class="flex flex-col flex-wrap gap-2 ">
+                    <p class="mb-1 text-base leading-tight text-slate-200/80">
+                      {description}
+                    </p>
+                    <div class="flex flex-wrap gap-2 text-xs">
+                      {highlights.map((highlight) => (
+                        <span class="flex w-fit items-center rounded-md bg-slate-700/40 px-[0.6rem] py-[0.2rem] font-medium text-slate-200/80 print:bg-stone-200/60">
+                          {highlight}
+                        </span>
+                      ))}
+                    </div>
                   </footer>
-                </main>
+                </section>
                 {preview && (
                   <section class="p-8 px-0 print:hidden">
                     <a
