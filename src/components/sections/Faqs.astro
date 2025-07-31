@@ -207,7 +207,7 @@ let faqSchema = generateFAQSchema(preguntas);
       faq.querySelector("details")?.toggleAttribute("open")
     );
   document.addEventListener("astro:page-load", () => {
-    let articlesFaqs = document.querySelectorAll("section main ul li article");
+    let articlesFaqs = document.querySelectorAll("section ul li article");
     articlesFaqs.forEach((faq) => togglearOpenOnClick(faq));
   });
 </script>
