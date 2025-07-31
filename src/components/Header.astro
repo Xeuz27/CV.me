@@ -18,7 +18,7 @@ const links = [
   >
     {
       links.map((link) => (
-        <li class="h-full cursor-pointer place-content-center whitespace-nowrap border-b-4 border-transparent bg-gradient-to-b from-[-80%] to-transparent to-80% px-2 transition-all duration-500 hover:border-[#dfdfdf] hover:from-[rgb(9,31,92)] hover:text-[#dfdfdf] hover:drop-shadow-[0_0px_8px_rgb(16,62,184)] sm:px-6 first:sm:ml-auto">
+        <li class="flex h-full cursor-pointer flex-col justify-center whitespace-nowrap border-b-4 border-transparent bg-gradient-to-b from-[-80%] to-transparent to-80% px-2 transition-all duration-500 hover:border-[#dfdfdf] hover:from-[rgb(9,31,92)] hover:text-[#dfdfdf] hover:drop-shadow-[0_0px_8px_rgb(16,62,184)] sm:px-6 first:sm:ml-auto">
           <a title={link.display} href={link.href}>
             {link.display}
           </a>
@@ -26,7 +26,7 @@ const links = [
       ))
     }
     <li
-      class="h-full cursor-pointer place-content-center whitespace-nowrap border-b-4 border-transparent bg-gradient-to-b from-[-80%] to-transparent to-80% px-2 transition-all duration-500 hover:border-[#dfdfdf] hover:from-[rgb(9,31,92)] hover:text-[#dfdfdf] hover:drop-shadow-[0_0px_8px_rgb(16,62,184)] sm:ml-auto"
+      class="flex h-full cursor-pointer flex-col justify-center whitespace-nowrap border-b-4 border-transparent bg-gradient-to-b from-[-80%] to-transparent to-80% px-2 transition-all duration-500 hover:border-[#dfdfdf] hover:from-[rgb(9,31,92)] hover:text-[#dfdfdf] hover:drop-shadow-[0_0px_8px_rgb(16,62,184)] sm:ml-auto"
     >
       <LanguageSwitcher />
     </li>
