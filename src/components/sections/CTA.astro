@@ -49,7 +49,7 @@ import { Image } from "astro:assets";
           name="name"
           type="text"
           required
-          class="rounded-md bg-slate-100/90 p-1 px-2 font-normal text-slate-950 placeholder:tracking-wide placeholder:text-stone-950"
+          class="rounded-md bg-slate-100/90 p-1 px-2 font-normal text-slate-950 outline-double outline-2 outline-offset-2 placeholder:tracking-wide placeholder:text-stone-950 focus:outline-[#ffcc33]"
           placeholder="Fulanito Perez"
         />
       </div>
@@ -60,7 +60,7 @@ import { Image } from "astro:assets";
           name="email"
           type="email"
           required
-          class="rounded-md bg-slate-100/90 p-1 px-2 font-normal text-slate-950 placeholder:tracking-wide placeholder:text-stone-950"
+          class="rounded-md bg-slate-100/90 p-1 px-2 font-normal text-slate-950 outline-double outline-2 outline-offset-2 placeholder:tracking-wide placeholder:text-stone-950 focus:outline-[#ffcc33]"
           placeholder="tucorreo@dominio.com"
         />
       </div>
@@ -70,9 +70,16 @@ import { Image } from "astro:assets";
           id="message"
           name="message"
           required
-          class="rounded-md bg-slate-100/90 p-1 px-2 font-normal text-slate-950 placeholder:tracking-wide placeholder:text-stone-950"
+          class="rounded-md bg-slate-100/90 p-1 px-2 font-normal text-slate-950 outline-double outline-2 outline-offset-2 placeholder:tracking-wide placeholder:text-stone-950 focus:outline-[#ffcc33]"
           placeholder="tengo una tienda online por instagram y necesito un catalogo mas facil de compartir y mantener"
           rows="5"></textarea>
+      </div>
+      <div class="">
+        <label for="checkbox" class="material-checkbox">
+          <input id="checkbox" name="checkbox" class="" type="checkbox" />
+          <span class="checkmark"> </span>
+          Usar este correo para recibir promociones y noticias?
+        </label>
       </div>
       <Button
         id={"form-submit"}
@@ -92,10 +99,75 @@ import { Image } from "astro:assets";
     -webkit-mask-image: linear-gradient( to right, transparent 0%, black 50%, transparent 100% );
     mask-image: linear-gradient(  to right, transparent 0%, black 50%, transparent 100% );
   }
+  /* From Uiverse.io by Gautammsharma */
+  .material-checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+
+    cursor: pointer;
+    @apply font-medium text-gray-100/80;
+  }
+
+  .material-checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .checkmark {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+    border: 1px solid;
+    border-radius: 4px;
+    @apply border-[#94a3b8];
+  }
+
+  .material-checkbox input[type="checkbox"]:checked ~ .checkmark {
+    border-color: #f3f3f3;
+  }
+
+  .material-checkbox input[type="checkbox"]:checked ~ .checkmark:after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 7px;
+    width: 4px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
+  .material-checkbox input[type="checkbox"]:focus ~ .checkmark {
+    background: rgb(8, 31, 92);
+    outline: 2px solid;
+    outline-color: #ffcc33;
+    outline-offset: 2px;
+  }
+
+  .material-checkbox:hover input[type="checkbox"] ~ .checkmark {
+    border: 1px solid #fff;
+    background: rgb(8, 31, 92);
+    @apply outline-2 outline-offset-2 drop-shadow-[0_0px_12px_#1037a1] focus:outline-[#ffcc33];
+  }
+
+  .material-checkbox input[type="checkbox"]:disabled ~ .checkmark {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .material-checkbox input[type="checkbox"]:disabled ~ .checkmark:hover {
+    border-color: #4d4d4d;
+  }
 </style>
 <script>
   import Toastify from "toastify-js";
-import "toastify-js/src/toastify.css";
+  import "toastify-js/src/toastify.css";
 
   let form = document.getElementById("form");
   document.addEventListener("astro:page-load", () => {

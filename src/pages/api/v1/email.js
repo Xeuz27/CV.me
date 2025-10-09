@@ -10,7 +10,7 @@ import {
 export async function POST({ request }) {
   const formData = await request.formData();
 
-  let bots = "asdasd";
+  let bots = formData.get("bots");
   if (bots.length >= 1)
     return new Response(
       JSON.stringify(
@@ -22,10 +22,12 @@ export async function POST({ request }) {
       ),
     );
 
+  let newsletter = formData.get("checkbox") === "on" ? "Si" : "No";
   const templateParams = {
     name: formData.get("name"),
     email: formData.get("email"),
     message: formData.get("message"),
+    newsletter: newsletter,
   };
   try {
     await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, {
