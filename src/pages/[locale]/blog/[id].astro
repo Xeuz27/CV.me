@@ -1,0 +1,74 @@
+---
+import Section from '@components/Section.astro'
+import CTA from '@components/sections/CTA.astro'
+import Layout from '@layouts/Layout.astro'
+import { getCollection, render } from 'astro:content'
+
+export async function getStaticPaths() {
+	const locales = ['es']
+	const rutas = await Promise.all(
+		locales.map(async (locale) => {
+			let articulos = await getCollection('blog')
+
+			return articulos.map((articulo) => ({
+				params: { locale, id: articulo.data.id },
+				props: { articulo }
+			}))
+		})
+	)
+	return rutas.flat()
+}
+
+const { articulo } = Astro.props
+const { data, slug } = articulo
+const { title, description, img } = data
+
+const { Content } = await render(articulo)
+export const prerender = true
+---
+
+<Layout
+	title={title}
+	description={description}
+	ogImage={img ? img : '/new-og.png'}
+>
+	<Fragment slot="head">
+		<!-- Canonical URL -->
+		<!-- <link rel="canonical" href={canonicalURL} hreflang={currentLocale} /> -->
+		<!-- Alternate Links -->
+		<!-- {
+      locales
+        .filter((locale) => locale !== currentLocale)
+        .map((locale) => {
+          return (
+            <link
+              rel="alternate"
+              href={canonicalURL.href.replace(currentLocale, locale)}
+              hreflang={locale}
+            />
+          );
+        })
+    } -->
+		<!-- <link
+      rel="alternate"
+      href={"https://yidev.vercel.app/es/casos-de-estudio/" + slug}
+      hreflang="x-default"
+    /> -->
+	</Fragment>
+	<Section slot="default-slot" classes={'p-4 sm:px-16'}>
+		<div
+			class="prose prose-sm prose-invert -z-20 max-w-none tracking-wider sm:prose-base prose-a:text-[rgb(106,190,251)] prose-a:hover:text-sky-700 prose-strong:font-normal max-sm:prose-h1:text-2xl"
+		>
+			<main>
+				<h1
+					class="relative -z-10 text-balance text-center"
+					transition:name={`title-${slug}`}
+				>
+					{title}
+				</h1>
+				<Content />
+			</main>
+		</div>
+		<CTA />
+	</Section>
+</Layout>

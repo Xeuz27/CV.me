@@ -18,5 +18,15 @@ const casosDeEstudio = defineCollection({
     date: z.string().or(z.date()),
   }),
 });
+const blog = defineCollection({
+  schema: z.object({
+    id: z.string(),
+    title: z.string(),
+    author: z.string(),
+    img: z.string(),
+    description: z.string(),
+    date: z.string().or(z.date()),
+  }),
+});
 
-export const collections = { caseStudies, casosDeEstudio };
+export const collections = { caseStudies, casosDeEstudio, blog };

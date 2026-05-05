@@ -30,7 +30,7 @@ export default {
       typography: {
         DEFAULT: {
           css: {
-            color: "rgb(180, 180, 180)",
+            color: "rgb(195, 205, 210)",
           },
         },
       },
