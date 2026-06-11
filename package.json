@@ -1,8 +1,8 @@
 {
-  "name": "cv.me",
+  "name": "yidev27",
   "type": "module",
-  "author": "yidev27",
-  "description": "minimal cv template printable",
+  "author": "yidev27 ~ Xeuz27",
+  "description": "personal portfolio / blog site",
   "keywords": [
     "fullstack",
     "developer",
@@ -26,7 +26,6 @@
     "@tailwindcss/vite": "^4.1.17",
     "astro": "^5.16.0",
     "gsap": "^3.12.7",
-    "ninja-keys": "^1.2.2",
     "tailwindcss": "^4.1.17",
     "toastify-js": "^1.12.0",
     "typescript": "^5.3.3"
