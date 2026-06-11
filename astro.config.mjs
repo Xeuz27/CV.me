@@ -24,7 +24,7 @@ export default defineConfig({
   },
   i18n: {
     defaultLocale: "es",
-    locales: ["en", "es"],
+    locales: ["es"],
   },
   trailingSlash: "ignore",
   build: {

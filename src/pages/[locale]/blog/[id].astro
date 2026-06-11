@@ -22,6 +22,7 @@ export async function getStaticPaths() {
 const { articulo } = Astro.props
 const { data, slug } = articulo
 const { title, description, img } = data
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const { Content } = await render(articulo)
 export const prerender = true
@@ -34,7 +35,7 @@ export const prerender = true
 >
 	<Fragment slot="head">
 		<!-- Canonical URL -->
-		<!-- <link rel="canonical" href={canonicalURL} hreflang={currentLocale} /> -->
+		<link rel="canonical" href={canonicalURL} />
 		<!-- Alternate Links -->
 		<!-- {
       locales
