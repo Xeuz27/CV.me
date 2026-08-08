@@ -1,5 +1,5 @@
 ---
-title: "Strategy Development: How we Design an eCommerce and position a brand in Google"
+title: 'Strategy Development: How we Design an eCommerce and position a brand in Google'
 author: jesus gutierrez
 img: /nvstoreDesktop.png
 description: "In this Case Study i'll show you the thought process of how I help NV Store in building a functional online Ecommerce while optimizing their online presence in Google."

@@ -6,7 +6,6 @@
 Esquema del JSON de CV de <a href="https://jsonresume.org/schema/">jsonresume.org</a>
 </p>
 
-
 <p>
 Basado en el diseño de <a href="https://github.com/BartoszJarocki/cv">Bartosz Jarocki</a>
 </p>
@@ -35,17 +34,17 @@ Basado en el diseño de <a href="https://github.com/BartoszJarocki/cv">Bartosz J
 
 ![printable-portfolio](https://ik.imagekit.io/0oguwfou0i/yi-printable-portfolio?updatedAt=1707175630120)
 
-##  Stack
+## Stack
 
-- [**Astro**](https://astro.build/) - El framework web de la nueva época.
-- [**Typescript**](https://www.typescriptlang.org/) - JavaScript con sintaxis de tipado.
-- [**Ninja Keys**](https://github.com/ssleptsov/ninja-keys) - Menu desplegable con atajos de teclado hecho en puro Javascript.
+-   [**Astro**](https://astro.build/) - El framework web de la nueva época.
+-   [**Typescript**](https://www.typescriptlang.org/) - JavaScript con sintaxis de tipado.
+-   [**Ninja Keys**](https://github.com/ssleptsov/ninja-keys) - Menu desplegable con atajos de teclado hecho en puro Javascript.
 
-##  Empezar
+## Empezar
 
 ### 1. Usa este [repo](https://github.com/xeuz27/cv.me) como _template_ de un proyecto de Astro
 
-- Yo uso [npm](https://docs.npmjs.com/cli/v6/commands/npm-install) como gestor de dependencias y empaquetador.
+-   Yo uso [npm](https://docs.npmjs.com/cli/v6/commands/npm-install) como gestor de dependencias y empaquetador.
 
 ```bash
 # Inicializa el proyecto
@@ -53,20 +52,23 @@ npm create astro@latest -- --template Xeuz27/cv.me
 ```
 
 ### 2. Añade tu contenido:
+
 Edita el archivo `cv.json` para crear tu propio Portafolio/CV imprimible.
+
 ### 3. Lanza el servidor de desarrollo:
 
 ```bash
 # Disfruta del resultado
 npm run dev
 ```
+
 ## Comandos
 
-|     | Comando          | Acción                                        |
-| :-- | :--------------- | :-------------------------------------------- |
-| ⚙️  | `npm run dev` o ` npm run start` | Lanza un servidor de desarrollo local en  `localhost:4321`.  |
-| ⚙️  | `npm run build`          | Comprueba posibles errores y hace un empaquetado de producción en `./dist/`.      |
-| ⚙️  | `npm run preview`        | Vista previa en local `localhost:4321` |
+|     | Comando                          | Acción                                                                       |
+| :-- | :------------------------------- | :--------------------------------------------------------------------------- |
+| ⚙️  | `npm run dev` o ` npm run start` | Lanza un servidor de desarrollo local en `localhost:4321`.                   |
+| ⚙️  | `npm run build`                  | Comprueba posibles errores y hace un empaquetado de producción en `./dist/`. |
+| ⚙️  | `npm run preview`                | Vista previa en local `localhost:4321`                                       |
 
 ## Licencia
 

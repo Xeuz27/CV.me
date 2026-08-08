@@ -1,20 +1,18 @@
 ---
-const { img, alt, classes, figClasses = "", pictureClasses = "" } = Astro.props;
-const extensiones = ["avif", "webp", "png"];
+const { img, alt, classes, figClasses = '', pictureClasses = '' } = Astro.props;
+const extensiones = ['avif', 'webp', 'png'];
 ---
 
 <figure class={figClasses}>
-  <picture class={pictureClasses}>
-    {
-      extensiones.map((ext, index) => {
-        if (index === 2) {
-          return (
-            <img src={`${img}.${ext}`} class={classes} alt={alt} title={alt} />
-          );
-        } else {
-          return <source srcset={`${img}.${ext}`} type={`image/${ext}`} />;
-        }
-      })
-    }
-  </picture>
+	<picture class={pictureClasses}>
+		{
+			extensiones.map((ext, index) => {
+				if (index === 2) {
+					return <img src={`${img}.${ext}`} class={classes} alt={alt} title={alt} />;
+				} else {
+					return <source srcset={`${img}.${ext}`} type={`image/${ext}`} />;
+				}
+			})
+		}
+	</picture>
 </figure>

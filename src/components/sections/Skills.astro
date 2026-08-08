@@ -1,17 +1,17 @@
 ---
-import Section from "@components/Section.astro";
-import { hardSkills } from "@data/cv.json";
+import Section from '@components/Section.astro';
+import { hardSkills } from '@data/cv.json';
 const lang = Astro.currentLocale;
 ---
 
-<Section title={lang === "en" ? "Skills" : `Habilidades`}>
-  <ul class="inline-flex flex-wrap gap-3">
-    {
-      hardSkills.map(({ name }) => (
-        <li class="rounded-md bg-gray-600/30 px-[1rem] py-[0.2rem] text-sm font-medium tracking-normal print:bg-gray-200/80">
-          <span>{name}</span>
-        </li>
-      ))
-    }
-  </ul>
+<Section title={lang === 'en' ? 'Skills' : `Habilidades`}>
+	<ul class='inline-flex flex-wrap gap-3'>
+		{
+			hardSkills.map(({ name }) => (
+				<li class='rounded-md bg-gray-600/30 px-[1rem] py-[0.2rem] text-sm font-medium tracking-normal print:bg-gray-200/80'>
+					<span>{name}</span>
+				</li>
+			))
+		}
+	</ul>
 </Section>

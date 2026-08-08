@@ -1,394 +1,369 @@
 {
-  "basics": {
-    "name": "Jesús Alejandro Gutiérrez Guevara",
-    "summary": "Committed to boost technological advancement, my focus is on leading entrepreneurs and small business owners towards new perspectives of success in the digital field. Providing knowledge and strategies to stand out and thrive in the technological world.",
-    "label": "Fullstack Developer with 3 years plus experience creating web pages and apps with React",
-    "image": "../../images/me.jpg",
-    "email": {
-      "href": "mailto:yidev27@gmail.com",
-      "label": "Email",
-      "data": "yidev27@gmail.com"
-    },
-    "phone": {
-      "href": "tel:+58 (414) 617-2019",
-      "label": "Phone Number",
-      "data": "+58 (414) 617-2019"
-    },
-    "url": {
-      "href": "https://yidev.vercel.app/en/",
-      "label": "Website",
-      "data": "yidev.vercel.app/en/"
-    },
-    "location": {
-      "address": "",
-      "postalCode": "",
-      "city": "Maracaibo",
-      "countryCode": "Ve",
-      "region": "Venezuela"
-    },
-    "profiles": [
-      {
-        "network": "Github",
-        "username": "github.com/Xeuz27",
-        "url": "https://github.com/Xeuz27"
-      },
-      {
-        "network": "Linkedin",
-        "username": "linkedin.com/in/yi-dev/",
-        "url": "https://www.linkedin.com/in/yi-dev/"
-      },
-      {
-        "show": false,
-        "network": "X",
-        "username": "yidev27",
-        "url": "https://x.com/yidev27"
-      }
-    ]
-  },
-  "work": [
-    {
-      "name": "Technolog.ch",
-      "position": "Fullstack Software Developer Jr",
-      "url": "https://www.technolog.ch/",
-      "startDate": "May, 2023",
-      "endDate": "Nov, 2023",
-      "summary": "Successfully implemented artificial intelligence to cut the time needed to build a backend using ChatGpt. The backend was developed using object-oriented programming with C#, the .net Core framework and Swagger for the Rest API documentation.",
-      "highlights": ["Started the company"]
-    },
-    {
-      "name": "Tesla Media Group",
-      "position": "Freelance Front-End Developer",
-      "url": "https://www.teslamediagroup.com/",
-      "startDate": "Oct, 2023",
-      "endDate": "Ene, 2023",
-      "summary": "Transcribed text documents with SEO for the Joomla content management system (CMS), which operates under the PHP language. These documents were blog articles aimed at improving search engine positioning, thus generating greater monthly traffic of visitors that eventually converted into sales.",
-      "highlights": ["Started the company"]
-    }
-  ],
-  "benefits": [
-    {
-      "title": " Strategic Support and Long-Term Vision",
-      "icon": "🚀",
-      "body": "I get involved in a project from start to finish, making sure it grows as <span class='text-white font-semibold'>your business grows too</span>."
-    },
-    {
-      "title": " Analytical Approach and Tailored Solutions",
-      "icon": "🎯",
-      "body": "I analyze every detail of the sales or client acquisition process to propose <strong class='text-white font-semibold'>strategies that boost your conversions and visibility.</strong>"
-    },
-    {
-      "title": "Comprehensive Experience and Detailed Attention",
-      "icon": "🤝",
-      "body": "Beyond web development, my background in customer service, sales, and accounting allows me to approach projects with a more complete vision, focused on <strong class='text-white font-semibold'>real results and market differentiation.</strong>"
-    }
-  ],
-  "services": [
-    {
-      "title": "💻 Web Development",
-      "id": "a flex-row-reverse",
-      "imgUrl": "handCoding",
-      "inner": [
-        {
-          "prop1": "What makes your web development service different?",
-          "prop2": "I don’t use CMS platforms like WordPress—I build everything from scratch for greater customization and performance."
-        },
-        {
-          "prop1": "How does a quality website impact a business?",
-          "prop2": "It’s your brand’s first impression online, conveying trust, security, and professionalism."
-        }
-      ]
-    },
-    {
-      "title": "📈 SEO",
-      "id": "b",
-      "imgUrl": "seo",
-      "inner": [
-        {
-          "prop1": "What strategies do you use to improve SEO?",
-          "prop2": "It depends on the business—it could be local SEO, content creation, or improving customer service touchpoints."
-        },
-        {
-          "prop1": "How long does it take to see SEO results?",
-          "prop2": "Initial results can appear in 6 to 12 months. Optimal results usually show after 1 to 2 years."
-        },
-        {
-          "prop1": "What types of businesses benefit most from SEO?",
-          "prop2": "Service providers (like construction companies, clinics, restaurants), online stores, marketing agencies, and more."
-        }
-      ]
-    },
-    {
-      "title": "⚡ Web Optimization",
-      "id": "c flex-row-reverse",
-      "imgUrl": "bugFixing",
-      "inner": [
-        {
-          "prop1": "What are the most common issues you fix?",
-          "prop2": "Slow loading times, heavy files, server performance issues, and accessibility problems."
-        },
-        {
-          "prop1": "How does my website's loading speed affect me?",
-          "prop2": "If your site takes more than 2–3 seconds to load, users may leave before even seeing it."
-        },
-        {
-          "prop1": "Do you only do technical optimization, or also UX/UI improvements?",
-          "prop2": "Mostly technical—but if needed, I also enhance navigation and user flows to boost conversions."
-        }
-      ]
-    },
-    {
-      "title": "🛠️ Web Maintenance",
-      "id": "d",
-      "imgUrl": "maintenance",
-      "inner": [
-        {
-          "prop1": "What does your web maintenance service include?",
-          "prop2": "Software updates, regular backups, and security improvements."
-        },
-        {
-          "prop1": "How often should a site be maintained?",
-          "prop2": "It depends—some websites need updates every 6 months, others weekly or monthly."
-        },
-        {
-          "prop1": "Do you only maintain websites you’ve built?",
-          "prop2": "Preferably yes, but I’m open to reviewing external sites if needed."
-        }
-      ]
-    }
-  ],
-  "volunteer": [
-    {
-      "organization": "Organization",
-      "position": "Volunteer",
-      "url": "https://organization.com/",
-      "startDate": "2012-01-01",
-      "endDate": "2013-01-01",
-      "summary": "Description…",
-      "highlights": ["Awarded 'Volunteer of the Month'"]
-    }
-  ],
-  "education": [
-    {
-      "institution": "Platzi",
-      "url": "https://platzi.com/",
-      "area": "Fullstack JavaScript Developer",
-      "studyType": "Ruta Profesional",
-      "startDate": "Sept, 2023",
-      "endDate": "Sept, 2024"
-    }
-  ],
-  "awards": [
-    {
-      "title": "Award",
-      "date": "2014-11-01",
-      "awarder": "Company",
-      "summary": "There is no spoon."
-    }
-  ],
-  "certificates": [
-    {
-      "name": "Certificate",
-      "date": "2021-11-07",
-      "issuer": "Company",
-      "url": "https://certificate.com"
-    }
-  ],
-  "publications": [
-    {
-      "name": "Publication",
-      "publisher": "Company",
-      "releaseDate": "2014-10-01",
-      "url": "https://publication.com",
-      "summary": "Description…"
-    }
-  ],
-  "softSkills": [
-    {
-      "name": "Web Development",
-      "level": "Master",
-      "keywords": ["HTML", "CSS", "JavaScript"]
-    }
-  ],
-  "hardSkills": [
-    {
-      "name": "Html",
-      "level": "Master",
-      "keywords": ["HTML", "CSS", "JavaScript"]
-    },
-    {
-      "name": "Css",
-      "level": "Master",
-      "keywords": ["HTML", "CSS", "JavaScript"]
-    },
-    {
-      "name": "Javascript",
-      "level": "Master",
-      "keywords": ["HTML", "CSS", "JavaScript"]
-    },
-    {
-      "name": "Mysql",
-      "level": "Master",
-      "keywords": ["HTML", "CSS", "JavaScript"]
-    },
-    {
-      "name": "NodeJS",
-      "level": "Master",
-      "keywords": ["HTML", "CSS", "JavaScript"]
-    },
-    {
-      "name": "ExpressJS",
-      "level": "Master",
-      "keywords": ["HTML", "CSS", "JavaScript"]
-    },
-    {
-      "name": "ReactJs",
-      "level": "Master",
-      "keywords": ["HTML", "CSS", "JavaScript"]
-    },
-    {
-      "name": "Astro",
-      "level": "Master",
-      "keywords": ["HTML", "CSS", "JavaScript"]
-    },
-    {
-      "name": "TailwindCSS",
-      "level": "Master",
-      "keywords": ["HTML", "CSS", "JavaScript"]
-    },
+	"basics": {
+		"name": "Jesús Alejandro Gutiérrez Guevara",
+		"summary": "Committed to boost technological advancement, my focus is on leading entrepreneurs and small business owners towards new perspectives of success in the digital field. Providing knowledge and strategies to stand out and thrive in the technological world.",
+		"label": "Fullstack Developer with 3 years plus experience creating web pages and apps with React",
+		"image": "../../images/me.jpg",
+		"email": {
+			"href": "mailto:yidev27@gmail.com",
+			"label": "Email",
+			"data": "yidev27@gmail.com"
+		},
+		"phone": {
+			"href": "tel:+58 (414) 617-2019",
+			"label": "Phone Number",
+			"data": "+58 (414) 617-2019"
+		},
+		"url": {
+			"href": "https://yidev.vercel.app/en/",
+			"label": "Website",
+			"data": "yidev.vercel.app/en/"
+		},
+		"location": {
+			"address": "",
+			"postalCode": "",
+			"city": "Maracaibo",
+			"countryCode": "Ve",
+			"region": "Venezuela"
+		},
+		"profiles": [
+			{
+				"network": "Github",
+				"username": "github.com/Xeuz27",
+				"url": "https://github.com/Xeuz27"
+			},
+			{
+				"network": "Linkedin",
+				"username": "linkedin.com/in/yi-dev/",
+				"url": "https://www.linkedin.com/in/yi-dev/"
+			},
+			{
+				"show": false,
+				"network": "X",
+				"username": "yidev27",
+				"url": "https://x.com/yidev27"
+			}
+		]
+	},
+	"work": [
+		{
+			"name": "Technolog.ch",
+			"position": "Fullstack Software Developer Jr",
+			"url": "https://www.technolog.ch/",
+			"startDate": "May, 2023",
+			"endDate": "Nov, 2023",
+			"summary": "Successfully implemented artificial intelligence to cut the time needed to build a backend using ChatGpt. The backend was developed using object-oriented programming with C#, the .net Core framework and Swagger for the Rest API documentation.",
+			"highlights": ["Started the company"]
+		},
+		{
+			"name": "Tesla Media Group",
+			"position": "Freelance Front-End Developer",
+			"url": "https://www.teslamediagroup.com/",
+			"startDate": "Oct, 2023",
+			"endDate": "Ene, 2023",
+			"summary": "Transcribed text documents with SEO for the Joomla content management system (CMS), which operates under the PHP language. These documents were blog articles aimed at improving search engine positioning, thus generating greater monthly traffic of visitors that eventually converted into sales.",
+			"highlights": ["Started the company"]
+		}
+	],
+	"benefits": [
+		{
+			"title": " Strategic Support and Long-Term Vision",
+			"icon": "🚀",
+			"body": "I get involved in a project from start to finish, making sure it grows as <span class='text-white font-semibold'>your business grows too</span>."
+		},
+		{
+			"title": " Analytical Approach and Tailored Solutions",
+			"icon": "🎯",
+			"body": "I analyze every detail of the sales or client acquisition process to propose <strong class='text-white font-semibold'>strategies that boost your conversions and visibility.</strong>"
+		},
+		{
+			"title": "Comprehensive Experience and Detailed Attention",
+			"icon": "🤝",
+			"body": "Beyond web development, my background in customer service, sales, and accounting allows me to approach projects with a more complete vision, focused on <strong class='text-white font-semibold'>real results and market differentiation.</strong>"
+		}
+	],
+	"services": [
+		{
+			"title": "💻 Web Development",
+			"id": "a flex-row-reverse",
+			"imgUrl": "handCoding",
+			"inner": [
+				{
+					"prop1": "What makes your web development service different?",
+					"prop2": "I don’t use CMS platforms like WordPress—I build everything from scratch for greater customization and performance."
+				},
+				{
+					"prop1": "How does a quality website impact a business?",
+					"prop2": "It’s your brand’s first impression online, conveying trust, security, and professionalism."
+				}
+			]
+		},
+		{
+			"title": "📈 SEO",
+			"id": "b",
+			"imgUrl": "seo",
+			"inner": [
+				{
+					"prop1": "What strategies do you use to improve SEO?",
+					"prop2": "It depends on the business—it could be local SEO, content creation, or improving customer service touchpoints."
+				},
+				{
+					"prop1": "How long does it take to see SEO results?",
+					"prop2": "Initial results can appear in 6 to 12 months. Optimal results usually show after 1 to 2 years."
+				},
+				{
+					"prop1": "What types of businesses benefit most from SEO?",
+					"prop2": "Service providers (like construction companies, clinics, restaurants), online stores, marketing agencies, and more."
+				}
+			]
+		},
+		{
+			"title": "⚡ Web Optimization",
+			"id": "c flex-row-reverse",
+			"imgUrl": "bugFixing",
+			"inner": [
+				{
+					"prop1": "What are the most common issues you fix?",
+					"prop2": "Slow loading times, heavy files, server performance issues, and accessibility problems."
+				},
+				{
+					"prop1": "How does my website's loading speed affect me?",
+					"prop2": "If your site takes more than 2–3 seconds to load, users may leave before even seeing it."
+				},
+				{
+					"prop1": "Do you only do technical optimization, or also UX/UI improvements?",
+					"prop2": "Mostly technical—but if needed, I also enhance navigation and user flows to boost conversions."
+				}
+			]
+		},
+		{
+			"title": "🛠️ Web Maintenance",
+			"id": "d",
+			"imgUrl": "maintenance",
+			"inner": [
+				{
+					"prop1": "What does your web maintenance service include?",
+					"prop2": "Software updates, regular backups, and security improvements."
+				},
+				{
+					"prop1": "How often should a site be maintained?",
+					"prop2": "It depends—some websites need updates every 6 months, others weekly or monthly."
+				},
+				{
+					"prop1": "Do you only maintain websites you’ve built?",
+					"prop2": "Preferably yes, but I’m open to reviewing external sites if needed."
+				}
+			]
+		}
+	],
+	"volunteer": [
+		{
+			"organization": "Organization",
+			"position": "Volunteer",
+			"url": "https://organization.com/",
+			"startDate": "2012-01-01",
+			"endDate": "2013-01-01",
+			"summary": "Description…",
+			"highlights": ["Awarded 'Volunteer of the Month'"]
+		}
+	],
+	"education": [
+		{
+			"institution": "Platzi",
+			"url": "https://platzi.com/",
+			"area": "Fullstack JavaScript Developer",
+			"studyType": "Ruta Profesional",
+			"startDate": "Sept, 2023",
+			"endDate": "Sept, 2024"
+		}
+	],
+	"awards": [
+		{
+			"title": "Award",
+			"date": "2014-11-01",
+			"awarder": "Company",
+			"summary": "There is no spoon."
+		}
+	],
+	"certificates": [
+		{
+			"name": "Certificate",
+			"date": "2021-11-07",
+			"issuer": "Company",
+			"url": "https://certificate.com"
+		}
+	],
+	"publications": [
+		{
+			"name": "Publication",
+			"publisher": "Company",
+			"releaseDate": "2014-10-01",
+			"url": "https://publication.com",
+			"summary": "Description…"
+		}
+	],
+	"softSkills": [
+		{
+			"name": "Web Development",
+			"level": "Master",
+			"keywords": ["HTML", "CSS", "JavaScript"]
+		}
+	],
+	"hardSkills": [
+		{
+			"name": "Html",
+			"level": "Master",
+			"keywords": ["HTML", "CSS", "JavaScript"]
+		},
+		{
+			"name": "Css",
+			"level": "Master",
+			"keywords": ["HTML", "CSS", "JavaScript"]
+		},
+		{
+			"name": "Javascript",
+			"level": "Master",
+			"keywords": ["HTML", "CSS", "JavaScript"]
+		},
+		{
+			"name": "Mysql",
+			"level": "Master",
+			"keywords": ["HTML", "CSS", "JavaScript"]
+		},
+		{
+			"name": "NodeJS",
+			"level": "Master",
+			"keywords": ["HTML", "CSS", "JavaScript"]
+		},
+		{
+			"name": "ExpressJS",
+			"level": "Master",
+			"keywords": ["HTML", "CSS", "JavaScript"]
+		},
+		{
+			"name": "ReactJs",
+			"level": "Master",
+			"keywords": ["HTML", "CSS", "JavaScript"]
+		},
+		{
+			"name": "Astro",
+			"level": "Master",
+			"keywords": ["HTML", "CSS", "JavaScript"]
+		},
+		{
+			"name": "TailwindCSS",
+			"level": "Master",
+			"keywords": ["HTML", "CSS", "JavaScript"]
+		},
 
-    {
-      "name": "Github",
-      "level": "Master",
-      "keywords": ["HTML", "CSS", "JavaScript"]
-    },
-    {
-      "name": "NPM",
-      "level": "Master",
-      "keywords": ["HTML", "CSS", "JavaScript"]
-    },
+		{
+			"name": "Github",
+			"level": "Master",
+			"keywords": ["HTML", "CSS", "JavaScript"]
+		},
+		{
+			"name": "NPM",
+			"level": "Master",
+			"keywords": ["HTML", "CSS", "JavaScript"]
+		},
 
-    {
-      "name": "Firebase",
-      "level": "Master",
-      "keywords": ["HTML", "CSS", "JavaScript"]
-    },
-    {
-      "name": "Seo",
-      "level": "Master",
-      "keywords": ["HTML", "CSS", "JavaScript"]
-    }
-  ],
-  "languages": [
-    {
-      "language": "Spanish",
-      "fluency": "Native"
-    },
-    {
-      "language": "English",
-      "fluency": "Fluent"
-    }
-  ],
-  "interests": [
-    {
-      "name": "Wildlife",
-      "keywords": ["Ferrets", "Unicorns"]
-    }
-  ],
-  "references": [
-    {
-      "name": "Jane Doe",
-      "reference": "Reference…"
-    }
-  ],
-  "projects": [
-    {
-      "name": "Petit Prime Solutions",
-      "type": "Website | Landing Page",
-      "isActive": true,
-      "description": "Landing page type website for construction-repair services company",
-      "highlights": ["Astro", "SEO", "Landing page"],
-      "url": "https://petit-prime-solutions.vercel.app/",
-      "preview": [
-        "/petitPrimeSolutionsDesktop.png",
-        "/petitPrimeSolutionsMobile.png"
-      ]
-    },
-    {
-      "name": "NvStore | Clothing Store",
-      "type": "Web App | Ecommerce",
-      "description": "Ecommerce Website for NvStore made with Astro and ReactJS with admin-dashboard to handle inventory",
-      "highlights": [
-        "Ecommerce",
-        "Astro",
-        "SEO",
-        "Astro Islands",
-        "ReactJS",
-        "In development"
-      ],
-      "url": "https://nvstore.vercel.app/",
-      "isActive": true,
-      "preview": ["/nvstoreDesktop.png", "/nvstoreMobile.png"]
-    },
-    {
-      "name": "Shoppi",
-      "type": "Web App | Ecommerce",
-      "description": "Mobile responsive ecommerce website with intuitive UX that payloads purchase orders to a Whatsapp phone Number",
-      "highlights": [
-        "ReactJS",
-        "ReactContext",
-        "App",
-        "UX",
-        "Modern UI",
-        "firebase",
-        "Realtime database"
-      ],
-      "url": "https://dark-shoppi.vercel.app/shop",
-      "isActive": false,
-      "preview": ["/shoppiDesktop.png", "/shoppiMobile.png"]
-    },
-    {
-      "name": "Yidev.io",
-      "type": "Landing Page",
-      "description": "Alternative to linktree with SEO integrations",
-      "highlights": ["Landing page", "Linktree", "Open Source", "SEO"],
-      "url": "https://xeuz27.github.io/yidev.io/",
-      "github": "https://github.com/Xeuz27/yidev.io",
-      "isActive": true,
-      "preview": ["/yidevIoDesktop.png", "/yidevIoMobile.png"]
-    },
-    {
-      "name": "NvStore",
-      "show": false,
-      "type": "Web App | Ecommerce",
-      "description": "Ecommerce website for NvStore with admin-dashboard to upload products and orders/shipping management",
-      "highlights": [
-        "App",
-        "ReactJS",
-        "ReactContext",
-        "firebase storage",
-        "Realtime database",
-        "In development"
-      ],
-      "url": "https://nv-ecommerce.vercel.app",
-      "isActive": true
-    },
-    {
-      "name": "Sumz-ai",
-      "show": false,
-      "description": "aplicacion para extraer informacion de un articulo de internet usando un endpoint de rapidApi para luego resumirlos usando chatgpt",
-      "highlights": ["App", "OpenAi", "Open Source"],
-      "url": "https://sumz-ai.vercel.app/",
-      "github": "https://github.com/Xeuz27/sumz-ai",
-      "isActive": true
-    },
-    {
-      "name": "Hoobank",
-      "show": false,
-      "description": "Landing page moderna siguiendo el tutorial de Js Mastery",
-      "highlights": ["Landing page", "Modern UI", "Open Source"],
-      "url": "https://hoobank-modern-ui-landing-page.vercel.app/",
-      "github": "https://github.com/Xeuz27/hoobank_modern_ui_landing_page",
-      "isActive": true
-    }
-  ]
+		{
+			"name": "Firebase",
+			"level": "Master",
+			"keywords": ["HTML", "CSS", "JavaScript"]
+		},
+		{
+			"name": "Seo",
+			"level": "Master",
+			"keywords": ["HTML", "CSS", "JavaScript"]
+		}
+	],
+	"languages": [
+		{
+			"language": "Spanish",
+			"fluency": "Native"
+		},
+		{
+			"language": "English",
+			"fluency": "Fluent"
+		}
+	],
+	"interests": [
+		{
+			"name": "Wildlife",
+			"keywords": ["Ferrets", "Unicorns"]
+		}
+	],
+	"references": [
+		{
+			"name": "Jane Doe",
+			"reference": "Reference…"
+		}
+	],
+	"projects": [
+		{
+			"name": "Petit Prime Solutions",
+			"type": "Website | Landing Page",
+			"isActive": true,
+			"description": "Landing page type website for construction-repair services company",
+			"highlights": ["Astro", "SEO", "Landing page"],
+			"url": "https://petit-prime-solutions.vercel.app/",
+			"preview": ["/petitPrimeSolutionsDesktop.png", "/petitPrimeSolutionsMobile.png"]
+		},
+		{
+			"name": "NvStore | Clothing Store",
+			"type": "Web App | Ecommerce",
+			"description": "Ecommerce Website for NvStore made with Astro and ReactJS with admin-dashboard to handle inventory",
+			"highlights": ["Ecommerce", "Astro", "SEO", "Astro Islands", "ReactJS", "In development"],
+			"url": "https://nvstore.vercel.app/",
+			"isActive": true,
+			"preview": ["/nvstoreDesktop.png", "/nvstoreMobile.png"]
+		},
+		{
+			"name": "Shoppi",
+			"type": "Web App | Ecommerce",
+			"description": "Mobile responsive ecommerce website with intuitive UX that payloads purchase orders to a Whatsapp phone Number",
+			"highlights": ["ReactJS", "ReactContext", "App", "UX", "Modern UI", "firebase", "Realtime database"],
+			"url": "https://dark-shoppi.vercel.app/shop",
+			"isActive": false,
+			"preview": ["/shoppiDesktop.png", "/shoppiMobile.png"]
+		},
+		{
+			"name": "Yidev.io",
+			"type": "Landing Page",
+			"description": "Alternative to linktree with SEO integrations",
+			"highlights": ["Landing page", "Linktree", "Open Source", "SEO"],
+			"url": "https://xeuz27.github.io/yidev.io/",
+			"github": "https://github.com/Xeuz27/yidev.io",
+			"isActive": true,
+			"preview": ["/yidevIoDesktop.png", "/yidevIoMobile.png"]
+		},
+		{
+			"name": "NvStore",
+			"show": false,
+			"type": "Web App | Ecommerce",
+			"description": "Ecommerce website for NvStore with admin-dashboard to upload products and orders/shipping management",
+			"highlights": ["App", "ReactJS", "ReactContext", "firebase storage", "Realtime database", "In development"],
+			"url": "https://nv-ecommerce.vercel.app",
+			"isActive": true
+		},
+		{
+			"name": "Sumz-ai",
+			"show": false,
+			"description": "aplicacion para extraer informacion de un articulo de internet usando un endpoint de rapidApi para luego resumirlos usando chatgpt",
+			"highlights": ["App", "OpenAi", "Open Source"],
+			"url": "https://sumz-ai.vercel.app/",
+			"github": "https://github.com/Xeuz27/sumz-ai",
+			"isActive": true
+		},
+		{
+			"name": "Hoobank",
+			"show": false,
+			"description": "Landing page moderna siguiendo el tutorial de Js Mastery",
+			"highlights": ["Landing page", "Modern UI", "Open Source"],
+			"url": "https://hoobank-modern-ui-landing-page.vercel.app/",
+			"github": "https://github.com/Xeuz27/hoobank_modern_ui_landing_page",
+			"isActive": true
+		}
+	]
 }

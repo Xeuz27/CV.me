@@ -1,48 +1,40 @@
 ---
-import Section from "@components/Section.astro";
+import Section from '@components/Section.astro';
 
-import { getI18N } from "@utils/i18n";
+import { getI18N } from '@utils/i18n';
 
 const { work } = getI18N(Astro.currentLocale);
 const lang = Astro.currentLocale;
 ---
 
-<Section title={lang === "en" ? "Experience" : `Experiencia Laboral`}>
-  <ul
-    class="flex flex-col gap-6 divide-y-[2px] divide-separator print:gap-3 print:divide-separatorPrint"
-  >
-    {
-      work.map(({ name, position, startDate, endDate, summary }) => {
-        return (
-          <li class="last:pt-5 print:pt-0 print:last:pt-2">
-            <article>
-              <header class="mb-3 flex flex-col-reverse items-center justify-between sm:flex-row">
-                <div class="flex flex-col gap-[2px] max-sm:w-full">
-                  <h4 class="text-lg tracking-normal text-gray-200/55 max-sm:flex max-sm:justify-between print:text-stone-600/70">
-                    {lang === "en" ? "Company" : "Empresa"}:
-                    <span class="text-gray-100/90 print:text-stone-800">
-                      {name}
-                    </span>
-                  </h4>
-                  <h5 class="text-sm text-gray-200/60 max-sm:flex max-sm:justify-between print:text-stone-400/50">
-                    {lang === "en" ? "Role: " : "Rol: "}
-                    <span class="text-gray-100/70 print:text-stone-400">
-                      {position}
-                    </span>
-                  </h5>
-                </div>
+<Section title={lang === 'en' ? 'Experience' : `Experiencia Laboral`}>
+	<ul class='flex flex-col gap-6 divide-y-[2px] divide-separator print:gap-3 print:divide-separatorPrint'>
+		{
+			work.map(({ name, position, startDate, endDate, summary }) => {
+				return (
+					<li class='last:pt-5 print:pt-0 print:last:pt-2'>
+						<article>
+							<header class='mb-3 flex flex-col-reverse items-center justify-between sm:flex-row'>
+								<div class='flex flex-col gap-[2px] max-sm:w-full'>
+									<h4 class='text-lg tracking-normal text-gray-200/55 max-sm:flex max-sm:justify-between print:text-stone-600/70'>
+										{lang === 'en' ? 'Company' : 'Empresa'}:
+										<span class='text-gray-100/90 print:text-stone-800'>{name}</span>
+									</h4>
+									<h5 class='text-sm text-gray-200/60 max-sm:flex max-sm:justify-between print:text-stone-400/50'>
+										{lang === 'en' ? 'Role: ' : 'Rol: '}
+										<span class='text-gray-100/70 print:text-stone-400'>{position}</span>
+									</h5>
+								</div>
 
-                <time class="text-sm text-zinc-100/60 sm:text-lg print:text-stone-400/80">
-                  {startDate} | {endDate}
-                </time>
-              </header>
-              <p class="text-justify leading-tight tracking-normal">
-                {summary}
-              </p>
-            </article>
-          </li>
-        );
-      })
-    }
-  </ul>
+								<time class='text-sm text-zinc-100/60 sm:text-lg print:text-stone-400/80'>
+									{startDate} | {endDate}
+								</time>
+							</header>
+							<p class='text-justify leading-tight tracking-normal'>{summary}</p>
+						</article>
+					</li>
+				);
+			})
+		}
+	</ul>
 </Section>

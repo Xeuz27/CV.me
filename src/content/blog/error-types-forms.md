@@ -1,9 +1,9 @@
 ---
-id: "error-types-formulario-typescript"
-title: "Formularios en TypeScript: por qué los tipos no coinciden (y cómo solucionarlo)"
+id: 'error-types-formulario-typescript'
+title: 'Formularios en TypeScript: por qué los tipos no coinciden (y cómo solucionarlo)'
 author: Jesus Gutierrez
 img: /error-types-forms.webp
-description: "Cómo evitar errores de tipo al trabajar con formularios usando mapped types"
+description: 'Cómo evitar errores de tipo al trabajar con formularios usando mapped types'
 date: 20260505T000000-0400
 ---
 
@@ -53,9 +53,9 @@ los generic types son un tipo de placeholder, lo que significa que no sabemos ex
 
 ```ts
 function identity<Type>(arg: Type): Type {
-  return arg;
+	return arg;
 }
-let whatIs = identity<string>("soy un string"); // typeof whatIs = string
+let whatIs = identity<string>('soy un string'); // typeof whatIs = string
 let whatIs = identity<number>(123); // typeof whatIs = number
 let whatIs = identity(true); // typeof whatIs = boolean (ts infiere boolean)
 ```
@@ -68,21 +68,21 @@ nota: para que sea un mapped type, debe operar sobre las claves de un tipo ya ex
 
 ```ts
 type Product = {
-  name: string;
-  description: string;
-  price: number;
-  createdAt: Date;
+	name: string;
+	description: string;
+	price: number;
+	createdAt: Date;
 };
 
 type mapped<Product> = {
-  [Clave in keyof Product]: string;
+	[Clave in keyof Product]: string;
 };
 
 const initialForm: mapped<Product> = {
-  name: "",
-  description: "",
-  price: "", // ahora si puede ser un string por que ya no es number
-  createdAt: "", // ahora si puede ser un string por que ya no es Date
+	name: '',
+	description: '',
+	price: '', // ahora si puede ser un string por que ya no es number
+	createdAt: '' // ahora si puede ser un string por que ya no es Date
 };
 ```
 

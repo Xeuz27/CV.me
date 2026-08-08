@@ -1,19 +1,19 @@
 ---
-import Translate from "@components/icons/translate.astro";
+import Translate from '@components/icons/translate.astro';
 
 const url = Astro.url;
 const lang = Astro.currentLocale;
 
-let pathnameSplitted = url.pathname.split("/");
-pathnameSplitted[1] = pathnameSplitted[1] === "en" ? "es" : "en";
+let pathnameSplitted = url.pathname.split('/');
+pathnameSplitted[1] = pathnameSplitted[1] === 'en' ? 'es' : 'en';
 ---
 
 <a
-  id="languageSwitcher"
-  href={url.origin + pathnameSplitted.join("/")}
-  title={`${lang === "en" ? "Traducir al Español" : " Translate to English"}`}
-  class="flex items-center gap-1 text-3xl uppercase print:hidden"
+	id='languageSwitcher'
+	href={url.origin + pathnameSplitted.join('/')}
+	title={`${lang === 'en' ? 'Traducir al Español' : ' Translate to English'}`}
+	class='flex items-center gap-1 text-3xl uppercase print:hidden'
 >
-  <Translate classes="size-7 mt-[2.5px] text-inherit pointer-events-none" />
-  {lang === "en" ? "Es" : "En"}
+	<Translate classes='size-7 mt-[2.5px] text-inherit pointer-events-none' />
+	{lang === 'en' ? 'Es' : 'En'}
 </a>

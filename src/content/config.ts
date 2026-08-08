@@ -1,32 +1,32 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection, z } from 'astro:content';
 
 const caseStudies = defineCollection({
-  schema: z.object({
-    title: z.string(),
-    author: z.string(),
-    img: z.string(),
-    description: z.string(),
-    date: z.string().or(z.date()),
-  }),
+	schema: z.object({
+		title: z.string(),
+		author: z.string(),
+		img: z.string(),
+		description: z.string(),
+		date: z.string().or(z.date())
+	})
 });
 const casosDeEstudio = defineCollection({
-  schema: z.object({
-    title: z.string(),
-    author: z.string(),
-    img: z.string(),
-    description: z.string(),
-    date: z.string().or(z.date()),
-  }),
+	schema: z.object({
+		title: z.string(),
+		author: z.string(),
+		img: z.string(),
+		description: z.string(),
+		date: z.string().or(z.date())
+	})
 });
 const blog = defineCollection({
-  schema: z.object({
-    id: z.string(),
-    title: z.string(),
-    author: z.string(),
-    img: z.string(),
-    description: z.string(),
-    date: z.string().or(z.date()),
-  }),
+	schema: z.object({
+		id: z.string(),
+		title: z.string(),
+		author: z.string(),
+		img: z.string(),
+		description: z.string(),
+		date: z.string().or(z.date())
+	})
 });
 
 export const collections = { caseStudies, casosDeEstudio, blog };

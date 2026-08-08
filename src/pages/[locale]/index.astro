@@ -1,40 +1,40 @@
 ---
-import Banner from "@components/sections/Banner.astro";
-import CTA from "@components/sections/CTA.astro";
-import Faqs from "@components/sections/Faqs.astro";
-import Projects from "@components/sections/Projects.astro";
-import Services from "@components/sections/Services.astro";
-import WhyMe from "@components/sections/WhyMe.astro";
-import Layout from "@layouts/Layout.astro";
+import Banner from '@components/sections/Banner.astro';
+import CTA from '@components/sections/CTA.astro';
+import Faqs from '@components/sections/Faqs.astro';
+import Projects from '@components/sections/Projects.astro';
+import Services from '@components/sections/Services.astro';
+import WhyMe from '@components/sections/WhyMe.astro';
+import Layout from '@layouts/Layout.astro';
 
-import { getI18NData, getLangFromUrl } from "@utils/i18n";
+import { getI18NData, getLangFromUrl } from '@utils/i18n';
 
 export async function getStaticPaths() {
-  // Define the languages you want to support
-  return [{ params: { locale: "es" } }];
+	// Define the languages you want to support
+	return [{ params: { locale: 'es' } }];
 }
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 let currentLocale = getLangFromUrl(canonicalURL);
-let locales = ["es"];
+let locales = ['es'];
 const { title, description } = getI18NData(Astro.currentLocale);
 ---
 
 <Layout
-  title={title}
-  description={description}
-  ogImage="https://ik.imagekit.io/0oguwfou0i/yi-printable-portfolio?updatedAt=1707175630120"
+	title={title}
+	description={description}
+	ogImage='https://ik.imagekit.io/0oguwfou0i/yi-printable-portfolio?updatedAt=1707175630120'
 >
-  <Fragment slot="head">
-    <link rel="canonical" href={canonicalURL} hreflang={currentLocale} />
-   </Fragment>
-  <div slot="default-slot" class="print:p-0">
-    <Banner />
-    <main class="mx-auto p-4 pt-0">
-      <WhyMe />
-      <Services />
-      <Projects />
-      <Faqs />
-      <CTA />
-    </main>
-  </div>
+	<Fragment slot='head'>
+		<link rel='canonical' href={canonicalURL} hreflang={currentLocale} />
+	</Fragment>
+	<div slot='default-slot' class='print:p-0'>
+		<Banner />
+		<main class='mx-auto p-4 pt-0'>
+			<WhyMe />
+			<Services />
+			<Projects />
+			<Faqs />
+			<CTA />
+		</main>
+	</div>
 </Layout>

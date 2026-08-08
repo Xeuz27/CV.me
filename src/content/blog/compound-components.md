@@ -1,9 +1,9 @@
 ---
-id: "compound-components-para-layouts-consistentes"
-title: "usar compound components para crear layouts mas consistentes"
+id: 'compound-components-para-layouts-consistentes'
+title: 'usar compound components para crear layouts mas consistentes'
 author: Jesus Gutierrez
 img: /error-types-forms.webp
-description: "Cómo evitar errores de tipo al trabajar con formularios usando mapped types"
+description: 'Cómo evitar errores de tipo al trabajar con formularios usando mapped types'
 date: 20260522T000000-0400
 ---
 
@@ -18,14 +18,14 @@ Y en muchos casos terminas con un componente enorme, lleno de configuraciones, i
 
 en el ir y venir de ideas y soluciones se nos ocurrio usar el patron compuesto, que sirve para entrelazar componentes entre si que comparten estado, contexto y logica, para darle mejor forma y estructura a esos componentes que le dan forma a las uis
 
-el ejemplo mas usado para un patron compuesto es el elemento Select de html, 
+el ejemplo mas usado para un patron compuesto es el elemento Select de html,
 
 ```js
 <Select>
-	<SelectTrigger />													
+	<SelectTrigger />
 	<SelectContent>
-    		<SelectItem />
-  	</SelectContent>
+		<SelectItem />
+	</SelectContent>
 </Select>
 ```
 
@@ -35,10 +35,11 @@ El SelectTrigger necesita existir dentro de Select, y los SelectItem deben vivir
 y si pudieramos construir partes mas complejas de nuestro layout, como multiples partes entrelazadas entre si para tener mejor consistencia visual y estructural cada vez que se use
 
 esto nos daria:
-- modularidad
-- legibilidad
-- consistencia
-- facilidad de adaptacion
+
+-   modularidad
+-   legibilidad
+-   consistencia
+-   facilidad de adaptacion
 
 la cuestion aqui seria comenzar a ver nuestros layouts como multiples partes pequeñas de un componente mas grande
 
@@ -57,120 +58,106 @@ la cuestion aqui seria comenzar a ver nuestros layouts como multiples partes peq
 ```js
 const WorkspaceHeader = ({ children }) => {
 	return (
-		<header className="sticky top-0 shrink-0 border-b h-16 flex gap-4 items-center justify-between">
-			<div className="flex items-center ">
-				<SidebarTrigger className="size-8 p-1" />
-				<Separator orientation="vertical" className="ml-3.5 h-8" />
+		<header className='sticky top-0 flex h-16 shrink-0 items-center justify-between gap-4 border-b'>
+			<div className='flex items-center '>
+				<SidebarTrigger className='size-8 p-1' />
+				<Separator orientation='vertical' className='ml-3.5 h-8' />
 			</div>
-			<div className="flex flex-1 justify-between">{children}</div>
+			<div className='flex flex-1 justify-between'>{children}</div>
 		</header>
-	)
-}
+	);
+};
 
 const Content = ({ title, description, Icon, children }) => {
 	return (
-		<div className="flex items-center gap-3">
-			<div className="flex items-center justify-center size-9 rounded-lg bg-primary/30">
-				<Icon className="size-5 text-primary" />
+		<div className='flex items-center gap-3'>
+			<div className='bg-primary/30 flex size-9 items-center justify-center rounded-lg'>
+				<Icon className='text-primary size-5' />
 			</div>
 			<div>
-				<h1 className="text-lg font-semibold text-foreground">{title}</h1>
-				<p className="text-xs text-muted-foreground hidden md:block">{description}</p>
+				<h1 className='text-foreground text-lg font-semibold'>{title}</h1>
+				<p className='text-muted-foreground hidden text-xs md:block'>{description}</p>
 			</div>
-			{children && <div className="">{children}</div>}
+			{children && <div className=''>{children}</div>}
 		</div>
-	)
-}
+	);
+};
 
 const Actions = ({ children }) => {
-	return <div className="flex items-center gap-3">{children}</div>
-}
+	return <div className='flex items-center gap-3'>{children}</div>;
+};
 
 const SearchBar = ({ placeholder, value, onSearch }) => {
 	return (
-		<div className="relative">
-			<Search className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-muted-foreground" />
-			<Input className="pl-9 w-48 bg-secondary/50" 
-				placeholder={placeholder} 
-				value={value} 
+		<div className='relative'>
+			<Search className='text-muted-foreground absolute left-3 top-1/2 size-4 -translate-y-1/2' />
+			<Input
+				className='bg-secondary/50 w-48 pl-9'
+				placeholder={placeholder}
+				value={value}
 				onChange={(e) => onSearch(e.target.value)}
 			/>
 		</div>
-	)
-}
+	);
+};
 
 const Btn = ({ text, onClick }) => {
 	return (
 		<Button
-			className="hover:bg-accent/20 px-1.5 md:px-4 gap-0 rounded-full md:rounded-sm"
+			className='hover:bg-accent/20 gap-0 rounded-full px-1.5 md:rounded-sm md:px-4'
 			onClick={() => {
-				onClick()
+				onClick();
 			}}
 		>
-			<Plus className="size-5" />
-			<span className="hidden md:block">{text}</span>
+			<Plus className='size-5' />
+			<span className='hidden md:block'>{text}</span>
 		</Button>
-	)
-}
-
-
+	);
+};
 ```
 
 entonces, algo como esto:
 
-
-
 ```js
-    <header className="flex items-center justify-between px-6 py-4 border-b border-border">
-        <div className="flex items-center gap-3">
-            <div className="flex items-center justify-center size-9 rounded-lg bg-primary/10">
-                <LayoutGrid className="size-5 text-primary" />
-            </div>
-            <div>
-                <h1 className="text-lg font-semibold text-foreground">Workspace</h1>
-                <p className="text-xs text-muted-foreground">Organize your tasks, notes, and ideas</p>
-            </div>
-        </div>
+<header className='border-border flex items-center justify-between border-b px-6 py-4'>
+	<div className='flex items-center gap-3'>
+		<div className='bg-primary/10 flex size-9 items-center justify-center rounded-lg'>
+			<LayoutGrid className='text-primary size-5' />
+		</div>
+		<div>
+			<h1 className='text-foreground text-lg font-semibold'>Workspace</h1>
+			<p className='text-muted-foreground text-xs'>Organize your tasks, notes, and ideas</p>
+		</div>
+	</div>
 
-        <div className="flex items-center gap-3">
-            <div className="relative ">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-muted-foreground" />
-                <Input
-                    placeholder="Search items..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="pl-9 w-64 bg-secondary/50"
-                />
-            </div>
-            <Button onClick={() => setAddColumnDialogOpen(true)}>
-                <Plus className="size-4 mr-1" />
-                Add Column
-            </Button>
-        </div>
-    </header>
+	<div className='flex items-center gap-3'>
+		<div className='relative '>
+			<Search className='text-muted-foreground absolute left-3 top-1/2 size-4 -translate-y-1/2' />
+			<Input
+				placeholder='Search items...'
+				value={searchQuery}
+				onChange={(e) => setSearchQuery(e.target.value)}
+				className='bg-secondary/50 w-64 pl-9'
+			/>
+		</div>
+		<Button onClick={() => setAddColumnDialogOpen(true)}>
+			<Plus className='mr-1 size-4' />
+			Add Column
+		</Button>
+	</div>
+</header>
 ```
 
 puede empezar a verse de esta manera:
 
 ```js
-    <WorkspaceHeader>
-        <WorkspaceHeader.Content
-            title='Workspace'
-            description='Organize your tasks, notes, and ideas'
-            Icon={LayoutGrid}
-        />
-        <WorkspaceHeader.Actions>
-            <WorkspaceHeader.Search
-                placeholder='Search Items'
-                value={searchQuery}
-                onSearch={setSearchQuery}
-            />
-            <WorkspaceHeader.Button
-                text='Add Column'
-                onClick={()=> setAddColumnDialogOpen}
-            />
-        </WorkspaceHeader.Actions>
-    </WorkspaceHeader>
+<WorkspaceHeader>
+	<WorkspaceHeader.Content title='Workspace' description='Organize your tasks, notes, and ideas' Icon={LayoutGrid} />
+	<WorkspaceHeader.Actions>
+		<WorkspaceHeader.Search placeholder='Search Items' value={searchQuery} onSearch={setSearchQuery} />
+		<WorkspaceHeader.Button text='Add Column' onClick={() => setAddColumnDialogOpen} />
+	</WorkspaceHeader.Actions>
+</WorkspaceHeader>
 ```
 
 <div class="flex gap-2 overflow-hidden max-md:flex-col-reverse md:gap-4">
@@ -189,53 +176,47 @@ puede empezar a verse de esta manera:
 
 que seria lo interesante de esto? que no necesariamente tienes que ver o crear condiciones segun que elementos necesita tu componente en esa vista en especifica sino solamente usar el componente si es que la vista lo amerita. O crear espacios donde agregar elementos que son unicos y especificos para la misma, sin necesariamente tener que estar modificando todo el componente.
 
-
-
 ```js
 const Actions = ({ children }) => {
-	return <div className="flex items-center gap-3">{children}</div>
-}
+	return <div className='flex items-center gap-3'>{children}</div>;
+};
 
-const Btn = ({ view, onClick, text, classname='' }) => {
+const Btn = ({ view, onClick, text, classname = '' }) => {
 	return (
 		<button
 			onClick={() => onClick()}
 			className={cn(
-				'px-3 py-1.5 text-sm rounded-md transition-colors',
-				view === text 
-                    ? 'bg-background text-foreground shadow-sm border border-accent/30' 
-                    : 'text-muted-foreground hover:text-foreground',
+				'rounded-md px-3 py-1.5 text-sm transition-colors',
+				view === text
+					? 'bg-background text-foreground border-accent/30 border shadow-sm'
+					: 'text-muted-foreground hover:text-foreground',
 				classname
 			)}
 		>
 			{text}
 		</button>
-	)
-}
+	);
+};
 
 <WorkspaceHeader>
-    <WorkspaceHeader.Content 
-        title="Calendar" 
-        description="Schedule meetings and track deadlines" 
-        Icon={CalendarDays} 
-    />
-    <WorkspaceHeader.Actions>
-        <div className="flex items-center gap-3">
-            <div className="flex items-center max-md:hidden bg-secondary/50 rounded-lg p-1">
-                <Btn view={view} onClick={() => setView('month')} text="month" />
-                <Btn classname="max-md:hidden" view={view} onClick={() => setView('week')} text="week" />
-                <Btn view={view} onClick={() => setView('day')} text="day" />
-            </div>
-        </div>
-        <WorkspaceHeader.Button
-            text="Add Event"
-            onClick={() => {
-                setEditingEvent(undefined)
-                setDialogOpen(true)
-            }}
-        />
-    </WorkspaceHeader.Actions>
-</WorkspaceHeader>
+	<WorkspaceHeader.Content title='Calendar' description='Schedule meetings and track deadlines' Icon={CalendarDays} />
+	<WorkspaceHeader.Actions>
+		<div className='flex items-center gap-3'>
+			<div className='bg-secondary/50 flex items-center rounded-lg p-1 max-md:hidden'>
+				<Btn view={view} onClick={() => setView('month')} text='month' />
+				<Btn classname='max-md:hidden' view={view} onClick={() => setView('week')} text='week' />
+				<Btn view={view} onClick={() => setView('day')} text='day' />
+			</div>
+		</div>
+		<WorkspaceHeader.Button
+			text='Add Event'
+			onClick={() => {
+				setEditingEvent(undefined);
+				setDialogOpen(true);
+			}}
+		/>
+	</WorkspaceHeader.Actions>
+</WorkspaceHeader>;
 ```
 
 al ver, luego que los tabs se repetian en varias vistas e iban siendo inconsistentes por no ser un componente aislado se abstrajo en su modulo nuevamente para que pudieran ser reusados
@@ -265,18 +246,18 @@ const Tab = ({ text, isActive, className, onClick }:) => {
 //vistaY.jsx
 <WorkspaceHeader.Actions>
     <WorkspaceHeader.Tabs>
-        <WorkspaceHeader.Tab 
+        <WorkspaceHeader.Tab
             text='month'
             onClick={()=>setView('month')}
             isActive={view}
         />
-        <WorkspaceHeader.Tab 
+        <WorkspaceHeader.Tab
             text='week'
             onClick={()=>setView('week')}
             className='max-md:hidden'
             isActive={view}
         />
-        <WorkspaceHeader.Tab 
+        <WorkspaceHeader.Tab
             text='day'
             onClick={()=>setView('day')}
             isActive={view}
@@ -291,6 +272,7 @@ const Tab = ({ text, isActive, className, onClick }:) => {
     />
 </WorkspaceHeader.Actions>
 ```
+
 <div class="flex gap-2 overflow-hidden max-md:flex-col-reverse md:gap-4">
   <img 
     class="mx-auto aspect-auto max-h-[580px] md:max-h-64 lg:max-h-96 xl:max-h-[360px]" 
@@ -343,6 +325,7 @@ si una vista no tiene elementos que otras si, el componente no se declara
     </WorkspaceHeader.Actions>
 </WorkspaceHeader>
 ```
+
 <div class="flex gap-2 overflow-hidden max-md:flex-col-reverse md:gap-4">
   <img 
     class="mx-auto aspect-auto max-h-[580px] md:max-h-64 lg:max-h-96 xl:max-h-[360px]" 
@@ -359,43 +342,25 @@ si una vista no tiene elementos que otras si, el componente no se declara
 
 aun siendo el patron compuesto una estructura medio rigida, el que sea modular nos da la flexibilidad de decidir que elementos usar y cuales no, tambien dejandonos decidir como componerlos
 
-
 ```js
 //vistaZ.jsx
 <WorkspaceHeader>
-    <WorkspaceHeader.Content 
-        title="Time Tracker" 
-        description={'log spent hours'} 
-        Icon={Clock}
-    >
-        <WorkspaceHeader.Tabs>
-            <WorkspaceHeader.Tab 
-                text="day" 
-                isActive={viewMode} 
-                onClick={() => setViewMode('day')} 
-            />
-            <WorkspaceHeader.Tab 
-                text="week" 
-                isActive={viewMode} 
-                onClick={() => setViewMode('week')} 
-            />
-        </WorkspaceHeader.Tabs>
-    </WorkspaceHeader.Content>
-    <WorkspaceHeader.Actions>
-        <div className="flex items-center gap-2 bg-border px-3 py-1.5 rounded-lg">
-            <Timer className="size-4 text-muted-foreground" />
-            <span className="text-sm text-muted-foreground">
-                {viewMode === 'day' ? 'Today:' : 'This week:'}
-            </span>
-            <span className="font-semibold text-accent/40">
-                {formatDuration(viewMode === 'day' ? todayTotalMinutes : weekTotalMinutes)}
-            </span>
-        </div>
-        <WorkspaceHeader.Button 
-            text="Add Entry" 
-            onClick={() => handleAddEntry()} 
-        />
-    </WorkspaceHeader.Actions>
+	<WorkspaceHeader.Content title='Time Tracker' description={'log spent hours'} Icon={Clock}>
+		<WorkspaceHeader.Tabs>
+			<WorkspaceHeader.Tab text='day' isActive={viewMode} onClick={() => setViewMode('day')} />
+			<WorkspaceHeader.Tab text='week' isActive={viewMode} onClick={() => setViewMode('week')} />
+		</WorkspaceHeader.Tabs>
+	</WorkspaceHeader.Content>
+	<WorkspaceHeader.Actions>
+		<div className='bg-border flex items-center gap-2 rounded-lg px-3 py-1.5'>
+			<Timer className='text-muted-foreground size-4' />
+			<span className='text-muted-foreground text-sm'>{viewMode === 'day' ? 'Today:' : 'This week:'}</span>
+			<span className='text-accent/40 font-semibold'>
+				{formatDuration(viewMode === 'day' ? todayTotalMinutes : weekTotalMinutes)}
+			</span>
+		</div>
+		<WorkspaceHeader.Button text='Add Entry' onClick={() => handleAddEntry()} />
+	</WorkspaceHeader.Actions>
 </WorkspaceHeader>
 ```
 
@@ -418,10 +383,3 @@ y asi puedes ir estructurando tus vistas como mejor convenga sin estar rompiendo
 eso nos ahorra tiempo de desarrollo y los dolores de cabeza de tener que idear componentes o condiciones para uno o ambos escenarios, en el mejor de los casos.
 
 en el peor de los casos, multiples escenarios al mismo tiempo que aumenta cuantos mas ejemplos, componentes y vistas tengas, cuando solo un componente es el responsable de manejar todos los casos.
-
-
-
-
-
-
-

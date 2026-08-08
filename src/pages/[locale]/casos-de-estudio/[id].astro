@@ -1,31 +1,31 @@
 ---
 //@ts-nocheck
-import Section from "@components/Section.astro";
-import CTA from "@components/sections/CTA.astro";
-import Layout from "@layouts/Layout.astro";
-import { getCasos, getLangFromUrl } from "@utils/i18n";
-import { render } from "astro:content";
+import Section from '@components/Section.astro';
+import CTA from '@components/sections/CTA.astro';
+import Layout from '@layouts/Layout.astro';
+import { getCasos, getLangFromUrl } from '@utils/i18n';
+import { render } from 'astro:content';
 
 export async function getStaticPaths() {
-  const locales = ["es"];
-  const rutas = await Promise.all(
-    locales.map(async (locale) => {
-      let casossAsync = await getCasos(locale);
+	const locales = ['es'];
+	const rutas = await Promise.all(
+		locales.map(async (locale) => {
+			let casossAsync = await getCasos(locale);
 
-      return casossAsync.map((caso) => ({
-        params: { locale, id: caso.slug },
-        props: { caso }
-      }));
-    })
-  );
-  return rutas.flat();
+			return casossAsync.map((caso) => ({
+				params: { locale, id: caso.slug },
+				props: { caso }
+			}));
+		})
+	);
+	return rutas.flat();
 }
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 let currentLocale = getLangFromUrl(canonicalURL);
-let altLocale = currentLocale === "en" ? "es" : "en";
+let altLocale = currentLocale === 'en' ? 'es' : 'en';
 
-let locales = ["es"];
+let locales = ['es'];
 
 const { caso } = Astro.props;
 const { data, slug } = caso;
@@ -35,27 +35,21 @@ const { Content } = await render(caso);
 export const prerender = true;
 ---
 
-<Layout
-  title={title}
-  description={description}
->
-  <Fragment slot="head">
-    <link rel="canonical" href={canonicalURL} hreflang={currentLocale} />
-  </Fragment>
-  <Section slot="default-slot" classes={"p-4 sm:px-16"}>
-    <div
-      class="prose prose-sm prose-invert -z-20 max-w-none tracking-wider sm:prose-base prose-a:text-[rgb(106,190,251)] prose-a:hover:text-sky-700 prose-strong:font-normal max-sm:prose-h1:text-2xl"
-    >
-      <main>
-        <h1
-          class="relative -z-10 text-balance text-center"
-          transition:name={`title-${slug}`}
-        >
-          {title}
-        </h1>
-        <Content />
-      </main>
-    </div>
-    <CTA />
-  </Section>
+<Layout title={title} description={description}>
+	<Fragment slot='head'>
+		<link rel='canonical' href={canonicalURL} hreflang={currentLocale} />
+	</Fragment>
+	<Section slot='default-slot' classes={'p-4 sm:px-16'}>
+		<div
+			class='prose prose-sm prose-invert -z-20 max-w-none tracking-wider sm:prose-base prose-a:text-[rgb(106,190,251)] prose-a:hover:text-sky-700 prose-strong:font-normal max-sm:prose-h1:text-2xl'
+		>
+			<main>
+				<h1 class='relative -z-10 text-balance text-center' transition:name={`title-${slug}`}>
+					{title}
+				</h1>
+				<Content />
+			</main>
+		</div>
+		<CTA />
+	</Section>
 </Layout>

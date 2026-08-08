@@ -1,53 +1,53 @@
 ---
-import type { HTMLTag, Polymorphic } from "astro/types";
+import type { HTMLTag, Polymorphic } from 'astro/types';
 
 type Props<Tag extends HTMLTag> = Polymorphic<{
-  as: Tag;
-  variant: keyof typeof variantClasses;
-  size: keyof typeof ButtonSizes;
+	as: Tag;
+	variant: keyof typeof variantClasses;
+	size: keyof typeof ButtonSizes;
 }>;
 
 const { as: Tag, class: className, size, variant, ...props } = Astro.props;
 
 const variantClasses: { [key: string]: string } = {
-  primary: "text-[#959595]",
-  secondary: "bg-gray-200 text-sky-800 hover:bg-gray-300 active:text-sky-800"
+	primary: 'text-[#959595]',
+	secondary: 'bg-gray-200 text-sky-800 hover:bg-gray-300 active:text-sky-800'
 };
 
 const ButtonSizes = {
-  none: "px-0 py-1",
-  sm: "py-2.5",
-  lg: "px-12 py-3"
+	none: 'px-0 py-1',
+	sm: 'py-2.5',
+	lg: 'px-12 py-3'
 };
 
 const classes = [
-  "hoverClasses",
-  "block w-fit mx-auto hover:cursor-pointer rounded mt-4 border-[1px] bg-main transition-all duration-300 border-[#94a3b8] text-base tracking-widest font-bold outline-none text-gray-300/80 outline-double outline-2 outline-offset-2 focus:outline-[#ffcc33]",
-  variantClasses[variant as keyof typeof variantClasses],
-  ButtonSizes[size as keyof typeof ButtonSizes],
-  className
+	'hoverClasses',
+	'block w-fit mx-auto hover:cursor-pointer rounded mt-4 border-[1px] bg-main transition-all duration-300 border-[#94a3b8] text-base tracking-widest font-bold outline-none text-gray-300/80 outline-double outline-2 outline-offset-2 focus:outline-[#ffcc33]',
+	variantClasses[variant as keyof typeof variantClasses],
+	ButtonSizes[size as keyof typeof ButtonSizes],
+	className
 ];
 ---
 
-<Tag class:list={classes} {...props} tabindex="0">
-  <slot />
+<Tag class:list={classes} {...props} tabindex='0'>
+	<slot />
 </Tag>
 
 <style>
-  @media (max-width: 450px) {
-    .hoverClasses {
-      color: #fff;
-      background-color: rgb(8, 31, 92);
-      border: 1px solid #fff;
-      @apply drop-shadow-[0_0px_12px_#1037a1];
-    }
-  }
-  .hoverClasses:hover {
-    color: #fff;
-    background-color: rgb(8, 31, 92);
-    border: 1px solid #fff;
-    @apply drop-shadow-[0_0px_12px_#1037a1];
-  }
+	@media (max-width: 450px) {
+		.hoverClasses {
+			color: #fff;
+			background-color: rgb(8, 31, 92);
+			border: 1px solid #fff;
+			@apply drop-shadow-[0_0px_12px_#1037a1];
+		}
+	}
+	.hoverClasses:hover {
+		color: #fff;
+		background-color: rgb(8, 31, 92);
+		border: 1px solid #fff;
+		@apply drop-shadow-[0_0px_12px_#1037a1];
+	}
 </style>
 
 <!-- COMO USAR EL BUTTON COMO UN BUTTON CON FUNCIONES ON CLICK

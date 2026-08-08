@@ -2,18 +2,7 @@
 const { title, classes } = Astro.props;
 ---
 
-<section
-  class:list={[
-    "mx-auto mb-8 max-w-[750px] lg:max-w-[980px] print:mb-4",
-    classes
-  ]}
->
-  {
-    title && (
-      <h3 class="mb-2 text-3xl font-bold text-sectionTitle print:text-stone-700/90">
-        {title}
-      </h3>
-    )
-  }
-  <slot />
+<section class:list={['mx-auto mb-8 max-w-[750px] lg:max-w-[980px] print:mb-4', classes]}>
+	{title && <h3 class='mb-2 text-3xl font-bold text-sectionTitle print:text-stone-700/90'>{title}</h3>}
+	<slot />
 </section>

@@ -1,66 +1,64 @@
 ---
 export interface Props {
-  title: string;
-  description: string;
-  ogImage: string | undefined;
+	title: string;
+	description: string;
+	ogImage: string | undefined;
 }
 
 const { title, description, ogImage } = Astro.props;
-const socialImageURL = new URL("/new-og.jpg", Astro.url).href;
+const socialImageURL = new URL('/new-og.jpg', Astro.url).href;
 const siteTitle = `${title}`;
-import { ClientRouter } from "astro:transitions";
-import "../styles/global.css";
+import { ClientRouter } from 'astro:transitions';
+import '../styles/global.css';
 ---
 
 <!-- Global Metadata -->
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="icon" type="image/svg+xml" href="/favicon.png" />
-<meta name="generator" content={Astro.generator} />
+<meta charset='utf-8' />
+<meta name='viewport' content='width=device-width, initial-scale=1' />
+<link rel='icon' type='image/svg+xml' href='/favicon.png' />
+<meta name='generator' content={Astro.generator} />
 
 <!-- Primary Meta Tags -->
 <title>{siteTitle}</title>
 
-<meta name="robots" content="index, follow" />
-<meta name="revisit-after" content="7 days" />
-<meta name="googlebot" content="index, follow" />
+<meta name='robots' content='index, follow' />
+<meta name='revisit-after' content='7 days' />
+<meta name='googlebot' content='index, follow' />
 
 <!-- Google Search Console Site Verification -->
-<meta
-  name="google-site-verification"
-  content="bxQs-Kba1ZgsizXREjb3G33B0b9s2QRRbjkITeuFToo"
-/>
+<meta name='google-site-verification' content='bxQs-Kba1ZgsizXREjb3G33B0b9s2QRRbjkITeuFToo' />
 <!-- SEO -->
-<meta name="title" content={siteTitle} />
-<meta name="description" content={description} />
-<meta name="author" content="Yidev27" />
+<meta name='title' content={siteTitle} />
+<meta name='description' content={description} />
+<meta name='author' content='Yidev27' />
 <meta
-  name="keywords"
-  content="Desarrollador Web, Web Developer, Consultor Web, Freelancer, Programador, Web, Apps, Javascript, ReactJS, Astro, Paginas Web, Maracaibo, Venezuela"
+	name='keywords'
+	content='Desarrollador Web, Web Developer, Consultor Web, Freelancer, Programador, Web, Apps, Javascript, ReactJS, Astro, Paginas Web, Maracaibo, Venezuela'
 />
 
 <!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content={Astro.url} />
-<meta property="og:title" content={title} />
-<meta property="og:description" content={description} />
-<meta property="og:image" itemprop="image" content={socialImageURL} />
+<meta property='og:type' content='website' />
+<meta property='og:url' content={Astro.url} />
+<meta property='og:title' content={title} />
+<meta property='og:description' content={description} />
+<meta property='og:image' itemprop='image' content={socialImageURL} />
 
 <!-- open graph /whatsapp -->
-<meta property="og:site_name" content={siteTitle} />
-<meta property="og:type" content="website" />
-<meta property="og:image:type" content="image/jpeg" />
-<meta property="og:image:width" content="300" />
-<meta property="og:image:height" content="300" />
-<link itemprop="thumbnailUrl" href={socialImageURL} />
+<meta property='og:site_name' content={siteTitle} />
+<meta property='og:type' content='website' />
+<meta property='og:image:type' content='image/jpeg' />
+<meta property='og:image:width' content='300' />
+<meta property='og:image:height' content='300' />
+<link itemprop='thumbnailUrl' href={socialImageURL} />
 
 <!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url} />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" itemprop="image" content={socialImageURL} />
+<meta property='twitter:card' content='summary_large_image' />
+<meta property='twitter:url' content={Astro.url} />
+<meta property='twitter:title' content={title} />
+<meta property='twitter:description' content={description} />
+<meta property='twitter:image' itemprop='image' content={socialImageURL} />
 
+<!--TODO: optimizar og cuadrados para tw y ws /> -->
 <!--TODO: add logo >>>> <meta property="og:logo" content="your value" /> -->
 <ClientRouter />
 

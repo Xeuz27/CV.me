@@ -1,227 +1,219 @@
 ---
 //
-import Section from "@components/Section.astro";
-import Button from "@components/UiComponents/Button.astro";
-import me from "../../images/me.jpg";
-import { Image } from "astro:assets";
+import Section from '@components/Section.astro';
+import Button from '@components/UiComponents/Button.astro';
+import me from '../../images/me.jpg';
+import { Image } from 'astro:assets';
 ---
 
-<Section classes="[&_h3]:text-center">
-  <div id="divisor" class="absolute left-0 right-0 h-0.5 w-[calc(100%)] bg-gray-800" />
-  <div class="pb-4" />
-  <h3 class="mb-2 text-3xl font-bold text-sectionTitle print:text-gray-700/90">
-    Cuentame tu idea!
-  </h3>
-  <p class="py-4 text-justify leading-5 tracking-wide text-gray-200/80 max-xs:w-full xs:px-4">
-    Desde si necesitas ayuda con tu perfil de google my business para mejorar tu
-    presencia online o un sitio web para mostrar todos los servicios que ofrece
-    tu negocio
-  </p>
-  <div class="flex items-center justify-center gap-4 max-sm:flex-col">
-    <figure class="mx-auto">
-      <Image
-        src={me}
-        alt={"Avatar de yidev"}
-        class={"max-h-56 max-w-72 max-xs:max-w-full sm:max-h-80 sm:max-w-80 "}
-      />
-      <figcaption class="font-normal text-slate-100/80">Avatar de yidev</figcaption>
-    </figure>
-    <form
-      id="form"
-      class="relative flex w-full flex-col justify-center gap-1.5 text-gray-100/80 sm:w-2/4"
-    >
-      <div tabindex="-1" class="invisible absolute left-0 top-0 flex flex-col gap-0.5">
-        <label for="bots">anti-spam</label>
-        <input
-          id="bots"
-          type="text"
-          name="bots"
-          class="bg-gray-200 px-2 py-0.5 placeholder:font-bold placeholder:text-black"
-          placeholder="si ves esto dejalo vacio!"
-        />
-      </div>
-      <div class="flex flex-col gap-0.5">
-        <label for="name" class="font-medium tracking-wide"
-          >Nombre Completo</label
-        >
-        <input
-          id="name"
-          name="name"
-          type="text"
-          required
-          class="rounded-md bg-slate-100/90 p-1 px-2 font-normal text-slate-950 outline-double outline-2 outline-offset-2 placeholder:tracking-wide placeholder:text-stone-950 focus:outline-[#ffcc33]"
-          placeholder="Fulanito Perez"
-        />
-      </div>
-      <div class="flex flex-col gap-0.5">
-        <label for="email" class="font-medium tracking-wide">Correo</label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          required
-          class="rounded-md bg-slate-100/90 p-1 px-2 font-normal text-slate-950 outline-double outline-2 outline-offset-2 placeholder:tracking-wide placeholder:text-stone-950 focus:outline-[#ffcc33]"
-          placeholder="tucorreo@dominio.com"
-        />
-      </div>
-      <div class="flex flex-col gap-0.5">
-        <label for="message" class="font-medium tracking-wide">Mensaje</label>
-        <textarea
-          id="message"
-          name="message"
-          required
-          class="rounded-md bg-slate-100/90 p-1 px-2 font-normal text-slate-950 outline-double outline-2 outline-offset-2 placeholder:tracking-wide placeholder:text-stone-950 focus:outline-[#ffcc33]"
-          placeholder="tengo una tienda online por instagram y necesito un catalogo mas facil de compartir y mantener"
-          rows="5"></textarea>
-      </div>
-      <div class="">
-        <label for="checkbox" class="material-checkbox">
-          <input id="checkbox" name="checkbox" class="" type="checkbox" />
-          <span class="checkmark"> </span>
-          Usar este correo para recibir promociones y noticias?
-        </label>
-      </div>
-      <Button
-        id={"form-submit"}
-        type="submit"
-        as="button"
-        variant="primary"
-        size="lg"
-        class="mt-2 w-full !py-1.5 uppercase"
-      >
-        Enviar
-      </Button>
-    </form>
-  </div>
+<Section classes='[&_h3]:text-center'>
+	<div id='divisor' class='absolute left-0 right-0 h-0.5 w-[calc(100%)] bg-gray-800'></div>
+	<div class='pb-4'></div>
+	<h3 class='mb-2 text-3xl font-bold text-sectionTitle print:text-gray-700/90'>Cuentame tu idea!</h3>
+	<p class='py-4 text-justify leading-5 tracking-wide text-gray-200/80 max-xs:w-full xs:px-4'>
+		Desde si necesitas ayuda con tu perfil de google my business para mejorar tu presencia online o un sitio web
+		para mostrar todos los servicios que ofrece tu negocio
+	</p>
+	<div class='flex items-center justify-center gap-4 max-sm:flex-col'>
+		<figure class='mx-auto'>
+			<Image
+				src={me}
+				alt={'Avatar de yidev'}
+				class={'max-h-56 max-w-72 max-xs:max-w-full sm:max-h-80 sm:max-w-80 '}
+			/>
+			<figcaption class='font-normal text-slate-100/80'>Avatar de yidev</figcaption>
+		</figure>
+		<form id='form' class='relative flex w-full flex-col justify-center gap-1.5 text-gray-100/80 sm:w-2/4'>
+			<div tabindex='-1' class='invisible absolute left-0 top-0 flex flex-col gap-0.5'>
+				<label for='bots'>anti-spam</label>
+				<input
+					id='bots'
+					type='text'
+					name='bots'
+					class='bg-gray-200 px-2 py-0.5 placeholder:font-bold placeholder:text-black'
+					placeholder='si ves esto dejalo vacio!'
+				/>
+			</div>
+			<div class='flex flex-col gap-0.5'>
+				<label for='name' class='font-medium tracking-wide'>Nombre Completo</label>
+				<input
+					id='name'
+					name='name'
+					type='text'
+					required
+					class='rounded-md bg-slate-100/90 p-1 px-2 font-normal text-slate-950 outline-double outline-2 outline-offset-2 placeholder:tracking-wide placeholder:text-stone-950 focus:outline-[#ffcc33]'
+					placeholder='Fulanito Perez'
+				/>
+			</div>
+			<div class='flex flex-col gap-0.5'>
+				<label for='email' class='font-medium tracking-wide'>Correo</label>
+				<input
+					id='email'
+					name='email'
+					type='email'
+					required
+					class='rounded-md bg-slate-100/90 p-1 px-2 font-normal text-slate-950 outline-double outline-2 outline-offset-2 placeholder:tracking-wide placeholder:text-stone-950 focus:outline-[#ffcc33]'
+					placeholder='tucorreo@dominio.com'
+				/>
+			</div>
+			<div class='flex flex-col gap-0.5'>
+				<label for='message' class='font-medium tracking-wide'>Mensaje</label>
+				<textarea
+					id='message'
+					name='message'
+					required
+					class='rounded-md bg-slate-100/90 p-1 px-2 font-normal text-slate-950 outline-double outline-2 outline-offset-2 placeholder:tracking-wide placeholder:text-stone-950 focus:outline-[#ffcc33]'
+					placeholder='tengo una tienda online por instagram y necesito un catalogo mas facil de compartir y mantener'
+					rows='5'></textarea>
+			</div>
+			<div class=''>
+				<label for='checkbox' class='material-checkbox'>
+					<input id='checkbox' name='checkbox' class='' type='checkbox' />
+					<span class='checkmark'> </span>
+					Usar este correo para recibir promociones y noticias?
+				</label>
+			</div>
+			<Button
+				id={'form-submit'}
+				type='submit'
+				as='button'
+				variant='primary'
+				size='lg'
+				class='mt-2 w-full !py-1.5 uppercase'
+			>
+				Enviar
+			</Button>
+		</form>
+	</div>
 </Section>
 <style>
-  @reference '../../styles/global.css';
-  
-  #divisor {
-    -webkit-mask-image: linear-gradient( to right, transparent 0%, black 50%, transparent 100% );
-    mask-image: linear-gradient(  to right, transparent 0%, black 50%, transparent 100% );
-  }
-  /* From Uiverse.io by Gautammsharma */
-  .material-checkbox {
-    display: flex;
-    align-items: center;
-    font-size: 16px;
+	@reference '../../styles/global.css';
 
-    cursor: pointer;
-    @apply font-medium text-gray-100/80;
-  }
+	#divisor {
+		-webkit-mask-image: linear-gradient(to right, transparent 0%, black 50%, transparent 100%);
+		mask-image: linear-gradient(to right, transparent 0%, black 50%, transparent 100%);
+	}
+	/* From Uiverse.io by Gautammsharma */
+	.material-checkbox {
+		display: flex;
+		align-items: center;
+		font-size: 16px;
 
-  .material-checkbox input[type="checkbox"] {
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
+		cursor: pointer;
+		@apply font-medium text-gray-100/80;
+	}
 
-  .checkmark {
-    position: relative;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-right: 4px;
-    border: 1px solid;
-    border-radius: 4px;
-    @apply border-[#94a3b8];
-  }
+	.material-checkbox input[type='checkbox'] {
+		position: absolute;
+		opacity: 0;
+		width: 0;
+		height: 0;
+	}
 
-  .material-checkbox input[type="checkbox"]:checked ~ .checkmark {
-    border-color: #f3f3f3;
-  }
+	.checkmark {
+		position: relative;
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		margin-right: 4px;
+		border: 1px solid;
+		border-radius: 4px;
+		@apply border-[#94a3b8];
+	}
 
-  .material-checkbox input[type="checkbox"]:checked ~ .checkmark:after {
-    content: "";
-    position: absolute;
-    top: 3px;
-    left: 7px;
-    width: 4px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
-  }
+	.material-checkbox input[type='checkbox']:checked ~ .checkmark {
+		border-color: #f3f3f3;
+	}
 
-  .material-checkbox input[type="checkbox"]:focus ~ .checkmark {
-    background: rgb(8, 31, 92);
-    outline: 2px solid;
-    outline-color: #ffcc33;
-    outline-offset: 2px;
-  }
+	.material-checkbox input[type='checkbox']:checked ~ .checkmark:after {
+		content: '';
+		position: absolute;
+		top: 3px;
+		left: 7px;
+		width: 4px;
+		height: 10px;
+		border: solid white;
+		border-width: 0 2px 2px 0;
+		transform: rotate(45deg);
+	}
 
-  .material-checkbox:hover input[type="checkbox"] ~ .checkmark {
-    border: 1px solid #fff;
-    background: rgb(8, 31, 92);
-    @apply outline-2 outline-offset-2 drop-shadow-[0_0px_12px_#1037a1] focus:outline-[#ffcc33];
-  }
+	.material-checkbox input[type='checkbox']:focus ~ .checkmark {
+		background: rgb(8, 31, 92);
+		outline: 2px solid;
+		outline-color: #ffcc33;
+		outline-offset: 2px;
+	}
 
-  .material-checkbox input[type="checkbox"]:disabled ~ .checkmark {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
+	.material-checkbox:hover input[type='checkbox'] ~ .checkmark {
+		border: 1px solid #fff;
+		background: rgb(8, 31, 92);
+		@apply outline-2 outline-offset-2 drop-shadow-[0_0px_12px_#1037a1] focus:outline-[#ffcc33];
+	}
 
-  .material-checkbox input[type="checkbox"]:disabled ~ .checkmark:hover {
-    border-color: #4d4d4d;
-  }
+	.material-checkbox input[type='checkbox']:disabled ~ .checkmark {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+
+	.material-checkbox input[type='checkbox']:disabled ~ .checkmark:hover {
+		border-color: #4d4d4d;
+	}
 </style>
 <script>
-  import Toastify from "toastify-js";
-import "toastify-js/src/toastify.css";
+	import Toastify from 'toastify-js';
+	import 'toastify-js/src/toastify.css';
 
-  let form = document.getElementById("form");
-  document.addEventListener("astro:page-load", () => {
-    form?.addEventListener("submit", async (e) => {
-      e.preventDefault();
+	let form = document.getElementById('form');
+	document.addEventListener('astro:page-load', () => {
+		form?.addEventListener('submit', async (e) => {
+			e.preventDefault();
 
-      const formData = new FormData(e.target as HTMLFormElement);
+			const formData = new FormData(e.target as HTMLFormElement);
 
-      //@ts-ignore
-      if (formData.get("bots").length >= 1) return;
+			//@ts-ignore
+			if (formData.get('bots').length >= 1) return;
 
-      await fetch("/api/v1/email", {
-        method: "POST",
-        body: formData
-      })
-        .then((res) => res.json())
-        .then((json) => {
-          Toastify({
-            className: "!duration-700",
-            gravity: "bottom",
-            position: "center",
-            offset: {
-              y: window.innerHeight / 3,
-              x: 0
-            },
-            text: "Enviado! ✔️",
-            style: {
-              bottom: "-50px",
-              border: "1px solid #efefef",
-              background: "#0b2276"
-            },
-            duration: 2500
-          }).showToast();
-        })
-        .catch((error) => {
-          Toastify({
-            className: "!duration-700",
-            gravity: "bottom",
-            position: "center",
-            offset: {
-              y: window.innerHeight / 3,
-              x: 0
-            },
-            text: "Error, por favor intenta de nuevo! ❌",
-            style: {
-              bottom: "-50px",
-              border: "1px solid #efefef",
-              background: "#0b2276"
-            },
-            duration: 2500
-          }).showToast();
-        });
-    });
-  });
+			await fetch('/api/v1/email', {
+				method: 'POST',
+				body: formData
+			})
+				.then((res) => res.json())
+				.then((json) => {
+					Toastify({
+						className: '!duration-700',
+						gravity: 'bottom',
+						position: 'center',
+						offset: {
+							y: window.innerHeight / 3,
+							x: 0
+						},
+						text: 'Enviado! ✔️',
+						style: {
+							bottom: '-50px',
+							border: '1px solid #efefef',
+							background: '#0b2276'
+						},
+						duration: 2500
+					}).showToast();
+				})
+				.catch((error) => {
+					Toastify({
+						className: '!duration-700',
+						gravity: 'bottom',
+						position: 'center',
+						offset: {
+							y: window.innerHeight / 3,
+							x: 0
+						},
+						text: 'Error, por favor intenta de nuevo! ❌',
+						style: {
+							bottom: '-50px',
+							border: '1px solid #efefef',
+							background: '#0b2276'
+						},
+						duration: 2500
+					}).showToast();
+				});
+		});
+	});
 </script>

@@ -1,30 +1,30 @@
 ---
-import DownArrow from "./DownArrow.astro";
-import Github from "./Github.astro";
-import Instagram from "./Instagram.astro";
-import Linkedin from "./Linkedin.astro";
-import Mail from "./Mail.astro";
-import Phone from "./Phone.astro";
-import Translate from "./translate.astro";
-import Website from "./Website.astro";
-import Whatsapp from "./Whatsapp.astro";
-import World from "./World.astro";
-import X from "./X.astro";
+import DownArrow from './DownArrow.astro';
+import Github from './Github.astro';
+import Instagram from './Instagram.astro';
+import Linkedin from './Linkedin.astro';
+import Mail from './Mail.astro';
+import Phone from './Phone.astro';
+import Translate from './translate.astro';
+import Website from './Website.astro';
+import Whatsapp from './Whatsapp.astro';
+import World from './World.astro';
+import X from './X.astro';
 
 const { icon, classes } = Astro.props;
 
 const Icons: Record<string, string | any> = {
-  DownArrow,
-  Github,
-  Instagram,
-  Linkedin,
-  Mail,
-  Phone,
-  Translate,
-  Website,
-  Whatsapp,
-  World,
-  X
+	DownArrow,
+	Github,
+	Instagram,
+	Linkedin,
+	Mail,
+	Phone,
+	Translate,
+	Website,
+	Whatsapp,
+	World,
+	X
 };
 
 const Render = Icons[icon];

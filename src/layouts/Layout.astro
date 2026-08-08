@@ -1,14 +1,14 @@
 ---
-import BaseHead from "@components/BaseHead.astro";
-import Footer from "@components/Footer.astro";
-import Header from "@components/Header.astro";
+import BaseHead from '@components/BaseHead.astro';
+import Footer from '@components/Footer.astro';
+import Header from '@components/Header.astro';
 
-import '../styles/global.css'
+import '../styles/global.css';
 
 interface Props {
-  title: string;
-  description: string;
-  ogImage?: string;
+	title: string;
+	description: string;
+	ogImage?: string;
 }
 
 const { title, description, ogImage } = Astro.props;
@@ -17,33 +17,32 @@ const locale = Astro.currentLocale;
 
 <!doctype html>
 <html lang={locale}>
-  <head>
-    <slot name="head" />
-    <BaseHead title={title} description={description} ogImage={ogImage} />
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DD9T91CN0F"
-    ></script>
-    <script>
-      // @ts-nocheck -->
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+	<head>
+		<slot name='head' />
+		<BaseHead title={title} description={description} ogImage={ogImage} />
+		<!-- Google tag (gtag.js) -->
+		<script async src='https://www.googletagmanager.com/gtag/js?id=G-DD9T91CN0F'></script>
+		<script>
+			// @ts-nocheck -->
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
 
-      gtag("config", "G-DD9T91CN0F");
-    </script>
-  </head>
-  <body class="relative h-full min-h-dvh pt-16">
-    <Header locale={locale} />
-    <div class="pb-[245px]">
-      <slot name="default-slot" />
-    </div>
-    <Footer />
-    <div
-      id="noise"
-      class="pointer-events-none fixed inset-0 before:absolute before:inset-0 before:bg-repeat before:opacity-10"
-    >
-    </div>
-  </body>
+			gtag('config', 'G-DD9T91CN0F');
+		</script>
+	</head>
+	<body class='relative h-full min-h-dvh pt-16'>
+		<Header locale={locale} />
+		<div class='pb-[245px]'>
+			<slot name='default-slot' />
+		</div>
+		<Footer />
+		<div
+			id='noise'
+			class='pointer-events-none fixed inset-0 before:absolute before:inset-0 before:bg-repeat before:opacity-10'
+		>
+		</div>
+	</body>
 </html>

@@ -1,19 +1,19 @@
 {
-  "extends": "astro/tsconfigs/strict",
-  "compilerOptions": {
-    "strictNullChecks": true,
-    "baseUrl": ".",
-    "verbatimModuleSyntax": true,
-    "paths": {
-      "@components/*": ["src/components/*"],
-      "@data/*": ["src/data/*"],
-      "@icons/*": ["src/components/icons/*"],
-      "@images/*": ["src/images/*"],
-      "@layouts/*": ["src/layouts/*"],
-      "@styles/*": ["src/styles/*"],
-      "@types": ["src/types.d.ts"],
-      "@utils/*": ["src/utils/*"],
-    },
-  },
-  "exclude": ["node_modules", "**/node_modules/*", ".vscode", "dist"],
+	"extends": "astro/tsconfigs/strict",
+	"compilerOptions": {
+		"strictNullChecks": true,
+		"baseUrl": ".",
+		"verbatimModuleSyntax": true,
+		"paths": {
+			"@components/*": ["src/components/*"],
+			"@data/*": ["src/data/*"],
+			"@icons/*": ["src/components/icons/*"],
+			"@images/*": ["src/images/*"],
+			"@layouts/*": ["src/layouts/*"],
+			"@styles/*": ["src/styles/*"],
+			"@types": ["src/types.d.ts"],
+			"@utils/*": ["src/utils/*"]
+		}
+	},
+	"exclude": ["node_modules", "**/node_modules/*", ".vscode", "dist"]
 }

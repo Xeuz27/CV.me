@@ -1,77 +1,73 @@
 ---
-import Section from "@components/Section.astro";
+import Section from '@components/Section.astro';
 
-import { getI18N } from "@utils/i18n";
+import { getI18N } from '@utils/i18n';
 
-import Icon from "@components/icons/Icon.astro";
+import Icon from '@components/icons/Icon.astro';
 
 const { basics } = getI18N(Astro.currentLocale);
 const { name, email, phone, url, profiles } = basics;
 
 const lang = Astro.currentLocale;
 
-const linkedinInfo = profiles.find(({ network }) => network === "Linkedin");
+const linkedinInfo = profiles.find(({ network }) => network === 'Linkedin');
 const linkedinUrl = {
-  label: "Linkedin",
-  href: linkedinInfo?.url,
-  data: linkedinInfo?.username
+	label: 'Linkedin',
+	href: linkedinInfo?.url,
+	data: linkedinInfo?.username
 };
-const githubInfo = profiles.find(({ network }) => network === "Github");
+const githubInfo = profiles.find(({ network }) => network === 'Github');
 const githubUrl = {
-  label: "Github",
-  href: githubInfo?.url,
-  data: githubInfo?.username
+	label: 'Github',
+	href: githubInfo?.url,
+	data: githubInfo?.username
 };
 
 const printInfo = [phone, email, githubUrl, url, linkedinUrl];
 
-const contactIconStyles = "pointer-events-none size-6 text-inherit";
+const contactIconStyles = 'pointer-events-none size-6 text-inherit';
 ---
 
-<Section title={lang === "en" ? "Contact Me" : `Contactos`}>
-  <footer class="hidden print:flex print:p-0">
-    <ul
-      class="flex w-full flex-col gap-y-[2px] divide-y-[2px] divide-separatorPrint"
-    >
-      {
-        printInfo.map(({ label, href, data }) => (
-          <li class="flex items-center justify-between text-xs sm:text-base">
-            <span>{label}:</span>
-            <a target="_blank" rel="nofollow noreferrer" href={href}>
-              {data}
-            </a>
-          </li>
-        ))
-      }
-    </ul>
-  </footer>
-  <footer
-    class="no-print flex gap-3 text-[#484848] max-sm:text-[#787878] print:hidden"
-  >
-    {
-      email && (
-        <a
-          href={email.href}
-          title={`
+<Section title={lang === 'en' ? 'Contact Me' : `Contactos`}>
+	<footer class='hidden print:flex print:p-0'>
+		<ul class='flex w-full flex-col gap-y-[2px] divide-y-[2px] divide-separatorPrint'>
+			{
+				printInfo.map(({ label, href, data }) => (
+					<li class='flex items-center justify-between text-xs sm:text-base'>
+						<span>{label}:</span>
+						<a target='_blank' rel='nofollow noreferrer' href={href}>
+							{data}
+						</a>
+					</li>
+				))
+			}
+		</ul>
+	</footer>
+	<footer class='no-print flex gap-3 text-[#484848] max-sm:text-[#787878] print:hidden'>
+		{
+			email && (
+				<a
+					href={email.href}
+					title={`
             ${
-              lang == "es"
-                ? `Enviar correo electronico a ${name} al correo ${email.data}`
-                : `Send Email to ${name} at ${email.data}`
-            }
+				lang == 'es'
+					? `Enviar correo electronico a ${name} al correo ${email.data}`
+					: `Send Email to ${name} at ${email.data}`
+			}
             `}
-          target="_blank"
-          rel="nofollow noreferrer"
-        >
-          <Icon icon="Mail" classes={contactIconStyles} />
-          <span class="sr-only">
-            {lang == "es"
-              ? `Enviar correo electronico a ${name} al correo ${email.data}`
-              : `Send Email to ${name} at ${email.data}`}
-          </span>
-        </a>
-      )
-    }
-    <!-- {
+					target='_blank'
+					rel='nofollow noreferrer'
+				>
+					<Icon icon='Mail' classes={contactIconStyles} />
+					<span class='sr-only'>
+						{lang == 'es'
+							? `Enviar correo electronico a ${name} al correo ${email.data}`
+							: `Send Email to ${name} at ${email.data}`}
+					</span>
+				</a>
+			)
+		}
+		<!-- {
       phone && (
         <a
           href="https://wa.me/4146172019?text=Hola,Vi%20tu%20curriculum%20y%20me%20interesa%20recibir%20un%20estimado"
@@ -94,7 +90,7 @@ const contactIconStyles = "pointer-events-none size-6 text-inherit";
         </a>
       )
     } -->
-    <!-- {
+		<!-- {
       phone && (
         <a
         
@@ -107,7 +103,7 @@ const contactIconStyles = "pointer-events-none size-6 text-inherit";
         </a>
       )
     } -->
-    <!-- <a
+		<!-- <a
       href={`${url.href}`}
       target="_blank"
       rel="dofollow noreferrer"
@@ -128,54 +124,48 @@ const contactIconStyles = "pointer-events-none size-6 text-inherit";
         }</span
       >
     </a> -->
-    {
-      profiles.map(({ network, url, show = true }) => {
-        return (
-          <a
-            class={`${show === false && "!hidden"}`}
-            href={url}
-            title={`
-              ${
-                lang === "es"
-                  ? `visitar el perfil de ${name} en ${network}`
-                  : `Go to Jesus' ${network} `
-              }
+		{
+			profiles.map(({ network, url, show = true }) => {
+				return (
+					<a
+						class={`${show === false && '!hidden'}`}
+						href={url}
+						title={`
+              ${lang === 'es' ? `visitar el perfil de ${name} en ${network}` : `Go to Jesus' ${network} `}
               `}
-            target="_blank"
-          >
-            <Icon icon={network} classes={contactIconStyles} />
-            <span class="sr-only">
-              {lang === "es"
-                ? `visitar el perfil de ${name} en ${network}`
-                : `Go to Jesus' ${network} `}
-            </span>
-          </a>
-        );
-      })
-    }
-  </footer>
+						target='_blank'
+					>
+						<Icon icon={network} classes={contactIconStyles} />
+						<span class='sr-only'>
+							{lang === 'es' ? `visitar el perfil de ${name} en ${network}` : `Go to Jesus' ${network} `}
+						</span>
+					</a>
+				);
+			})
+		}
+	</footer>
 </Section>
 <style>
-  footer.no-print a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #393939;
-    padding: 10px;
-    border-radius: 12px;
-    transition: all 0.5s;
-  }
-  footer.no-print a:hover {
-    background-color: rgb(8, 31, 92);
-    border: 1px solid #dfdfdf;
-    @apply drop-shadow-[0_0px_8px_#1037a1];
-  }
-  footer.no-print a:hover {
-    color: #dfdfdf;
-  }
-  footer.print li a:hover {
-    text-decoration: underline;
-    text-underline-offset: 2px;
-    text-decoration-color: #888;
-  }
+	footer.no-print a {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid #393939;
+		padding: 10px;
+		border-radius: 12px;
+		transition: all 0.5s;
+	}
+	footer.no-print a:hover {
+		background-color: rgb(8, 31, 92);
+		border: 1px solid #dfdfdf;
+		@apply drop-shadow-[0_0px_8px_#1037a1];
+	}
+	footer.no-print a:hover {
+		color: #dfdfdf;
+	}
+	footer.print li a:hover {
+		text-decoration: underline;
+		text-underline-offset: 2px;
+		text-decoration-color: #888;
+	}
 </style>

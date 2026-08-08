@@ -1,9 +1,9 @@
 ---
-id: "optimizar-imagenes-para-sitio-web"
-title: "Por qué y cómo Optimizar imagenes para sitios web"
+id: 'optimizar-imagenes-para-sitio-web'
+title: 'Por qué y cómo Optimizar imagenes para sitios web'
 author: Jesus Gutierrez
 img: /optimizar-imagenes.webp
-description: "Cómo optimizar las imagenes de tu sitio web usando distintos"
+description: 'Cómo optimizar las imagenes de tu sitio web usando distintos'
 date: 20250122T000000-0400
 ---
 
@@ -28,11 +28,11 @@ Fuente: <a rel="nofollow noopener" title='velocidad de carga pagina web - mikksa
 
 Te lo explico de esta manera
 
-- tienes assets mal optimizados en tu sitio web
-- eso causa Mal rendimiento
-- google toma esto en cuenta y tu posicionamiento baja
-- eso hace que menos gente visita tu sitio web
-- lo cual reduce las probabilidades de los usuarios tomando la accion final
+-   tienes assets mal optimizados en tu sitio web
+-   eso causa Mal rendimiento
+-   google toma esto en cuenta y tu posicionamiento baja
+-   eso hace que menos gente visita tu sitio web
+-   lo cual reduce las probabilidades de los usuarios tomando la accion final
 
 ten en cuenta que esto es un juego de numeros que es lo mismo que decir cuanto menos usuarios menos probabilidades de convertir.
 
@@ -98,46 +98,40 @@ de esta forma, guardas una versión optimizada desde el inicio y evitas tener qu
 para esto necesitas un poco de lógica en el backend. por ejemplo, usando `sharp` en Node:
 
 ```ts
-import sharp from "sharp";
+import sharp from 'sharp';
 
 export async function POST({ request }) {
-  try {
-    const formData = await request.formData();
-    const file = formData.get("file");
+	try {
+		const formData = await request.formData();
+		const file = formData.get('file');
 
-    if (!(file instanceof Blob)) {
-      return new Response(JSON.stringify({ error: "archivo inválido" }), {
-        status: 400,
-        headers: { "Content-Type": "application/json" },
-      });
-    }
+		if (!(file instanceof Blob)) {
+			return new Response(JSON.stringify({ error: 'archivo inválido' }), {
+				status: 400,
+				headers: { 'Content-Type': 'application/json' }
+			});
+		}
 
-    const buffer = Buffer.from(await file.arrayBuffer());
+		const buffer = Buffer.from(await file.arrayBuffer());
 
-    const optimized = await sharp(buffer)
-      .resize({ width: 1200 }) // opcional
-      .webp({ quality: 70 })
-      .toBuffer();
+		const optimized = await sharp(buffer)
+			.resize({ width: 1200 }) // opcional
+			.webp({ quality: 70 })
+			.toBuffer();
 
-    await saveToDb(optimized, "imagen-1"); // aqui guardas con el metodo pertinente
-                                          // al servicio o DB que estes usando en tu app
+		await saveToDb(optimized, 'imagen-1'); // aqui guardas con el metodo pertinente
+		// al servicio o DB que estes usando en tu app
 
-    return new Response(
-      JSON.stringify({ message: "imagen optimizada correctamente" }),
-      {
-        status: 200,
-        headers: { "Content-Type": "application/json" },
-      },
-    );
-  } catch (error) {
-    return new Response(
-      JSON.stringify({ error: "error al procesar la imagen" }),
-      {
-        status: 500,
-        headers: { "Content-Type": "application/json" },
-      },
-    );
-  }
+		return new Response(JSON.stringify({ message: 'imagen optimizada correctamente' }), {
+			status: 200,
+			headers: { 'Content-Type': 'application/json' }
+		});
+	} catch (error) {
+		return new Response(JSON.stringify({ error: 'error al procesar la imagen' }), {
+			status: 500,
+			headers: { 'Content-Type': 'application/json' }
+		});
+	}
 }
 ```
 

@@ -1,31 +1,29 @@
 ---
-import Section from "@components/Section.astro";
+import Section from '@components/Section.astro';
 
-import { getI18N, getLangFromUrl } from "@utils/i18n";
+import { getI18N, getLangFromUrl } from '@utils/i18n';
 
 const { languages } = getI18N(Astro.currentLocale);
 const lang = getLangFromUrl(Astro.url);
 ---
 
-<Section classes="print:mb-12" title={lang === "en" ? "Languages" : `Idiomas`}>
-  <ul
-    class="flex flex-col gap-2 divide-y-[2px] divide-separator print:divide-separatorPrint"
-  >
-    {
-      languages.map(({ language, fluency }) => {
-        return (
-          <li class="last:pt-1">
-            <div class="flex w-full flex-col text-gray-100/55 print:text-gray-800/80">
-              <h4 class="flex justify-between text-sm tracking-normal sm:text-base">
-                <span>{lang === "en" ? "Language" : "Idioma"}: </span>
-                <span>
-                  {language} - {fluency}
-                </span>
-              </h4>
-            </div>
-          </li>
-        );
-      })
-    }
-  </ul>
+<Section classes='print:mb-12' title={lang === 'en' ? 'Languages' : `Idiomas`}>
+	<ul class='flex flex-col gap-2 divide-y-[2px] divide-separator print:divide-separatorPrint'>
+		{
+			languages.map(({ language, fluency }) => {
+				return (
+					<li class='last:pt-1'>
+						<div class='flex w-full flex-col text-gray-100/55 print:text-gray-800/80'>
+							<h4 class='flex justify-between text-sm tracking-normal sm:text-base'>
+								<span>{lang === 'en' ? 'Language' : 'Idioma'}: </span>
+								<span>
+									{language} - {fluency}
+								</span>
+							</h4>
+						</div>
+					</li>
+				);
+			})
+		}
+	</ul>
 </Section>

@@ -1,138 +1,120 @@
 ---
-import Section from "@components/Section.astro";
-import { getI18N } from "@utils/i18n";
+import Section from '@components/Section.astro';
+import { getI18N } from '@utils/i18n';
 
 const { projects } = getI18N(Astro.currentLocale);
 const lang = Astro.currentLocale;
 ---
 
-<Section classes="print:mt-1">
-  <h2
-    class="sectionTitlee mb-8 bg-main/90 py-4 text-center text-6xl font-bold tracking-wide text-sectionTitle backdrop-blur-sm"
-  >
-    {lang === "en" ? "Some Projects" : `Algunos Trabajos`}
-  </h2>
-  <ul
-    class="flex flex-col gap-6 divide-y-[2px] divide-separator pt-2 print:gap-4 print:divide-separatorPrint"
-  >
-    {
-      projects.map(
-        ({
-          url,
-          description,
-          highlights,
-          name,
-          type,
-          isActive,
-          preview,
-          show = true
-        }) => {
-          if (!show) return;
-          return (
-            <li class="pt-[52px] first:pt-0 print:pt-3 first:print:!pt-0">
-              <article class="flex flex-col">
-                <section class="flex h-full flex-col gap-3 print:gap-1">
-                  <header class="flex flex-row items-center gap-1 max-md:justify-between">
-                    <h4 class="min-xs:text-base text-slate-100/80 hover:text-white max-xs:text-lg sm:text-xl md:text-2xl print:text-stone-700/80">
-                      <a
-                        class="flex gap-1 font-medium leading-none hover:underline hover:underline-offset-2  max-xs:flex-col "
-                        href={url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title={`${lang === "en" ? `Go to ${name}` : `Ir a ${name}`}`}
-                      >
-                        <span class="whitespace-nowrap">{name}</span>
-                        <span class="max-xs:hidden">•</span>
-                        <span class="whitespace-nowrap">{type}</span>
-                      </a>
-                    </h4>
-                    {isActive && (
-                      <span class="mt-1.5 px-2 text-base leading-none text-green-500/80">
-                        Online
-                      </span>
-                    )}
-                  </header>
-                  <footer class="flex flex-col flex-wrap gap-2 ">
-                    <p class="mb-1 text-base leading-tight text-slate-200/80">
-                      {description}
-                    </p>
-                    <div class="flex flex-wrap gap-2 text-xs">
-                      {highlights.map((highlight) => (
-                        <span class="flex w-fit items-center rounded-md bg-slate-700/40 px-[0.6rem] py-[0.2rem] font-medium text-slate-200/80 print:bg-stone-200/60">
-                          {highlight}
-                        </span>
-                      ))}
-                    </div>
-                  </footer>
-                </section>
-                {preview && (
-                  <section class="p-8 px-0 print:hidden">
-                    <a
-                      class="flex gap-8 overflow-hidden max-md:flex-col-reverse md:gap-4"
-                      href={url}
-                      target="_blank"
-                      title={`${lang === "en" ? `Go to ${name}` : `Ir a ${name}`}`}
-                      rel="noopener noreferrer"
-                    >
-                      <img
-                        class="mx-auto aspect-auto max-h-[580px] md:max-h-64 lg:max-h-96 xl:max-h-[420px]"
-                        src={preview[1]}
-                        alt={description}
-                      />
-                      <img
-                        class="mx-auto aspect-video max-h-64 max-sm:max-h-72 lg:max-h-96 xl:max-h-[420px]"
-                        src={preview[0]}
-                        alt={description}
-                      />
-                    </a>
-                  </section>
-                )}
-              </article>
-            </li>
-          );
-        }
-      )
-    }
-  </ul>
+<Section classes='print:mt-1'>
+	<h2
+		class='sectionTitlee mb-8 bg-main/90 py-4 text-center text-6xl font-bold tracking-wide text-sectionTitle backdrop-blur-sm'
+	>
+		{lang === 'en' ? 'Some Projects' : `Algunos Trabajos`}
+	</h2>
+	<ul class='flex flex-col gap-6 divide-y-[2px] divide-separator pt-2 print:gap-4 print:divide-separatorPrint'>
+		{
+			projects.map(({ url, description, highlights, name, type, isActive, preview, show = true }) => {
+				if (!show) return;
+				return (
+					<li class='pt-[52px] first:pt-0 print:pt-3 first:print:!pt-0'>
+						<article class='flex flex-col'>
+							<section class='flex h-full flex-col gap-3 print:gap-1'>
+								<header class='flex flex-row items-center gap-1 max-md:justify-between'>
+									<h4 class='min-xs:text-base text-slate-100/80 hover:text-white max-xs:text-lg sm:text-xl md:text-2xl print:text-stone-700/80'>
+										<a
+											class='flex gap-1 font-medium leading-none hover:underline hover:underline-offset-2  max-xs:flex-col '
+											href={url}
+											target='_blank'
+											rel='noopener noreferrer'
+											title={`${lang === 'en' ? `Go to ${name}` : `Ir a ${name}`}`}
+										>
+											<span class='whitespace-nowrap'>{name}</span>
+											<span class='max-xs:hidden'>•</span>
+											<span class='whitespace-nowrap'>{type}</span>
+										</a>
+									</h4>
+									{isActive && (
+										<span class='mt-1.5 px-2 text-base leading-none text-green-500/80'>Online</span>
+									)}
+								</header>
+								<footer class='flex flex-col flex-wrap gap-2 '>
+									<p class='mb-1 text-base leading-tight text-slate-200/80'>{description}</p>
+									<div class='flex flex-wrap gap-2 text-xs'>
+										{highlights.map((highlight) => (
+											<span class='flex w-fit items-center rounded-md bg-slate-700/40 px-[0.6rem] py-[0.2rem] font-medium text-slate-200/80 print:bg-stone-200/60'>
+												{highlight}
+											</span>
+										))}
+									</div>
+								</footer>
+							</section>
+							{preview && (
+								<section class='p-8 px-0 print:hidden'>
+									<a
+										class='flex gap-8 overflow-hidden max-md:flex-col-reverse md:gap-4'
+										href={url}
+										target='_blank'
+										title={`${lang === 'en' ? `Go to ${name}` : `Ir a ${name}`}`}
+										rel='noopener noreferrer'
+									>
+										<img
+											class='mx-auto aspect-auto max-h-[580px] md:max-h-64 lg:max-h-96 xl:max-h-[420px]'
+											src={preview[1]}
+											alt={description}
+										/>
+										<img
+											class='mx-auto aspect-video max-h-64 max-sm:max-h-72 lg:max-h-96 xl:max-h-[420px]'
+											src={preview[0]}
+											alt={description}
+										/>
+									</a>
+								</section>
+							)}
+						</article>
+					</li>
+				);
+			})
+		}
+	</ul>
 </Section>
 <script>
-  import { gsap } from "gsap";
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
+	import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-  document.addEventListener("astro:page-load", () => {
-    if (
-      window.location.pathname === "/" ||
-      window.location.pathname === "/en" ||
-      window.location.pathname === "/es"
-    ) {
-      const parentDiv = (string: any) =>
-        document.querySelector(string).parentNode;
-      gsap.registerPlugin(ScrollTrigger);
-      let mm = gsap.matchMedia();
-      mm.add("(max-width: 1024px)", () => {
-        gsap.to(".sectionTitlee", {
-          scrollTrigger: {
-            trigger: ".sectionTitlee",
-            endTrigger: parentDiv(".sectionTitlee"),
-            pin: true,
-            start: "top 64px",
-            end: "bottom 160px",
-            pinSpacing: false
-          }
-        });
-      });
-      mm.add("(min-width: 1024px)", () => {
-        gsap.to(".sectionTitlee", {
-          scrollTrigger: {
-            trigger: ".sectionTitlee",
-            endTrigger: parentDiv(".sectionTitlee"),
-            pin: true,
-            start: "top 63px",
-            end: "bottom 160px",
-            pinSpacing: false
-          }
-        });
-      });
-    }
-  });
+	document.addEventListener('astro:page-load', () => {
+		if (
+			window.location.pathname === '/' ||
+			window.location.pathname === '/en' ||
+			window.location.pathname === '/es'
+		) {
+			const parentDiv = (string: any) => document.querySelector(string).parentNode;
+			gsap.registerPlugin(ScrollTrigger);
+			let mm = gsap.matchMedia();
+			mm.add('(max-width: 1024px)', () => {
+				gsap.to('.sectionTitlee', {
+					scrollTrigger: {
+						trigger: '.sectionTitlee',
+						endTrigger: parentDiv('.sectionTitlee'),
+						pin: true,
+						start: 'top 64px',
+						end: 'bottom 160px',
+						pinSpacing: false
+					}
+				});
+			});
+			mm.add('(min-width: 1024px)', () => {
+				gsap.to('.sectionTitlee', {
+					scrollTrigger: {
+						trigger: '.sectionTitlee',
+						endTrigger: parentDiv('.sectionTitlee'),
+						pin: true,
+						start: 'top 63px',
+						end: 'bottom 160px',
+						pinSpacing: false
+					}
+				});
+			});
+		}
+	});
 </script>

@@ -1,67 +1,62 @@
 ---
 //@ts-nocheck
-const { size, weight, text, propStyles = "" } = Astro.props;
+const { size, weight, text, propStyles = '' } = Astro.props;
 
 const sizes = {
-  sm: "text-lg lg:text-2xl xl:text-3xl",
-  md: "text-2xl",
-  lg: "text-4xl md:text-5xl lg:text-7xl",
-  inherit: "text-sizeInherit"
+	sm: 'text-lg lg:text-2xl xl:text-3xl',
+	md: 'text-2xl',
+	lg: 'text-4xl md:text-5xl lg:text-7xl',
+	inherit: 'text-sizeInherit'
 };
 const weights = {
-  thin: "font-thin",
-  extralight: "font-extralight",
-  light: "font-light",
-  normal: "font-normal",
-  medium: "font-medium",
-  semibold: "font-semibold",
-  bold: "font-bold",
-  extrabold: "font-extrabold",
-  black: "font-black"
+	thin: 'font-thin',
+	extralight: 'font-extralight',
+	light: 'font-light',
+	normal: 'font-normal',
+	medium: 'font-medium',
+	semibold: 'font-semibold',
+	bold: 'font-bold',
+	extrabold: 'font-extrabold',
+	black: 'font-black'
 };
 ---
 
 {
-  text.split(" ").map((word) => {
-    return (
-      <span class:list={`${propStyles} ${sizes[size]} ${weights[weight]}`}>
-        {" "}
-        {word}{" "}
-      </span>
-    );
-  })
+	text.split(' ').map((word) => {
+		return <span class:list={`${propStyles} ${sizes[size]} ${weights[weight]}`}> {word} </span>;
+	})
 }
 <style>
-  span {
-    display: inline;
+	span {
+		display: inline;
 
-    color: transparent;
-    -webkit-text-fill-color: transparent;
+		color: transparent;
+		-webkit-text-fill-color: transparent;
 
-    background-clip: text;
-    -webkit-background-clip: text;
+		background-clip: text;
+		-webkit-background-clip: text;
 
-    /*prettier-ignore*/
-    background-image: linear-gradient( to bottom,  oklch(54.6% 0.245 262.881) 40%, /* -> from-blue-600 -> #155dfc */ #50bfe7 90% );
-    /*prettier-ignore*/
-    background-image: -moz-linear-gradient( to bottom,  oklch(54.6% 0.245 262.881) 40%, /* -> from-blue-600 -> #155dfc */ #50bfe7 90% );
-    /*prettier-ignore*/
-    background-image: -o-linear-gradient( to bottom,  oklch(54.6% 0.245 262.881) 40%, /* -> from-blue-600 -> #155dfc */ #50bfe7 90% );
-    /*prettier-ignore*/
-    background-image: -webkit-linear-gradient( to bottom, oklch(54.6% 0.245 262.881) 40%, /* -> from-blue-600 -> #155dfc */ #50bfe7 90%  );
-  }
-  @media (width >= 640px) {
-    span {
-      text-wrap: nowrap;
+		/*prettier-ignore*/
+		background-image: linear-gradient( to bottom,  oklch(54.6% 0.245 262.881) 40%, /* -> from-blue-600 -> #155dfc */ #50bfe7 90% );
+		/*prettier-ignore*/
+		background-image: -moz-linear-gradient( to bottom,  oklch(54.6% 0.245 262.881) 40%, /* -> from-blue-600 -> #155dfc */ #50bfe7 90% );
+		/*prettier-ignore*/
+		background-image: -o-linear-gradient( to bottom,  oklch(54.6% 0.245 262.881) 40%, /* -> from-blue-600 -> #155dfc */ #50bfe7 90% );
+		/*prettier-ignore*/
+		background-image: -webkit-linear-gradient( to bottom, oklch(54.6% 0.245 262.881) 40%, /* -> from-blue-600 -> #155dfc */ #50bfe7 90%  );
+	}
+	@media (width >= 640px) {
+		span {
+			text-wrap: nowrap;
 
-      /*prettier-ignore*/
-      background-image: linear-gradient( to bottom,  oklch(54.6% 0.245 262.881) 40%, /* -> from-blue-600 -> #155dfc */ #519ffe 100%  );
-      /*prettier-ignore*/
-      background-image: -moz-linear-gradient( to bottom,  oklch(54.6% 0.245 262.881) 40%, /* -> from-blue-600 -> #155dfc */ #519ffe 100%  );
-      /*prettier-ignore*/
-      background-image: -o-linear-gradient( to bottom,  oklch(54.6% 0.245 262.881) 40%, /* -> from-blue-600 -> #155dfc */ #519ffe 100%  );
-      /*prettier-ignore*/
-      background-image: -webkit-linear-gradient( to bottom,  oklch(54.6% 0.245 262.881) 40%, /* -> from-blue-600 -> #155dfc */ #519ffe 100%  );
-    }
-  }
+			/*prettier-ignore*/
+			background-image: linear-gradient( to bottom,  oklch(54.6% 0.245 262.881) 40%, /* -> from-blue-600 -> #155dfc */ #519ffe 100%  );
+			/*prettier-ignore*/
+			background-image: -moz-linear-gradient( to bottom,  oklch(54.6% 0.245 262.881) 40%, /* -> from-blue-600 -> #155dfc */ #519ffe 100%  );
+			/*prettier-ignore*/
+			background-image: -o-linear-gradient( to bottom,  oklch(54.6% 0.245 262.881) 40%, /* -> from-blue-600 -> #155dfc */ #519ffe 100%  );
+			/*prettier-ignore*/
+			background-image: -webkit-linear-gradient( to bottom,  oklch(54.6% 0.245 262.881) 40%, /* -> from-blue-600 -> #155dfc */ #519ffe 100%  );
+		}
+	}
 </style>

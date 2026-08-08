@@ -1,8 +1,8 @@
 ---
-title: "Estrategias y Desarrollo: Cómo Diseñamos un eCommerce y Posicionamos una Marca en Google"
+title: 'Estrategias y Desarrollo: Cómo Diseñamos un eCommerce y Posicionamos una Marca en Google'
 author: jesus gutierrez
 img: /nvstoreDesktop.png
-description: "En este caso de estudio, te mostramos el paso a paso de cómo ayudamos a NV Store a construir una tienda eCommerce funcional mientras optimizábamos su presencia en Google."
+description: 'En este caso de estudio, te mostramos el paso a paso de cómo ayudamos a NV Store a construir una tienda eCommerce funcional mientras optimizábamos su presencia en Google.'
 date: 20250122T000000-0400
 ---
 

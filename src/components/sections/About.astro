@@ -1,12 +1,12 @@
 ---
-import Section from "@components/Section.astro";
+import Section from '@components/Section.astro';
 
-import { getI18N } from "../../utils/i18n";
+import { getI18N } from '../../utils/i18n';
 const { basics } = getI18N(Astro.currentLocale);
 const { summary } = basics;
 const lang = Astro.currentLocale;
 ---
 
-<Section title={lang === "en" ? "About Me" : `Sobre mí`}>
-  <p class="leading-tight">{summary}</p>
+<Section title={lang === 'en' ? 'About Me' : `Sobre mí`}>
+	<p class='leading-tight'>{summary}</p>
 </Section>
